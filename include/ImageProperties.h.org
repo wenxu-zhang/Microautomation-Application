@@ -1,0 +1,21 @@
+#pragma once
+#include "Utils.h"
+#include "Controller.h"
+
+class ImageProperties{
+public:
+	ImageProperties(const AcquisitionChannel* ac, string name="temp",string comment="",int x=0,int y=0,double z=0,double temp=20,string time="0000:00:00 00:00:00");
+	const AcquisitionChannel* ac;//do not modify this channel information
+	int x;//x position of image (from linear encoder)
+	int y;//y position of image (from linear encoder)
+	double z;//z focus position of image (from microscope)
+	double temp;//temperature during capture
+	string time;//approximate time stamp of acquisition  YYYY:MM:DD HH:MM:SS
+	string comment;//optional comment
+	string name;//file name with directory (relative to workingDir) but without extension (extension is left to the desired file format of the camera class usually tiff)
+	//bool showScaleBar;
+	//bool showOnScreen;
+	//handled by camera    unsigned short max;//max intensity value
+	//handled by camera    unsigned short min;//min intensity value
+	//handled by camera    int bitsPerPixel;//Andor885 is a 14bit camera Hamamatsu BT would be 16bit
+};
