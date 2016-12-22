@@ -1,0 +1,9 @@
+SCC = This is a Source Code Control file
+
+[Program.sln]
+SCC_Aux_Path = "F:\VSS Database\PROGRAM"
+SCC_Project_Name = "$/Program", KWAAAAAA
+
+[Program.vcproj]
+SCC_Aux_Path = "\\Axioobserver\Data1\VSS Database\Program"
+SCC_Project_Name = "$/Program", KWAAAAAA

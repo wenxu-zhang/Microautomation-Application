@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?><?xml-stylesheet type='text/xsl' href='_UpgradeReport_Files/UpgradeReport.xslt'?><UpgradeLog>
+<Properties><Property Name="Solution" Value="Program">
+</Property><Property Name="Solution File" Value="E:\Software Projects\Program\Program.sln">
+</Property><Property Name="Date" Value="Thursday, January 20, 2011">
+</Property><Property Name="Time" Value="11:00 AM">
+</Property></Properties><Event ErrorLevel="0" Project="Program" Source="Program.vcproj" Description="Converting project file 'E:\Software Projects\Program\Program.vcproj'.">
+</Event><Event ErrorLevel="2" Project="Program" Source="Program.vcproj" Description="Fail to convert 'E:\Software Projects\Program\Program.vcproj' to 'E:\Software Projects\Program\Program.vcxproj'. Please make sure that you have sufficient permissions for the source and destination file.">
+</Event><Event ErrorLevel="2" Project="Program" Source="Program.vcproj" Description="Project upgrade failed.">
+</Event><Event ErrorLevel="3" Project="Program" Source="Program.vcproj" Description="Not Converted">
+</Event><Event ErrorLevel="0" Project="" Source="Program.sln" Description="Solution converted successfully">
+</Event><Event ErrorLevel="3" Project="" Source="Program.sln" Description="Converted">
+</Event></UpgradeLog>

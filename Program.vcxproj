@@ -1,0 +1,288 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup Label="ProjectConfigurations">
+    <ProjectConfiguration Include="Debug|Win32">
+      <Configuration>Debug</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Release|Win32">
+      <Configuration>Release</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+  </ItemGroup>
+  <PropertyGroup Label="Globals">
+    <ProjectGuid>{A1E44F2D-CE95-456D-A1D3-0EF92917042E}</ProjectGuid>
+    <RootNamespace>Program</RootNamespace>
+    <SccProjectName>
+    </SccProjectName>
+    <SccAuxPath>
+    </SccAuxPath>
+    <SccLocalPath>
+    </SccLocalPath>
+    <SccProvider>
+    </SccProvider>
+    <Keyword>Win32Proj</Keyword>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'" Label="Configuration">
+    <ConfigurationType>Application</ConfigurationType>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'" Label="Configuration">
+    <ConfigurationType>Application</ConfigurationType>
+    <UseOfAtl>false</UseOfAtl>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.props" />
+  <ImportGroup Label="ExtensionSettings">
+  </ImportGroup>
+  <ImportGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'" Label="PropertySheets">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <ImportGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'" Label="PropertySheets">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <PropertyGroup Label="UserMacros" />
+  <PropertyGroup>
+    <_ProjectFileVersion>10.0.30319.1</_ProjectFileVersion>
+    <OutDir Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">.\bin\</OutDir>
+    <IntDir Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">Debug\</IntDir>
+    <LinkIncremental Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">true</LinkIncremental>
+    <OutDir Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">Release\</OutDir>
+    <IntDir Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">Release\</IntDir>
+    <LinkIncremental Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">true</LinkIncremental>
+    <ExecutablePath Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">.\bin;$(VCInstallDir)bin;$(WindowsSdkDir)bin\NETFX 4.0 Tools;$(WindowsSdkDir)bin;$(VSInstallDir)Common7\Tools\bin;$(VSInstallDir)Common7\tools;$(VSInstallDir)Common7\ide;$(ProgramFiles)\HTML Help Workshop;$(FrameworkSDKDir)\bin;$(MSBuildToolsPath32);$(VSInstallDir);$(SystemRoot)\SysWow64;$(FxCopDir);$(PATH);</ExecutablePath>
+    <IncludePath Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">.\lib;.\include;$(VCInstallDir)include;$(VCInstallDir)atlmfc\include;$(WindowsSdkDir)include;$(FrameworkSDKDir)\include;</IncludePath>
+    <LibraryPath Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">.\lib;$(VCInstallDir)lib;$(VCInstallDir)atlmfc\lib;$(WindowsSdkDir)lib;$(FrameworkSDKDir)\lib</LibraryPath>
+    <SourcePath Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">.\src;$(VCInstallDir)atlmfc\src\mfc;$(VCInstallDir)atlmfc\src\mfcm;$(VCInstallDir)atlmfc\src\atl;$(VCInstallDir)crt\src;</SourcePath>
+    <ReferencePath Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">.\lib;$(VCInstallDir)atlmfc\lib;$(VCInstallDir)lib</ReferencePath>
+  </PropertyGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <ClCompile>
+      <AdditionalOptions>/D _WIN32_WINNT=0x0502 %(AdditionalOptions)</AdditionalOptions>
+      <Optimization>Disabled</Optimization>
+      <PreprocessorDefinitions>WIN32;_DEBUG;_CONSOLE;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <MinimalRebuild>true</MinimalRebuild>
+      <BasicRuntimeChecks>EnableFastChecks</BasicRuntimeChecks>
+      <RuntimeLibrary>MultiThreadedDebug</RuntimeLibrary>
+      <PrecompiledHeader>NotUsing</PrecompiledHeader>
+      <GenerateXMLDocumentationFiles>false</GenerateXMLDocumentationFiles>
+      <WarningLevel>Level3</WarningLevel>
+      <DebugInformationFormat>EditAndContinue</DebugInformationFormat>
+      <CompileAsManaged>false</CompileAsManaged>
+    </ClCompile>
+    <Link>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+      <SubSystem>Console</SubSystem>
+      <TargetMachine>MachineX86</TargetMachine>
+    </Link>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <ClCompile>
+      <PreprocessorDefinitions>WIN32;NDEBUG;_CONSOLE;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <RuntimeLibrary>MultiThreaded</RuntimeLibrary>
+      <PrecompiledHeader>
+      </PrecompiledHeader>
+      <WarningLevel>Level3</WarningLevel>
+      <DebugInformationFormat>ProgramDatabase</DebugInformationFormat>
+    </ClCompile>
+    <Link>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+      <SubSystem>Console</SubSystem>
+      <OptimizeReferences>true</OptimizeReferences>
+      <EnableCOMDATFolding>true</EnableCOMDATFolding>
+      <TargetMachine>MachineX86</TargetMachine>
+    </Link>
+  </ItemDefinitionGroup>
+  <ItemGroup>
+    <ClInclude Include="include\AcquisitionChannel.h" />
+    <ClInclude Include="include\AcquisitionGroup.h" />
+    <ClInclude Include="include\AcquisitionParameters.h" />
+    <ClInclude Include="include\AcquisitionSeries.h" />
+    <ClInclude Include="include\AndorCam.h" />
+    <ClInclude Include="include\ATMCD32D.H" />
+    <ClInclude Include="include\Axiovert.h" />
+    <ClInclude Include="include\Camera.h" />
+    <ClInclude Include="include\Chamber.h" />
+    <ClInclude Include="include\Changer.h" />
+    <ClInclude Include="include\Channel.h" />
+    <ClInclude Include="include\CImg.h" />
+    <ClInclude Include="include\CMTBCOMContinualEventSink.h" />
+    <ClInclude Include="include\CUsbCodeVCOM.h" />
+    <ClInclude Include="include\DaisyValve.h" />
+    <ClInclude Include="include\FlowChannel.h" />
+    <ClInclude Include="include\FluidicsSetup.h" />
+    <ClInclude Include="include\Reagent.h" />
+    <ClInclude Include="include\RS232.h" />
+    <ClInclude Include="include\comm.h" />
+    <ClInclude Include="include\Controller.h" />
+    <ClInclude Include="include\CUsbCode.h" />
+    <ClInclude Include="include\DefiniteFocus.h" />
+    <ClInclude Include="include\Definitions.h" />
+    <ClInclude Include="include\devioctl.h" />
+    <ClInclude Include="include\DG.h" />
+    <ClInclude Include="include\DisplayList.h" />
+    <ClInclude Include="include\Eye.h" />
+    <ClInclude Include="include\Focus.h" />
+    <ClInclude Include="include\FTD2XX.H" />
+    <ClInclude Include="include\Galvo.h" />
+    <ClInclude Include="include\GridFocus.h" />
+    <ClInclude Include="include\GridScan.h" />
+    <ClInclude Include="include\Image.h" />
+    <ClInclude Include="include\ImageProperties.h" />
+    <ClInclude Include="include\ImageRegion.h" />
+    <ClInclude Include="include\Lambda10_3.h" />
+    <ClInclude Include="include\Laser.h" />
+    <ClInclude Include="include\Light.h" />
+    <ClInclude Include="include\LightSource.h" />
+    <ClInclude Include="include\Ludl.h" />
+    <ClInclude Include="include\Magnification.h" />
+    <ClInclude Include="include\MultiCam.h" />
+    <ClInclude Include="include\NIDAQ.h" />
+    <ClInclude Include="include\NIDAQmx.h" />
+    <ClInclude Include="include\nr.h" />
+    <ClInclude Include="include\nrtypes.h" />
+    <ClInclude Include="include\nrtypes_lib.h" />
+    <ClInclude Include="include\nrtypes_nr.h" />
+    <ClInclude Include="include\nrutil.h" />
+    <ClInclude Include="include\nrutil_nr.h" />
+    <ClInclude Include="include\nrutil_tnt.h" />
+    <ClInclude Include="include\nrutil_val.h" />
+    <ClInclude Include="include\Objective.h" />
+    <ClInclude Include="include\Observer.h" />
+    <ClInclude Include="include\Optovar.h" />
+    <ClInclude Include="include\OutPort.h" />
+    <ClInclude Include="include\PerimeterFocus.h" />
+    <ClInclude Include="include\PL32.h" />
+    <ClInclude Include="include\PortTalk_IOCTL.h" />
+    <ClInclude Include="include\PowerMeter.h" />
+    <ClInclude Include="include\print_array.h" />
+    <ClInclude Include="include\ProtocolEric.h" />
+    <ClInclude Include="include\ProtocolWalsh.h" />
+    <ClInclude Include="include\ProtocolYing_Ja.h" />
+    <ClInclude Include="include\pt_ioctl.h" />
+    <ClInclude Include="include\Pump.h" />
+    <ClInclude Include="include\Record.h" />
+    <ClInclude Include="include\Scan.h" />
+    <ClInclude Include="include\ScanFocus.h" />
+    <ClInclude Include="include\ScanSpots.h" />
+    <ClInclude Include="include\ScopeComm.h" />
+    <ClInclude Include="include\Selection.h" />
+    <ClInclude Include="include\Solution.h" />
+    <ClInclude Include="include\SpotFocus.h" />
+    <ClInclude Include="include\SpotSeriesScan.h" />
+    <ClInclude Include="include\Syringe.h" />
+    <ClInclude Include="include\TEModule.h" />
+    <ClInclude Include="include\Test.h" />
+    <ClInclude Include="include\Thread.h" />
+    <ClInclude Include="include\ThreadList.h" />
+    <ClInclude Include="include\tiff.h" />
+    <ClInclude Include="include\tiffio.h" />
+    <ClInclude Include="include\tiffvers.h" />
+    <ClInclude Include="include\Timer.h" />
+    <ClInclude Include="include\Trigger.h" />
+    <ClInclude Include="include\USB.h" />
+    <ClInclude Include="include\Utils.h" />
+    <ClInclude Include="include\Valve.h" />
+    <ClInclude Include="include\Warn.h" />
+    <ClInclude Include="include\XYStage.h" />
+    <ClInclude Include="include\ZStage.h" />
+  </ItemGroup>
+  <ItemGroup>
+    <Library Include="lib\ATMCD32M.LIB" />
+    <Library Include="lib\FTD2XX.lib" />
+    <Library Include="lib\libtiff.lib" />
+    <Library Include="lib\NIDAQmx.lib" />
+    <Library Include="lib\PL32.LIB" />
+    <Library Include="lib\SetupAPI.Lib" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="lib\MTBAPI.TLB" />
+    <None Include="bin\Atmcd32d.dll" />
+    <None Include="bin\Detector.ini" />
+    <None Include="bin\FTD2XX.dll" />
+    <None Include="bin\jpeg62.dll" />
+    <None Include="bin\libtiff3.dll" />
+    <None Include="bin\MTBApi.dll" />
+    <None Include="bin\PL32.dll" />
+    <None Include="bin\PumpCommServer.dll" />
+    <None Include="bin\zlib1.dll" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="src\AcquisitionChannel.cpp" />
+    <ClCompile Include="src\AcquisitionGroup.cpp" />
+    <ClCompile Include="src\AcquisitionParameters.cpp" />
+    <ClCompile Include="src\AcquisitionSeries.cpp" />
+    <ClCompile Include="src\AndorCam.cpp" />
+    <ClCompile Include="src\avevar.cpp" />
+    <ClCompile Include="src\Axiovert.cpp" />
+    <ClCompile Include="src\Camera.cpp" />
+    <ClCompile Include="src\Chamber.cpp" />
+    <ClCompile Include="src\Channel.cpp" />
+    <ClCompile Include="src\CMTBCOMContinualEventSink.cpp" />
+    <ClCompile Include="src\Controller.cpp" />
+    <ClCompile Include="src\CUsbCode.cpp" />
+    <ClCompile Include="src\CUsbCodeVCOM.cpp" />
+    <ClCompile Include="src\DaisyValve.cpp" />
+    <ClCompile Include="src\DefiniteFocus.cpp" />
+    <ClCompile Include="src\DG.cpp" />
+    <ClCompile Include="src\fit.cpp" />
+    <ClCompile Include="src\FlowChannel.cpp" />
+    <ClCompile Include="src\FluidicsSetup.cpp" />
+    <ClCompile Include="src\Focus.cpp" />
+    <ClCompile Include="src\Galvo.cpp" />
+    <ClCompile Include="src\gammln.cpp" />
+    <ClCompile Include="src\gammq.cpp" />
+    <ClCompile Include="src\gcf.cpp" />
+    <ClCompile Include="src\GridFocus.cpp" />
+    <ClCompile Include="src\gser.cpp" />
+    <ClCompile Include="src\ImageProperties.cpp" />
+    <ClCompile Include="src\ImageRegion.cpp" />
+    <ClCompile Include="src\Lambda10_3.cpp" />
+    <ClCompile Include="src\Laser.cpp" />
+    <ClCompile Include="src\LightSource.cpp" />
+    <ClCompile Include="src\Ludl.cpp" />
+    <ClCompile Include="src\Magnification.cpp" />
+    <ClCompile Include="src\MultiCam.cpp" />
+    <ClCompile Include="src\NIDAQ.cpp" />
+    <ClCompile Include="src\Objective.cpp" />
+    <ClCompile Include="src\Observer.cpp" />
+    <ClCompile Include="src\Optovar.cpp" />
+    <ClCompile Include="src\OutPort.cpp" />
+    <ClCompile Include="src\PerimeterFocus.cpp" />
+    <ClCompile Include="src\PowerMeter.cpp" />
+    <ClCompile Include="src\ProtocolEric.cpp" />
+    <ClCompile Include="src\ProtocolWalsh.cpp" />
+    <ClCompile Include="src\ProtocolYing_Ja.cpp" />
+    <ClCompile Include="src\Pump.cpp" />
+    <ClCompile Include="src\Reagent.cpp" />
+    <ClCompile Include="src\Record.cpp" />
+    <ClCompile Include="src\RS232.cpp" />
+    <ClCompile Include="src\Scan.cpp" />
+    <ClCompile Include="src\ScanFocus.cpp" />
+    <ClCompile Include="src\ScanSpots.cpp" />
+    <ClCompile Include="src\Selection.cpp" />
+    <ClCompile Include="src\Solution.cpp" />
+    <ClCompile Include="src\splie2.cpp" />
+    <ClCompile Include="src\splin2.cpp" />
+    <ClCompile Include="src\spline.cpp" />
+    <ClCompile Include="src\splint.cpp" />
+    <ClCompile Include="src\SpotFocus.cpp">
+      <ObjectFileName Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">$(IntDir)%(Filename)1.obj</ObjectFileName>
+      <XMLDocumentationFileName Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">$(IntDir)%(Filename)1.xdc</XMLDocumentationFileName>
+      <ObjectFileName Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">$(IntDir)%(Filename)1.obj</ObjectFileName>
+      <XMLDocumentationFileName Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">$(IntDir)%(Filename)1.xdc</XMLDocumentationFileName>
+    </ClCompile>
+    <ClCompile Include="src\SpotSeriesScan.cpp" />
+    <ClCompile Include="src\Syringe.cpp" />
+    <ClCompile Include="src\TEModule.cpp" />
+    <ClCompile Include="src\Timer.cpp" />
+    <ClCompile Include="src\Trigger.cpp" />
+    <ClCompile Include="src\USB.cpp" />
+    <ClCompile Include="src\Utils.cpp" />
+    <ClCompile Include="src\Valve.cpp" />
+    <ClCompile Include="src\XYStage.cpp" />
+    <ClCompile Include="src\ZStage.cpp" />
+  </ItemGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
+  <ImportGroup Label="ExtensionTargets">
+  </ImportGroup>
+</Project>
