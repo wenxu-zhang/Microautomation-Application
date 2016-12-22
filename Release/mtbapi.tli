@@ -1,0 +1,4708 @@
+﻿// Created by Microsoft (R) C/C++ Compiler Version 14.00.50727.762 (b8698e7c).
+//
+// e:\software projects\program\release\mtbapi.tli
+//
+// Wrapper implementations for Win32 type library MTBApi.tlb
+// compiler-generated file created 09/17/10 at 20:08:22 - DO NOT EDIT!
+
+#pragma once
+
+//
+// interface IMTBIdent wrapper method implementations
+//
+
+inline _bstr_t IMTBIdent::GetName ( ) {
+    BSTR _result = 0;
+    HRESULT _hr = get_Name(&_result);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return _bstr_t(_result, false);
+}
+
+inline _bstr_t IMTBIdent::GetConfiguration ( ) {
+    BSTR _result = 0;
+    HRESULT _hr = raw_GetConfiguration(&_result);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return _bstr_t(_result, false);
+}
+
+inline VARIANT_BOOL IMTBIdent::GetConfigurationHasChanged ( ) {
+    VARIANT_BOOL _result = 0;
+    HRESULT _hr = get_ConfigurationHasChanged(&_result);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return _result;
+}
+
+inline _bstr_t IMTBIdent::GetUniqueName ( ) {
+    BSTR _result = 0;
+    HRESULT _hr = get_UniqueName(&_result);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return _bstr_t(_result, false);
+}
+
+//
+// interface IMTBBase wrapper method implementations
+//
+
+inline VARIANT_BOOL IMTBBase::StartMonitoring ( _bstr_t clientID ) {
+    VARIANT_BOOL _result = 0;
+    HRESULT _hr = raw_StartMonitoring(clientID, &_result);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return _result;
+}
+
+inline VARIANT_BOOL IMTBBase::StopMonitoring ( _bstr_t clientID ) {
+    VARIANT_BOOL _result = 0;
+    HRESULT _hr = raw_StopMonitoring(clientID, &_result);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return _result;
+}
+
+inline VARIANT_BOOL IMTBBase::GetIsMonitoring ( ) {
+    VARIANT_BOOL _result = 0;
+    HRESULT _hr = get_IsMonitoring(&_result);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return _result;
+}
+
+inline VARIANT_BOOL IMTBBase::IsMonitoringForClient ( _bstr_t clientID ) {
+    VARIANT_BOOL _result = 0;
+    HRESULT _hr = raw_IsMonitoringForClient(clientID, &_result);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return _result;
+}
+
+inline VARIANT_BOOL IMTBBase::Lock ( _bstr_t clientID ) {
+    VARIANT_BOOL _result = 0;
+    HRESULT _hr = raw_Lock(clientID, &_result);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return _result;
+}
+
+inline VARIANT_BOOL IMTBBase::Unlock ( _bstr_t clientID ) {
+    VARIANT_BOOL _result = 0;
+    HRESULT _hr = raw_Unlock(clientID, &_result);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return _result;
+}
+
+inline VARIANT_BOOL IMTBBase::GetIsLocked ( ) {
+    VARIANT_BOOL _result = 0;
+    HRESULT _hr = get_IsLocked(&_result);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return _result;
+}
+
+inline VARIANT_BOOL IMTBBase::IsLockedForClient ( _bstr_t clientID ) {
+    VARIANT_BOOL _result = 0;
+    HRESULT _hr = raw_IsLockedForClient(clientID, &_result);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return _result;
+}
+
+inline VARIANT_BOOL IMTBBase::WaitReady ( long timeout ) {
+    VARIANT_BOOL _result = 0;
+    HRESULT _hr = raw_WaitReady(timeout, &_result);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return _result;
+}
+
+inline VARIANT_BOOL IMTBBase::GetIsBusy ( ) {
+    VARIANT_BOOL _result = 0;
+    HRESULT _hr = get_IsBusy(&_result);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return _result;
+}
+
+inline HRESULT IMTBBase::add_MTBErrorEvent ( IUnknown * value ) {
+    HRESULT _hr = raw_add_MTBErrorEvent(value);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return _hr;
+}
+
+inline HRESULT IMTBBase::remove_MTBErrorEvent ( IUnknown * value ) {
+    HRESULT _hr = raw_remove_MTBErrorEvent(value);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return _hr;
+}
+
+inline HRESULT IMTBBase::add_MTBLockingChangedEvent ( IUnknown * value ) {
+    HRESULT _hr = raw_add_MTBLockingChangedEvent(value);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return _hr;
+}
+
+inline HRESULT IMTBBase::remove_MTBLockingChangedEvent ( IUnknown * value ) {
+    HRESULT _hr = raw_remove_MTBLockingChangedEvent(value);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return _hr;
+}
+
+inline HRESULT IMTBBase::add_MTBMonitoringChangedEvent ( IUnknown * value ) {
+    HRESULT _hr = raw_add_MTBMonitoringChangedEvent(value);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return _hr;
+}
+
+inline HRESULT IMTBBase::remove_MTBMonitoringChangedEvent ( IUnknown * value ) {
+    HRESULT _hr = raw_remove_MTBMonitoringChangedEvent(value);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return _hr;
+}
+
+inline HRESULT IMTBBase::add_MTBBusyChangedEvent ( IUnknown * value ) {
+    HRESULT _hr = raw_add_MTBBusyChangedEvent(value);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return _hr;
+}
+
+inline HRESULT IMTBBase::remove_MTBBusyChangedEvent ( IUnknown * value ) {
+    HRESULT _hr = raw_remove_MTBBusyChangedEvent(value);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return _hr;
+}
+
+//
+// dispinterface IMTBFocusStabilizerEvents wrapper method implementations
+//
+
+inline HRESULT IMTBFocusStabilizerEvents::MTBPeriodicallyOnOffChangedEvent ( enum MTBOnOff onOff, enum MTBFocusStabilizerPeriodicallyOnOffChangedReason reason ) {
+    return _com_dispatch_method(this, 0x1, DISPATCH_METHOD, VT_EMPTY, NULL, 
+        L"\x0003\x0003", onOff, reason);
+}
+
+inline HRESULT IMTBFocusStabilizerEvents::MTBPeriodChangedEvent ( unsigned long period ) {
+    return _com_dispatch_method(this, 0x2, DISPATCH_METHOD, VT_EMPTY, NULL, 
+        L"\x0003", period);
+}
+
+inline HRESULT IMTBFocusStabilizerEvents::MTBDataChangedEvent ( SAFEARRAY * data, enum MTBFocusStabilizerDataType type ) {
+    return _com_dispatch_method(this, 0x3, DISPATCH_METHOD, VT_EMPTY, NULL, 
+        L"\x2011\x0003", data, type);
+}
+
+inline HRESULT IMTBFocusStabilizerEvents::MTBExclusiveModeChangedEvent ( enum MTBOnOff onOff ) {
+    return _com_dispatch_method(this, 0x4, DISPATCH_METHOD, VT_EMPTY, NULL, 
+        L"\x0003", onOff);
+}
+
+inline HRESULT IMTBFocusStabilizerEvents::MTBDeviationChangedEvent ( struct _Hashtable * deviations ) {
+    return _com_dispatch_method(this, 0x5, DISPATCH_METHOD, VT_EMPTY, NULL, 
+        L"\x0009", deviations);
+}
+
+//
+// interface IMTBFocusStabilizer wrapper method implementations
+//
+
+inline VARIANT_BOOL IMTBFocusStabilizer::StabilizePeriodically ( enum MTBOnOff onOff ) {
+    VARIANT_BOOL _result = 0;
+    HRESULT _hr = raw_StabilizePeriodically(onOff, &_result);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return _result;
+}
+
+inline VARIANT_BOOL IMTBFocusStabilizer::StabilizePeriodically_2 ( enum MTBOnOff onOff, unsigned long period ) {
+    VARIANT_BOOL _result = 0;
+    HRESULT _hr = raw_StabilizePeriodically_2(onOff, period, &_result);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return _result;
+}
+
+inline enum MTBOnOff IMTBFocusStabilizer::GetStabilizePeriodicallyOnOff ( enum MTBFocusStabilizerPeriodicallyOnOffChangedReason * reason ) {
+    enum MTBOnOff _result;
+    HRESULT _hr = raw_GetStabilizePeriodicallyOnOff(reason, &_result);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return _result;
+}
+
+inline unsigned long IMTBFocusStabilizer::Getperiod ( ) {
+    unsigned long _result = 0;
+    HRESULT _hr = get_period(&_result);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return _result;
+}
+
+inline void IMTBFocusStabilizer::Putperiod ( unsigned long pRetVal ) {
+    HRESULT _hr = put_period(pRetVal);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+}
+
+inline VARIANT_BOOL IMTBFocusStabilizer::StabilizeNow ( enum MTBCmdSetModes mode ) {
+    VARIANT_BOOL _result = 0;
+    HRESULT _hr = raw_StabilizeNow(mode, &_result);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return _result;
+}
+
+inline VARIANT_BOOL IMTBFocusStabilizer::StabilizeNow_2 ( enum MTBCmdSetModes mode, long timeout ) {
+    VARIANT_BOOL _result = 0;
+    HRESULT _hr = raw_StabilizeNow_2(mode, timeout, &_result);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return _result;
+}
+
+inline VARIANT_BOOL IMTBFocusStabilizer::InitOnCurrentFocusPosition ( enum MTBCmdSetModes mode ) {
+    VARIANT_BOOL _result = 0;
+    HRESULT _hr = raw_InitOnCurrentFocusPosition(mode, &_result);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return _result;
+}
+
+inline VARIANT_BOOL IMTBFocusStabilizer::InitOnCurrentFocusPosition_2 ( enum MTBCmdSetModes mode, long timeout ) {
+    VARIANT_BOOL _result = 0;
+    HRESULT _hr = raw_InitOnCurrentFocusPosition_2(mode, timeout, &_result);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return _result;
+}
+
+inline VARIANT_BOOL IMTBFocusStabilizer::InitOnCurrentFocusPosition_3 ( _bstr_t clientID, enum MTBCmdSetModes mode ) {
+    VARIANT_BOOL _result = 0;
+    HRESULT _hr = raw_InitOnCurrentFocusPosition_3(clientID, mode, &_result);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return _result;
+}
+
+inline VARIANT_BOOL IMTBFocusStabilizer::InitOnCurrentFocusPosition_4 ( _bstr_t clientID, enum MTBCmdSetModes mode, long timeout ) {
+    VARIANT_BOOL _result = 0;
+    HRESULT _hr = raw_InitOnCurrentFocusPosition_4(clientID, mode, timeout, &_result);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return _result;
+}
+
+inline VARIANT_BOOL IMTBFocusStabilizer::InitOnCurrentFocusPosition_5 ( SAFEARRAY * * data ) {
+    VARIANT_BOOL _result = 0;
+    HRESULT _hr = raw_InitOnCurrentFocusPosition_5(data, &_result);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return _result;
+}
+
+inline VARIANT_BOOL IMTBFocusStabilizer::InitOnCurrentFocusPosition_6 ( SAFEARRAY * * data, long timeout ) {
+    VARIANT_BOOL _result = 0;
+    HRESULT _hr = raw_InitOnCurrentFocusPosition_6(data, timeout, &_result);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return _result;
+}
+
+inline VARIANT_BOOL IMTBFocusStabilizer::InitOnCurrentFocusPosition_7 ( _bstr_t clientID, SAFEARRAY * * data ) {
+    VARIANT_BOOL _result = 0;
+    HRESULT _hr = raw_InitOnCurrentFocusPosition_7(clientID, data, &_result);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return _result;
+}
+
+inline VARIANT_BOOL IMTBFocusStabilizer::InitOnCurrentFocusPosition_8 ( _bstr_t clientID, SAFEARRAY * * data, long timeout ) {
+    VARIANT_BOOL _result = 0;
+    HRESULT _hr = raw_InitOnCurrentFocusPosition_8(clientID, data, timeout, &_result);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return _result;
+}
+
+inline VARIANT_BOOL IMTBFocusStabilizer::InitWithStabilizingData ( SAFEARRAY * data, enum MTBCmdSetModes mode ) {
+    VARIANT_BOOL _result = 0;
+    HRESULT _hr = raw_InitWithStabilizingData(data, mode, &_result);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return _result;
+}
+
+inline VARIANT_BOOL IMTBFocusStabilizer::InitWithStabilizingData_2 ( SAFEARRAY * data, enum MTBCmdSetModes mode, long timeout ) {
+    VARIANT_BOOL _result = 0;
+    HRESULT _hr = raw_InitWithStabilizingData_2(data, mode, timeout, &_result);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return _result;
+}
+
+inline VARIANT_BOOL IMTBFocusStabilizer::InitWithStabilizingData_3 ( _bstr_t clientID, SAFEARRAY * data, enum MTBCmdSetModes mode ) {
+    VARIANT_BOOL _result = 0;
+    HRESULT _hr = raw_InitWithStabilizingData_3(clientID, data, mode, &_result);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return _result;
+}
+
+inline VARIANT_BOOL IMTBFocusStabilizer::InitWithStabilizingData_4 ( _bstr_t clientID, SAFEARRAY * data, enum MTBCmdSetModes mode, long timeout ) {
+    VARIANT_BOOL _result = 0;
+    HRESULT _hr = raw_InitWithStabilizingData_4(clientID, data, mode, timeout, &_result);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return _result;
+}
+
+inline SAFEARRAY * IMTBFocusStabilizer::GetStabilizerData ( enum MTBFocusStabilizerDataType type ) {
+    SAFEARRAY * _result = 0;
+    HRESULT _hr = raw_GetStabilizerData(type, &_result);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return _result;
+}
+
+inline HRESULT IMTBFocusStabilizer::add_MTBPeriodicallyOnOffChangedEvent ( IUnknown * value ) {
+    HRESULT _hr = raw_add_MTBPeriodicallyOnOffChangedEvent(value);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return _hr;
+}
+
+inline HRESULT IMTBFocusStabilizer::remove_MTBPeriodicallyOnOffChangedEvent ( IUnknown * value ) {
+    HRESULT _hr = raw_remove_MTBPeriodicallyOnOffChangedEvent(value);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return _hr;
+}
+
+inline HRESULT IMTBFocusStabilizer::add_MTBPeriodChangedEvent ( IUnknown * value ) {
+    HRESULT _hr = raw_add_MTBPeriodChangedEvent(value);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return _hr;
+}
+
+inline HRESULT IMTBFocusStabilizer::remove_MTBPeriodChangedEvent ( IUnknown * value ) {
+    HRESULT _hr = raw_remove_MTBPeriodChangedEvent(value);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return _hr;
+}
+
+inline HRESULT IMTBFocusStabilizer::add_MTBDataChangedEvent ( IUnknown * value ) {
+    HRESULT _hr = raw_add_MTBDataChangedEvent(value);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return _hr;
+}
+
+inline HRESULT IMTBFocusStabilizer::remove_MTBDataChangedEvent ( IUnknown * value ) {
+    HRESULT _hr = raw_remove_MTBDataChangedEvent(value);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return _hr;
+}
+
+inline double IMTBFocusStabilizer::GetDeviation ( _bstr_t unit ) {
+    double _result = 0;
+    HRESULT _hr = raw_GetDeviation(unit, &_result);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return _result;
+}
+
+inline VARIANT_BOOL IMTBFocusStabilizer::SetExclusiveMode ( enum MTBOnOff onOff ) {
+    VARIANT_BOOL _result = 0;
+    HRESULT _hr = raw_SetExclusiveMode(onOff, &_result);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return _result;
+}
+
+inline VARIANT_BOOL IMTBFocusStabilizer::SetExclusiveMode_2 ( _bstr_t clientID, enum MTBOnOff onOff ) {
+    VARIANT_BOOL _result = 0;
+    HRESULT _hr = raw_SetExclusiveMode_2(clientID, onOff, &_result);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return _result;
+}
+
+inline enum MTBOnOff IMTBFocusStabilizer::GetExclusiveModeOnOff ( ) {
+    enum MTBOnOff _result;
+    HRESULT _hr = raw_GetExclusiveModeOnOff(&_result);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return _result;
+}
+
+inline HRESULT IMTBFocusStabilizer::add_MTBExclusiveModeChangedEvent ( IUnknown * value ) {
+    HRESULT _hr = raw_add_MTBExclusiveModeChangedEvent(value);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return _hr;
+}
+
+inline HRESULT IMTBFocusStabilizer::remove_MTBExclusiveModeChangedEvent ( IUnknown * value ) {
+    HRESULT _hr = raw_remove_MTBExclusiveModeChangedEvent(value);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return _hr;
+}
+
+inline HRESULT IMTBFocusStabilizer::add_MTBDeviationChangedEvent ( IUnknown * value ) {
+    HRESULT _hr = raw_add_MTBDeviationChangedEvent(value);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return _hr;
+}
+
+inline HRESULT IMTBFocusStabilizer::remove_MTBDeviationChangedEvent ( IUnknown * value ) {
+    HRESULT _hr = raw_remove_MTBDeviationChangedEvent(value);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return _hr;
+}
+
+//
+// interface IMTBConfiguration wrapper method implementations
+//
+
+inline _bstr_t IMTBConfiguration::ReadActiveConfiguration ( ) {
+    BSTR _result = 0;
+    HRESULT _hr = raw_ReadActiveConfiguration(&_result);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return _bstr_t(_result, false);
+}
+
+inline _bstr_t IMTBConfiguration::ReadConfiguration ( ) {
+    BSTR _result = 0;
+    HRESULT _hr = raw_ReadConfiguration(&_result);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return _bstr_t(_result, false);
+}
+
+inline HRESULT IMTBConfiguration::WriteConfiguration ( _bstr_t configuration ) {
+    HRESULT _hr = raw_WriteConfiguration(configuration);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return _hr;
+}
+
+inline _bstr_t IMTBConfiguration::ReadComponents ( ) {
+    BSTR _result = 0;
+    HRESULT _hr = raw_ReadComponents(&_result);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return _bstr_t(_result, false);
+}
+
+inline _bstr_t IMTBConfiguration::ReadUserComponents ( ) {
+    BSTR _result = 0;
+    HRESULT _hr = raw_ReadUserComponents(&_result);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return _bstr_t(_result, false);
+}
+
+inline HRESULT IMTBConfiguration::WriteUserComponents ( _bstr_t components ) {
+    HRESULT _hr = raw_WriteUserComponents(components);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return _hr;
+}
+
+inline HRESULT IMTBConfiguration::ConfigChanged ( ) {
+    HRESULT _hr = raw_ConfigChanged();
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return _hr;
+}
+
+inline _variant_t IMTBConfiguration::GetCanServer ( _bstr_t clientID, BSTR * instanceID ) {
+    VARIANT _result;
+    VariantInit(&_result);
+    HRESULT _hr = raw_GetCanServer(clientID, instanceID, &_result);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return _variant_t(_result, false);
+}
+
+inline HRESULT IMTBConfiguration::ReleaseCanServer ( _bstr_t clientID, _bstr_t instanceID ) {
+    HRESULT _hr = raw_ReleaseCanServer(clientID, instanceID);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return _hr;
+}
+
+inline HRESULT IMTBConfiguration::add_ConfigChangedEvent ( IUnknown * value ) {
+    HRESULT _hr = raw_add_ConfigChangedEvent(value);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return _hr;
+}
+
+inline HRESULT IMTBConfiguration::remove_ConfigChangedEvent ( IUnknown * value ) {
+    HRESULT _hr = raw_remove_ConfigChangedEvent(value);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return _hr;
+}
+
+inline _variant_t IMTBConfiguration::GetCanServerMonitor ( _bstr_t clientID, BSTR * instanceID ) {
+    VARIANT _result;
+    VariantInit(&_result);
+    HRESULT _hr = raw_GetCanServerMonitor(clientID, instanceID, &_result);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return _variant_t(_result, false);
+}
+
+inline HRESULT IMTBConfiguration::ReleaseCanServerMonitor ( _bstr_t clientID, _bstr_t instanceID ) {
+    HRESULT _hr = raw_ReleaseCanServerMonitor(clientID, instanceID);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return _hr;
+}
+
+inline HRESULT IMTBConfiguration::add_MonitorASCIIEvent ( IUnknown * value ) {
+    HRESULT _hr = raw_add_MonitorASCIIEvent(value);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return _hr;
+}
+
+inline HRESULT IMTBConfiguration::remove_MonitorASCIIEvent ( IUnknown * value ) {
+    HRESULT _hr = raw_remove_MonitorASCIIEvent(value);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return _hr;
+}
+
+inline HRESULT IMTBConfiguration::add_MonitorMessageEvent ( IUnknown * value ) {
+    HRESULT _hr = raw_add_MonitorMessageEvent(value);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return _hr;
+}
+
+inline HRESULT IMTBConfiguration::remove_MonitorMessageEvent ( IUnknown * value ) {
+    HRESULT _hr = raw_remove_MonitorMessageEvent(value);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return _hr;
+}
+
+inline HRESULT IMTBConfiguration::add_MonitorPIDEvent ( IUnknown * value ) {
+    HRESULT _hr = raw_add_MonitorPIDEvent(value);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return _hr;
+}
+
+inline HRESULT IMTBConfiguration::remove_MonitorPIDEvent ( IUnknown * value ) {
+    HRESULT _hr = raw_remove_MonitorPIDEvent(value);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return _hr;
+}
+
+inline HRESULT IMTBConfiguration::add_MonitorRawDataEvent ( IUnknown * value ) {
+    HRESULT _hr = raw_add_MonitorRawDataEvent(value);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return _hr;
+}
+
+inline HRESULT IMTBConfiguration::remove_MonitorRawDataEvent ( IUnknown * value ) {
+    HRESULT _hr = raw_remove_MonitorRawDataEvent(value);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return _hr;
+}
+
+inline HRESULT IMTBConfiguration::add_CanSrvReceivedCharEvent ( IUnknown * value ) {
+    HRESULT _hr = raw_add_CanSrvReceivedCharEvent(value);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return _hr;
+}
+
+inline HRESULT IMTBConfiguration::remove_CanSrvReceivedCharEvent ( IUnknown * value ) {
+    HRESULT _hr = raw_remove_CanSrvReceivedCharEvent(value);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return _hr;
+}
+
+inline HRESULT IMTBConfiguration::add_CanSrvReceivedEvent ( IUnknown * value ) {
+    HRESULT _hr = raw_add_CanSrvReceivedEvent(value);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return _hr;
+}
+
+inline HRESULT IMTBConfiguration::remove_CanSrvReceivedEvent ( IUnknown * value ) {
+    HRESULT _hr = raw_remove_CanSrvReceivedEvent(value);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return _hr;
+}
+
+inline HRESULT IMTBConfiguration::add_CanSrvReceivedSyncEvent ( IUnknown * value ) {
+    HRESULT _hr = raw_add_CanSrvReceivedSyncEvent(value);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return _hr;
+}
+
+inline HRESULT IMTBConfiguration::remove_CanSrvReceivedSyncEvent ( IUnknown * value ) {
+    HRESULT _hr = raw_remove_CanSrvReceivedSyncEvent(value);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return _hr;
+}
+
+inline HRESULT IMTBConfiguration::add_CanSrvReceivedCANMessageEvent ( IUnknown * value ) {
+    HRESULT _hr = raw_add_CanSrvReceivedCANMessageEvent(value);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return _hr;
+}
+
+inline HRESULT IMTBConfiguration::remove_CanSrvReceivedCANMessageEvent ( IUnknown * value ) {
+    HRESULT _hr = raw_remove_CanSrvReceivedCANMessageEvent(value);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return _hr;
+}
+
+inline HRESULT IMTBConfiguration::add_CanSrvReceivedCANMessageSyncEvent ( IUnknown * value ) {
+    HRESULT _hr = raw_add_CanSrvReceivedCANMessageSyncEvent(value);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return _hr;
+}
+
+inline HRESULT IMTBConfiguration::remove_CanSrvReceivedCANMessageSyncEvent ( IUnknown * value ) {
+    HRESULT _hr = raw_remove_CanSrvReceivedCANMessageSyncEvent(value);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return _hr;
+}
+
+inline HRESULT IMTBConfiguration::add_CanSrvErrorNumberEvent ( IUnknown * value ) {
+    HRESULT _hr = raw_add_CanSrvErrorNumberEvent(value);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return _hr;
+}
+
+inline HRESULT IMTBConfiguration::remove_CanSrvErrorNumberEvent ( IUnknown * value ) {
+    HRESULT _hr = raw_remove_CanSrvErrorNumberEvent(value);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return _hr;
+}
+
+inline HRESULT IMTBConfiguration::add_CanSrvErrorDescriptionEvent ( IUnknown * value ) {
+    HRESULT _hr = raw_add_CanSrvErrorDescriptionEvent(value);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return _hr;
+}
+
+inline HRESULT IMTBConfiguration::remove_CanSrvErrorDescriptionEvent ( IUnknown * value ) {
+    HRESULT _hr = raw_remove_CanSrvErrorDescriptionEvent(value);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return _hr;
+}
+
+inline HRESULT IMTBConfiguration::add_CanSrvErrorEvent ( IUnknown * value ) {
+    HRESULT _hr = raw_add_CanSrvErrorEvent(value);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return _hr;
+}
+
+inline HRESULT IMTBConfiguration::remove_CanSrvErrorEvent ( IUnknown * value ) {
+    HRESULT _hr = raw_remove_CanSrvErrorEvent(value);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return _hr;
+}
+
+inline _bstr_t IMTBConfiguration::ReadComponentsFile ( _bstr_t filename ) {
+    BSTR _result = 0;
+    HRESULT _hr = raw_ReadComponentsFile(filename, &_result);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return _bstr_t(_result, false);
+}
+
+inline HRESULT IMTBConfiguration::WriteComponentsFile ( _bstr_t contents, _bstr_t filename ) {
+    HRESULT _hr = raw_WriteComponentsFile(contents, filename);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return _hr;
+}
+
+inline long IMTBConfiguration::GetComponentsFileVersion ( _bstr_t filename ) {
+    long _result = 0;
+    HRESULT _hr = raw_GetComponentsFileVersion(filename, &_result);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return _result;
+}
+
+//
+// dispinterface IMTBConfigurationEvents wrapper method implementations
+//
+
+inline HRESULT IMTBConfigurationEvents::ConfigChangedEvent ( ) {
+    return _com_dispatch_method(this, 0x1, DISPATCH_METHOD, VT_EMPTY, NULL, NULL);
+}
+
+inline HRESULT IMTBConfigurationEvents::MonitorASCIIEvent ( const _variant_t & MonMode, short PortNbr, const _variant_t & ErrorStateNbr, _bstr_t stText ) {
+    return _com_dispatch_method(this, 0x2, DISPATCH_METHOD, VT_EMPTY, NULL, 
+        L"\x000c\x0002\x000c\x0008", &MonMode, PortNbr, &ErrorStateNbr, (BSTR)stText);
+}
+
+inline HRESULT IMTBConfigurationEvents::MonitorMessageEvent ( const _variant_t & MonMode, short PortNbr, _bstr_t stTime, const _variant_t & MsgType, short DestAddr, short SourceAddr, short CmdClass, short CmdNbr, short CmdSubNbr, short sPID, const _variant_t & vData ) {
+    return _com_dispatch_method(this, 0x3, DISPATCH_METHOD, VT_EMPTY, NULL, 
+        L"\x000c\x0002\x0008\x000c\x0002\x0002\x0002\x0002\x0002\x0002\x000c", &MonMode, PortNbr, (BSTR)stTime, &MsgType, DestAddr, SourceAddr, CmdClass, CmdNbr, CmdSubNbr, sPID, &vData);
+}
+
+inline HRESULT IMTBConfigurationEvents::MonitorPIDEvent ( short PIDNumber ) {
+    return _com_dispatch_method(this, 0x4, DISPATCH_METHOD, VT_EMPTY, NULL, 
+        L"\x0002", PIDNumber);
+}
+
+inline HRESULT IMTBConfigurationEvents::MonitorRawDataEvent ( const _variant_t & MonMode, short PortNbr, _bstr_t stTime, const _variant_t & vData ) {
+    return _com_dispatch_method(this, 0x5, DISPATCH_METHOD, VT_EMPTY, NULL, 
+        L"\x000c\x0002\x0008\x000c", &MonMode, PortNbr, (BSTR)stTime, &vData);
+}
+
+inline HRESULT IMTBConfigurationEvents::CanSrvReceivedCharEvent ( short c ) {
+    return _com_dispatch_method(this, 0x6, DISPATCH_METHOD, VT_EMPTY, NULL, 
+        L"\x0002", c);
+}
+
+inline HRESULT IMTBConfigurationEvents::CanSrvReceivedEvent ( const _variant_t & vData ) {
+    return _com_dispatch_method(this, 0x7, DISPATCH_METHOD, VT_EMPTY, NULL, 
+        L"\x000c", &vData);
+}
+
+inline HRESULT IMTBConfigurationEvents::CanSrvReceivedSyncEvent ( const _variant_t & vData, short PID ) {
+    return _com_dispatch_method(this, 0x8, DISPATCH_METHOD, VT_EMPTY, NULL, 
+        L"\x000c\x0002", &vData, PID);
+}
+
+inline HRESULT IMTBConfigurationEvents::CanSrvReceivedCANMessageEvent ( const _variant_t & MsgType, short DestAddr, short SourceAddr, short CmdClass, short CmdNbr, short CmdSubNbr, short PID, const _variant_t & vData ) {
+    return _com_dispatch_method(this, 0x9, DISPATCH_METHOD, VT_EMPTY, NULL, 
+        L"\x000c\x0002\x0002\x0002\x0002\x0002\x0002\x000c", &MsgType, DestAddr, SourceAddr, CmdClass, CmdNbr, CmdSubNbr, PID, &vData);
+}
+
+inline HRESULT IMTBConfigurationEvents::CanSrvReceivedCANMessageSyncEvent ( const _variant_t & MsgType, short DestAddr, short SourceAddr, short CmdClass, short CmdNbr, short CmdSubNbr, short PID, const _variant_t & vData ) {
+    return _com_dispatch_method(this, 0xa, DISPATCH_METHOD, VT_EMPTY, NULL, 
+        L"\x000c\x0002\x0002\x0002\x0002\x0002\x0002\x000c", &MsgType, DestAddr, SourceAddr, CmdClass, CmdNbr, CmdSubNbr, PID, &vData);
+}
+
+inline HRESULT IMTBConfigurationEvents::CanSrvErrorNumberEvent ( const _variant_t & ErrorNbr, short PID ) {
+    return _com_dispatch_method(this, 0xb, DISPATCH_METHOD, VT_EMPTY, NULL, 
+        L"\x000c\x0002", &ErrorNbr, PID);
+}
+
+inline HRESULT IMTBConfigurationEvents::CanSrvErrorDescriptionEvent ( short PID, _bstr_t sError ) {
+    return _com_dispatch_method(this, 0xc, DISPATCH_METHOD, VT_EMPTY, NULL, 
+        L"\x0002\x0008", PID, (BSTR)sError);
+}
+
+inline HRESULT IMTBConfigurationEvents::CanSrvErrorEvent ( const _variant_t & ErrorNbr, short PID, _bstr_t sError ) {
+    return _com_dispatch_method(this, 0xd, DISPATCH_METHOD, VT_EMPTY, NULL, 
+        L"\x000c\x0002\x0008", &ErrorNbr, PID, (BSTR)sError);
+}
+
+//
+// dispinterface IMTBBaseEvents wrapper method implementations
+//
+
+inline HRESULT IMTBBaseEvents::MTBErrorEvent ( long code, _bstr_t msg ) {
+    return _com_dispatch_method(this, 0x1, DISPATCH_METHOD, VT_EMPTY, NULL, 
+        L"\x0003\x0008", code, (BSTR)msg);
+}
+
+inline HRESULT IMTBBaseEvents::MTBLockingChangedEvent ( VARIANT_BOOL started ) {
+    return _com_dispatch_method(this, 0x2, DISPATCH_METHOD, VT_EMPTY, NULL, 
+        L"\x000b", started);
+}
+
+inline HRESULT IMTBBaseEvents::MTBMonitoringChangedEvent ( VARIANT_BOOL started, _bstr_t clientID ) {
+    return _com_dispatch_method(this, 0x3, DISPATCH_METHOD, VT_EMPTY, NULL, 
+        L"\x000b\x0008", started, (BSTR)clientID);
+}
+
+inline HRESULT IMTBBaseEvents::MTBBusyChangedEvent ( VARIANT_BOOL busy ) {
+    return _com_dispatch_method(this, 0x4, DISPATCH_METHOD, VT_EMPTY, NULL, 
+        L"\x000b", busy);
+}
+
+//
+// dispinterface IMTBMicroscopeManagerEvents wrapper method implementations
+//
+
+inline HRESULT IMTBMicroscopeManagerEvents::MTBParfocalCorrectionChangedEvent ( enum MTBOnOff onOff ) {
+    return _com_dispatch_method(this, 0x1, DISPATCH_METHOD, VT_EMPTY, NULL, 
+        L"\x0003", onOff);
+}
+
+inline HRESULT IMTBMicroscopeManagerEvents::MTBLightManagerModeChangedEvent ( enum MTBLightManagerModes mode ) {
+    return _com_dispatch_method(this, 0x2, DISPATCH_METHOD, VT_EMPTY, NULL, 
+        L"\x0003", mode);
+}
+
+inline HRESULT IMTBMicroscopeManagerEvents::MTBLightManagerTemporaryOnOffChangedEvent ( enum MTBOnOff onOff ) {
+    return _com_dispatch_method(this, 0x3, DISPATCH_METHOD, VT_EMPTY, NULL, 
+        L"\x0003", onOff);
+}
+
+inline HRESULT IMTBMicroscopeManagerEvents::MTBDazzleProtectionOnOffChangedEvent ( enum MTBOnOff onOff ) {
+    return _com_dispatch_method(this, 0x4, DISPATCH_METHOD, VT_EMPTY, NULL, 
+        L"\x0003", onOff);
+}
+
+inline HRESULT IMTBMicroscopeManagerEvents::MTBContrastManagerContrastMethodsChangedEvent ( enum MTBContrastManagerContrastMethods methods ) {
+    return _com_dispatch_method(this, 0x5, DISPATCH_METHOD, VT_EMPTY, NULL, 
+        L"\x0003", methods);
+}
+
+inline HRESULT IMTBMicroscopeManagerEvents::MTBContrastManagerContrastMethodChangedEvent ( enum MTBContrastManagerContrastMethods method ) {
+    return _com_dispatch_method(this, 0x6, DISPATCH_METHOD, VT_EMPTY, NULL, 
+        L"\x0003", method);
+}
+
+inline HRESULT IMTBMicroscopeManagerEvents::MTBContrastManagerModeChangedEvent ( enum MTBContrastManagerModes mode ) {
+    return _com_dispatch_method(this, 0x7, DISPATCH_METHOD, VT_EMPTY, NULL, 
+        L"\x0003", mode);
+}
+
+inline HRESULT IMTBMicroscopeManagerEvents::MTBCondenserFocusingOnOffChangedEvent ( enum MTBOnOff onOff ) {
+    return _com_dispatch_method(this, 0x8, DISPATCH_METHOD, VT_EMPTY, NULL, 
+        L"\x0003", onOff);
+}
+
+inline HRESULT IMTBMicroscopeManagerEvents::MTBCurrentFeedOnOffChangedEvent ( enum MTBOnOff onOff ) {
+    return _com_dispatch_method(this, 0x9, DISPATCH_METHOD, VT_EMPTY, NULL, 
+        L"\x0003", onOff);
+}
+
+//
+// interface IMTBEventSink wrapper method implementations
+//
+
+inline HRESULT IMTBEventSink::Advise ( const _variant_t & toAdvise ) {
+    HRESULT _hr = raw_Advise(toAdvise);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return _hr;
+}
+
+inline HRESULT IMTBEventSink::Unadvise ( const _variant_t & toUnadvise ) {
+    HRESULT _hr = raw_Unadvise(toUnadvise);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return _hr;
+}
+
+inline _bstr_t IMTBEventSink::GetclientID ( ) {
+    BSTR _result = 0;
+    HRESULT _hr = get_clientID(&_result);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return _bstr_t(_result, false);
+}
+
+inline void IMTBEventSink::PutclientID ( _bstr_t pRetVal ) {
+    HRESULT _hr = put_clientID(pRetVal);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+}
+
+//
+// dispinterface IMTBConnectionEvents wrapper method implementations
+//
+
+inline HRESULT IMTBConnectionEvents::MTBConnectionPossibleEvent ( ) {
+    return _com_dispatch_method(this, 0x1, DISPATCH_METHOD, VT_EMPTY, NULL, NULL);
+}
+
+inline HRESULT IMTBConnectionEvents::MTBConfigMismatchEvent ( SAFEARRAY * componentNames ) {
+    return _com_dispatch_method(this, 0x2, DISPATCH_METHOD, VT_EMPTY, NULL, 
+        L"\x2008", componentNames);
+}
+
+//
+// dispinterface IMTBApoTomeEvents wrapper method implementations
+//
+
+inline HRESULT IMTBApoTomeEvents::MTBOperationStateChangedEvent ( enum MTBApoTomeOperationState state ) {
+    return _com_dispatch_method(this, 0x1, DISPATCH_METHOD, VT_EMPTY, NULL, 
+        L"\x0003", state);
+}
+
+inline HRESULT IMTBApoTomeEvents::MTBGridChangedEvent ( VARIANT_BOOL Grid ) {
+    return _com_dispatch_method(this, 0x2, DISPATCH_METHOD, VT_EMPTY, NULL, 
+        L"\x000b", Grid);
+}
+
+//
+// interface IMTBContinual wrapper method implementations
+//
+
+inline double IMTBContinual::GetMinPosition ( _bstr_t unit ) {
+    double _result = 0;
+    HRESULT _hr = raw_GetMinPosition(unit, &_result);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return _result;
+}
+
+inline double IMTBContinual::GetMaxPosition ( _bstr_t unit ) {
+    double _result = 0;
+    HRESULT _hr = raw_GetMaxPosition(unit, &_result);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return _result;
+}
+
+inline double IMTBContinual::TypicalDeviation ( _bstr_t unit ) {
+    double _result = 0;
+    HRESULT _hr = raw_TypicalDeviation(unit, &_result);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return _result;
+}
+
+inline double IMTBContinual::MaxDeviation ( _bstr_t unit ) {
+    double _result = 0;
+    HRESULT _hr = raw_MaxDeviation(unit, &_result);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return _result;
+}
+
+inline double IMTBContinual::StepWidth ( _bstr_t unit ) {
+    double _result = 0;
+    HRESULT _hr = raw_StepWidth(unit, &_result);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return _result;
+}
+
+inline enum MTBLimits IMTBContinual::GetIsOnHWLimit ( ) {
+    enum MTBLimits _result;
+    HRESULT _hr = get_IsOnHWLimit(&_result);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return _result;
+}
+
+inline double IMTBContinual::GetPosition ( _bstr_t unit ) {
+    double _result = 0;
+    HRESULT _hr = raw_GetPosition(unit, &_result);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return _result;
+}
+
+inline VARIANT_BOOL IMTBContinual::SetPosition ( double Position, _bstr_t unit, enum MTBCmdSetModes mode, long timeout ) {
+    VARIANT_BOOL _result = 0;
+    HRESULT _hr = raw_SetPosition(Position, unit, mode, timeout, &_result);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return _result;
+}
+
+inline VARIANT_BOOL IMTBContinual::SetPosition_2 ( double Position, _bstr_t unit, enum MTBCmdSetModes mode ) {
+    VARIANT_BOOL _result = 0;
+    HRESULT _hr = raw_SetPosition_2(Position, unit, mode, &_result);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return _result;
+}
+
+inline VARIANT_BOOL IMTBContinual::SetPosition_3 ( _bstr_t clientID, double Position, _bstr_t unit, enum MTBCmdSetModes mode, long timeout ) {
+    VARIANT_BOOL _result = 0;
+    HRESULT _hr = raw_SetPosition_3(clientID, Position, unit, mode, timeout, &_result);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return _result;
+}
+
+inline VARIANT_BOOL IMTBContinual::SetPosition_4 ( _bstr_t clientID, double Position, _bstr_t unit, enum MTBCmdSetModes mode ) {
+    VARIANT_BOOL _result = 0;
+    HRESULT _hr = raw_SetPosition_4(clientID, Position, unit, mode, &_result);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return _result;
+}
+
+inline long IMTBContinual::GetPositionUnitCount ( ) {
+    long _result = 0;
+    HRESULT _hr = raw_GetPositionUnitCount(&_result);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return _result;
+}
+
+inline _bstr_t IMTBContinual::GetPositionUnit ( long index ) {
+    BSTR _result = 0;
+    HRESULT _hr = raw_GetPositionUnit(index, &_result);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return _bstr_t(_result, false);
+}
+
+inline HRESULT IMTBContinual::add_MTBPositionChangedEvent ( IUnknown * value ) {
+    HRESULT _hr = raw_add_MTBPositionChangedEvent(value);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return _hr;
+}
+
+inline HRESULT IMTBContinual::remove_MTBPositionChangedEvent ( IUnknown * value ) {
+    HRESULT _hr = raw_remove_MTBPositionChangedEvent(value);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return _hr;
+}
+
+inline HRESULT IMTBContinual::add_MTBTargetPositionChangedEvent ( IUnknown * value ) {
+    HRESULT _hr = raw_add_MTBTargetPositionChangedEvent(value);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return _hr;
+}
+
+inline HRESULT IMTBContinual::remove_MTBTargetPositionChangedEvent ( IUnknown * value ) {
+    HRESULT _hr = raw_remove_MTBTargetPositionChangedEvent(value);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return _hr;
+}
+
+inline HRESULT IMTBContinual::add_MTBPositionSettledEvent ( IUnknown * value ) {
+    HRESULT _hr = raw_add_MTBPositionSettledEvent(value);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return _hr;
+}
+
+inline HRESULT IMTBContinual::remove_MTBPositionSettledEvent ( IUnknown * value ) {
+    HRESULT _hr = raw_remove_MTBPositionSettledEvent(value);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return _hr;
+}
+
+inline HRESULT IMTBContinual::add_MTBHWLimitReachedEvent ( IUnknown * value ) {
+    HRESULT _hr = raw_add_MTBHWLimitReachedEvent(value);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return _hr;
+}
+
+inline HRESULT IMTBContinual::remove_MTBHWLimitReachedEvent ( IUnknown * value ) {
+    HRESULT _hr = raw_remove_MTBHWLimitReachedEvent(value);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return _hr;
+}
+
+inline double IMTBContinual::GetTargetPosition ( _bstr_t unit ) {
+    double _result = 0;
+    HRESULT _hr = raw_GetTargetPosition(unit, &_result);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return _result;
+}
+
+//
+// interface IMTBMove wrapper method implementations
+//
+
+inline double IMTBMove::GetMinMoveSpeed ( _bstr_t unit ) {
+    double _result = 0;
+    HRESULT _hr = raw_GetMinMoveSpeed(unit, &_result);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return _result;
+}
+
+inline double IMTBMove::GetMaxMoveSpeed ( _bstr_t unit ) {
+    double _result = 0;
+    HRESULT _hr = raw_GetMaxMoveSpeed(unit, &_result);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return _result;
+}
+
+inline VARIANT_BOOL IMTBMove::Move ( double moveSpeed, _bstr_t unit ) {
+    VARIANT_BOOL _result = 0;
+    HRESULT _hr = raw_Move(moveSpeed, unit, &_result);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return _result;
+}
+
+inline VARIANT_BOOL IMTBMove::Move_2 ( _bstr_t clientID, double moveSpeed, _bstr_t unit ) {
+    VARIANT_BOOL _result = 0;
+    HRESULT _hr = raw_Move_2(clientID, moveSpeed, unit, &_result);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return _result;
+}
+
+inline VARIANT_BOOL IMTBMove::Stop ( ) {
+    VARIANT_BOOL _result = 0;
+    HRESULT _hr = raw_Stop(&_result);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return _result;
+}
+
+inline VARIANT_BOOL IMTBMove::Stop_2 ( _bstr_t clientID ) {
+    VARIANT_BOOL _result = 0;
+    HRESULT _hr = raw_Stop_2(clientID, &_result);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return _result;
+}
+
+inline long IMTBMove::GetSpeedUnitCount ( ) {
+    long _result = 0;
+    HRESULT _hr = raw_GetSpeedUnitCount(&_result);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return _result;
+}
+
+inline _bstr_t IMTBMove::GetSpeedUnit ( long index ) {
+    BSTR _result = 0;
+    HRESULT _hr = raw_GetSpeedUnit(index, &_result);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return _bstr_t(_result, false);
+}
+
+inline HRESULT IMTBMove::add_MTBMoveSpeedSettledEvent ( IUnknown * value ) {
+    HRESULT _hr = raw_add_MTBMoveSpeedSettledEvent(value);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return _hr;
+}
+
+inline HRESULT IMTBMove::remove_MTBMoveSpeedSettledEvent ( IUnknown * value ) {
+    HRESULT _hr = raw_remove_MTBMoveSpeedSettledEvent(value);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return _hr;
+}
+
+//
+// interface IMTBApoTomeServo wrapper method implementations
+//
+
+inline long IMTBApoTomeServo::GetMaxTriggerPositionListEntries ( ) {
+    long _result = 0;
+    HRESULT _hr = get_MaxTriggerPositionListEntries(&_result);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return _result;
+}
+
+inline SAFEARRAY * IMTBApoTomeServo::GetTriggerPositionList ( _bstr_t unit ) {
+    SAFEARRAY * _result = 0;
+    HRESULT _hr = raw_GetTriggerPositionList(unit, &_result);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return _result;
+}
+
+inline VARIANT_BOOL IMTBApoTomeServo::SetTriggerPositionList ( SAFEARRAY * list, _bstr_t unit ) {
+    VARIANT_BOOL _result = 0;
+    HRESULT _hr = raw_SetTriggerPositionList(list, unit, &_result);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return _result;
+}
+
+inline VARIANT_BOOL IMTBApoTomeServo::SetTriggerPositionList_2 ( _bstr_t clientID, SAFEARRAY * list, _bstr_t unit ) {
+    VARIANT_BOOL _result = 0;
+    HRESULT _hr = raw_SetTriggerPositionList_2(clientID, list, unit, &_result);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return _result;
+}
+
+inline long IMTBApoTomeServo::GetTriggerPositionListPointer ( ) {
+    long _result = 0;
+    HRESULT _hr = raw_GetTriggerPositionListPointer(&_result);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return _result;
+}
+
+inline VARIANT_BOOL IMTBApoTomeServo::SetTriggerPositionListPointer ( long pointer ) {
+    VARIANT_BOOL _result = 0;
+    HRESULT _hr = raw_SetTriggerPositionListPointer(pointer, &_result);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return _result;
+}
+
+inline VARIANT_BOOL IMTBApoTomeServo::SetTriggerPositionListPointer_2 ( _bstr_t clientID, long pointer ) {
+    VARIANT_BOOL _result = 0;
+    HRESULT _hr = raw_SetTriggerPositionListPointer_2(clientID, pointer, &_result);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return _result;
+}
+
+inline HRESULT IMTBApoTomeServo::add_MTBTriggerPositionListChangedEvent ( IUnknown * value ) {
+    HRESULT _hr = raw_add_MTBTriggerPositionListChangedEvent(value);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return _hr;
+}
+
+inline HRESULT IMTBApoTomeServo::remove_MTBTriggerPositionListChangedEvent ( IUnknown * value ) {
+    HRESULT _hr = raw_remove_MTBTriggerPositionListChangedEvent(value);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return _hr;
+}
+
+inline HRESULT IMTBApoTomeServo::add_MTBTriggerPositionListPointerChangedEvent ( IUnknown * value ) {
+    HRESULT _hr = raw_add_MTBTriggerPositionListPointerChangedEvent(value);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return _hr;
+}
+
+inline HRESULT IMTBApoTomeServo::remove_MTBTriggerPositionListPointerChangedEvent ( IUnknown * value ) {
+    HRESULT _hr = raw_remove_MTBTriggerPositionListPointerChangedEvent(value);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return _hr;
+}
+
+//
+// dispinterface IMTBApoTomeServoEvents wrapper method implementations
+//
+
+inline HRESULT IMTBApoTomeServoEvents::MTBTriggerPositionListChangedEvent ( ) {
+    return _com_dispatch_method(this, 0x1, DISPATCH_METHOD, VT_EMPTY, NULL, NULL);
+}
+
+inline HRESULT IMTBApoTomeServoEvents::MTBTriggerPositionListPointerChangedEvent ( long pointer ) {
+    return _com_dispatch_method(this, 0x2, DISPATCH_METHOD, VT_EMPTY, NULL, 
+        L"\x0003", pointer);
+}
+
+//
+// interface IMTBApoTomePhase wrapper method implementations
+//
+
+inline HRESULT IMTBApoTomePhase::GetPhaseWobble ( long * speed, double * minPosition, double * maxPosition ) {
+    HRESULT _hr = raw_GetPhaseWobble(speed, minPosition, maxPosition);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return _hr;
+}
+
+inline VARIANT_BOOL IMTBApoTomePhase::SetPhaseWobble ( long speed, double minPosition, double maxPosition ) {
+    VARIANT_BOOL _result = 0;
+    HRESULT _hr = raw_SetPhaseWobble(speed, minPosition, maxPosition, &_result);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return _result;
+}
+
+inline VARIANT_BOOL IMTBApoTomePhase::SetPhaseWobble_2 ( _bstr_t clientID, long speed, double minPosition, double maxPosition ) {
+    VARIANT_BOOL _result = 0;
+    HRESULT _hr = raw_SetPhaseWobble_2(clientID, speed, minPosition, maxPosition, &_result);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return _result;
+}
+
+inline HRESULT IMTBApoTomePhase::add_MTBPhaseWobbleChangedEvent ( IUnknown * value ) {
+    HRESULT _hr = raw_add_MTBPhaseWobbleChangedEvent(value);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return _hr;
+}
+
+inline HRESULT IMTBApoTomePhase::remove_MTBPhaseWobbleChangedEvent ( IUnknown * value ) {
+    HRESULT _hr = raw_remove_MTBPhaseWobbleChangedEvent(value);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return _hr;
+}
+
+//
+// dispinterface IMTBApoTomePhaseEvents wrapper method implementations
+//
+
+inline HRESULT IMTBApoTomePhaseEvents::MTBPhaseWobbleChangedEvent ( long speed, double minPosition, double maxPosition ) {
+    return _com_dispatch_method(this, 0x1, DISPATCH_METHOD, VT_EMPTY, NULL, 
+        L"\x0003\x0005\x0005", speed, minPosition, maxPosition);
+}
+
+//
+// interface IMTBApoTome wrapper method implementations
+//
+
+inline enum MTBApoTomeOperationState IMTBApoTome::GetOperationState ( ) {
+    enum MTBApoTomeOperationState _result;
+    HRESULT _hr = get_OperationState(&_result);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return _result;
+}
+
+inline IMTBApoTomePhasePtr IMTBApoTome::GetPhase ( ) {
+    struct IMTBApoTomePhase * _result = 0;
+    HRESULT _hr = get_Phase(&_result);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return IMTBApoTomePhasePtr(_result, false);
+}
+
+inline IMTBApoTomeFocusPtr IMTBApoTome::GetFocus ( ) {
+    struct IMTBApoTomeFocus * _result = 0;
+    HRESULT _hr = get_Focus(&_result);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return IMTBApoTomeFocusPtr(_result, false);
+}
+
+inline VARIANT_BOOL IMTBApoTome::SWTrigger ( ) {
+    VARIANT_BOOL _result = 0;
+    HRESULT _hr = raw_SWTrigger(&_result);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return _result;
+}
+
+inline VARIANT_BOOL IMTBApoTome::SWTrigger_2 ( _bstr_t clientID ) {
+    VARIANT_BOOL _result = 0;
+    HRESULT _hr = raw_SWTrigger_2(clientID, &_result);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return _result;
+}
+
+inline VARIANT_BOOL IMTBApoTome::GetHasGridRecognition ( ) {
+    VARIANT_BOOL _result = 0;
+    HRESULT _hr = get_HasGridRecognition(&_result);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return _result;
+}
+
+inline double IMTBApoTome::GetGrid ( ) {
+    double _result = 0;
+    HRESULT _hr = get_Grid(&_result);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return _result;
+}
+
+inline HRESULT IMTBApoTome::GetHWTriggerProperties ( long * channel, enum MTBApoTomeHWTriggerCondition * condition ) {
+    HRESULT _hr = raw_GetHWTriggerProperties(channel, condition);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return _hr;
+}
+
+inline VARIANT_BOOL IMTBApoTome::SetHWTriggerProperties ( long channel, enum MTBApoTomeHWTriggerCondition condition ) {
+    VARIANT_BOOL _result = 0;
+    HRESULT _hr = raw_SetHWTriggerProperties(channel, condition, &_result);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return _result;
+}
+
+inline VARIANT_BOOL IMTBApoTome::SetHWTriggerProperties_2 ( _bstr_t clientID, long channel, enum MTBApoTomeHWTriggerCondition condition ) {
+    VARIANT_BOOL _result = 0;
+    HRESULT _hr = raw_SetHWTriggerProperties_2(clientID, channel, condition, &_result);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return _result;
+}
+
+inline HRESULT IMTBApoTome::add_MTBOperationStateChangedEvent ( IUnknown * value ) {
+    HRESULT _hr = raw_add_MTBOperationStateChangedEvent(value);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return _hr;
+}
+
+inline HRESULT IMTBApoTome::remove_MTBOperationStateChangedEvent ( IUnknown * value ) {
+    HRESULT _hr = raw_remove_MTBOperationStateChangedEvent(value);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return _hr;
+}
+
+inline HRESULT IMTBApoTome::add_MTBGridChangedEvent ( IUnknown * value ) {
+    HRESULT _hr = raw_add_MTBGridChangedEvent(value);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return _hr;
+}
+
+inline HRESULT IMTBApoTome::remove_MTBGridChangedEvent ( IUnknown * value ) {
+    HRESULT _hr = raw_remove_MTBGridChangedEvent(value);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return _hr;
+}
+
+//
+// dispinterface IMTBStageEvents wrapper method implementations
+//
+
+inline HRESULT IMTBStageEvents::MTBPositionSettledEvent ( struct _Hashtable * xPositions, struct _Hashtable * yPositions ) {
+    return _com_dispatch_method(this, 0x1, DISPATCH_METHOD, VT_EMPTY, NULL, 
+        L"\x0009\x0009", xPositions, yPositions);
+}
+
+//
+// interface IMTBContinualSpeed wrapper method implementations
+//
+
+inline double IMTBContinualSpeed::GetMinContinualSpeed ( _bstr_t unit ) {
+    double _result = 0;
+    HRESULT _hr = raw_GetMinContinualSpeed(unit, &_result);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return _result;
+}
+
+inline double IMTBContinualSpeed::GetMaxContinualSpeed ( _bstr_t unit ) {
+    double _result = 0;
+    HRESULT _hr = raw_GetMaxContinualSpeed(unit, &_result);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return _result;
+}
+
+inline double IMTBContinualSpeed::GetMinContinualStartSpeed ( _bstr_t unit ) {
+    double _result = 0;
+    HRESULT _hr = raw_GetMinContinualStartSpeed(unit, &_result);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return _result;
+}
+
+inline double IMTBContinualSpeed::GetMaxContinualStartSpeed ( _bstr_t unit ) {
+    double _result = 0;
+    HRESULT _hr = raw_GetMaxContinualStartSpeed(unit, &_result);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return _result;
+}
+
+inline double IMTBContinualSpeed::GetMinContinualAcceleration ( _bstr_t unit ) {
+    double _result = 0;
+    HRESULT _hr = raw_GetMinContinualAcceleration(unit, &_result);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return _result;
+}
+
+inline double IMTBContinualSpeed::GetMaxContinualAcceleration ( _bstr_t unit ) {
+    double _result = 0;
+    HRESULT _hr = raw_GetMaxContinualAcceleration(unit, &_result);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return _result;
+}
+
+inline double IMTBContinualSpeed::GetContinualSpeed ( _bstr_t unit ) {
+    double _result = 0;
+    HRESULT _hr = raw_GetContinualSpeed(unit, &_result);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return _result;
+}
+
+inline VARIANT_BOOL IMTBContinualSpeed::SetContinualSpeed ( double continualSpeed, _bstr_t unit ) {
+    VARIANT_BOOL _result = 0;
+    HRESULT _hr = raw_SetContinualSpeed(continualSpeed, unit, &_result);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return _result;
+}
+
+inline VARIANT_BOOL IMTBContinualSpeed::SetContinualSpeed_2 ( _bstr_t clientID, double continualSpeed, _bstr_t unit ) {
+    VARIANT_BOOL _result = 0;
+    HRESULT _hr = raw_SetContinualSpeed_2(clientID, continualSpeed, unit, &_result);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return _result;
+}
+
+inline VARIANT_BOOL IMTBContinualSpeed::GetHasContinualStartSpeed ( ) {
+    VARIANT_BOOL _result = 0;
+    HRESULT _hr = get_HasContinualStartSpeed(&_result);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return _result;
+}
+
+inline double IMTBContinualSpeed::GetContinualStartSpeed ( _bstr_t unit ) {
+    double _result = 0;
+    HRESULT _hr = raw_GetContinualStartSpeed(unit, &_result);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return _result;
+}
+
+inline VARIANT_BOOL IMTBContinualSpeed::SetContinualStartSpeed ( double continualSpeed, _bstr_t unit ) {
+    VARIANT_BOOL _result = 0;
+    HRESULT _hr = raw_SetContinualStartSpeed(continualSpeed, unit, &_result);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return _result;
+}
+
+inline VARIANT_BOOL IMTBContinualSpeed::SetContinualStartSpeed_2 ( _bstr_t clientID, double continualSpeed, _bstr_t unit ) {
+    VARIANT_BOOL _result = 0;
+    HRESULT _hr = raw_SetContinualStartSpeed_2(clientID, continualSpeed, unit, &_result);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return _result;
+}
+
+inline VARIANT_BOOL IMTBContinualSpeed::GetHasContinualAcceleration ( ) {
+    VARIANT_BOOL _result = 0;
+    HRESULT _hr = get_HasContinualAcceleration(&_result);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return _result;
+}
+
+inline double IMTBContinualSpeed::GetContinualAcceleration ( _bstr_t unit ) {
+    double _result = 0;
+    HRESULT _hr = raw_GetContinualAcceleration(unit, &_result);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return _result;
+}
+
+inline VARIANT_BOOL IMTBContinualSpeed::SetContinualAcceleration ( double continualAcceleration, _bstr_t unit ) {
+    VARIANT_BOOL _result = 0;
+    HRESULT _hr = raw_SetContinualAcceleration(continualAcceleration, unit, &_result);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return _result;
+}
+
+inline VARIANT_BOOL IMTBContinualSpeed::SetContinualAcceleration_2 ( _bstr_t clientID, double continualAcceleration, _bstr_t unit ) {
+    VARIANT_BOOL _result = 0;
+    HRESULT _hr = raw_SetContinualAcceleration_2(clientID, continualAcceleration, unit, &_result);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return _result;
+}
+
+inline long IMTBContinualSpeed::GetContinualSpeedUnitCount ( ) {
+    long _result = 0;
+    HRESULT _hr = raw_GetContinualSpeedUnitCount(&_result);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return _result;
+}
+
+inline _bstr_t IMTBContinualSpeed::GetContinualSpeedUnit ( long index ) {
+    BSTR _result = 0;
+    HRESULT _hr = raw_GetContinualSpeedUnit(index, &_result);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return _bstr_t(_result, false);
+}
+
+inline long IMTBContinualSpeed::GetContinualStartSpeedUnitCount ( ) {
+    long _result = 0;
+    HRESULT _hr = raw_GetContinualStartSpeedUnitCount(&_result);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return _result;
+}
+
+inline _bstr_t IMTBContinualSpeed::GetContinualStartSpeedUnit ( long index ) {
+    BSTR _result = 0;
+    HRESULT _hr = raw_GetContinualStartSpeedUnit(index, &_result);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return _bstr_t(_result, false);
+}
+
+inline long IMTBContinualSpeed::GetContinualAccelerationUnitCount ( ) {
+    long _result = 0;
+    HRESULT _hr = raw_GetContinualAccelerationUnitCount(&_result);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return _result;
+}
+
+inline _bstr_t IMTBContinualSpeed::GetContinualAccelerationUnit ( long index ) {
+    BSTR _result = 0;
+    HRESULT _hr = raw_GetContinualAccelerationUnit(index, &_result);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return _bstr_t(_result, false);
+}
+
+inline HRESULT IMTBContinualSpeed::add_MTBContinualSpeedChangedEvent ( IUnknown * value ) {
+    HRESULT _hr = raw_add_MTBContinualSpeedChangedEvent(value);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return _hr;
+}
+
+inline HRESULT IMTBContinualSpeed::remove_MTBContinualSpeedChangedEvent ( IUnknown * value ) {
+    HRESULT _hr = raw_remove_MTBContinualSpeedChangedEvent(value);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return _hr;
+}
+
+inline HRESULT IMTBContinualSpeed::add_MTBContinualStartSpeedChangedEvent ( IUnknown * value ) {
+    HRESULT _hr = raw_add_MTBContinualStartSpeedChangedEvent(value);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return _hr;
+}
+
+inline HRESULT IMTBContinualSpeed::remove_MTBContinualStartSpeedChangedEvent ( IUnknown * value ) {
+    HRESULT _hr = raw_remove_MTBContinualStartSpeedChangedEvent(value);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return _hr;
+}
+
+inline HRESULT IMTBContinualSpeed::add_MTBContinualAccelerationChangedEvent ( IUnknown * value ) {
+    HRESULT _hr = raw_add_MTBContinualAccelerationChangedEvent(value);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return _hr;
+}
+
+inline HRESULT IMTBContinualSpeed::remove_MTBContinualAccelerationChangedEvent ( IUnknown * value ) {
+    HRESULT _hr = raw_remove_MTBContinualAccelerationChangedEvent(value);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return _hr;
+}
+
+//
+// interface IMTBStage wrapper method implementations
+//
+
+inline IMTBStageAxisPtr IMTBStage::GetXAxis ( ) {
+    struct IMTBStageAxis * _result = 0;
+    HRESULT _hr = get_XAxis(&_result);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return IMTBStageAxisPtr(_result, false);
+}
+
+inline IMTBStageAxisPtr IMTBStage::GetYAxis ( ) {
+    struct IMTBStageAxis * _result = 0;
+    HRESULT _hr = get_YAxis(&_result);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return IMTBStageAxisPtr(_result, false);
+}
+
+inline HRESULT IMTBStage::GetPosition ( double * xPosition, double * yPosition, _bstr_t unit ) {
+    HRESULT _hr = raw_GetPosition(xPosition, yPosition, unit);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return _hr;
+}
+
+inline VARIANT_BOOL IMTBStage::SetPosition ( double xPosition, double yPosition, _bstr_t unit, enum MTBCmdSetModes mode, long timeout ) {
+    VARIANT_BOOL _result = 0;
+    HRESULT _hr = raw_SetPosition(xPosition, yPosition, unit, mode, timeout, &_result);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return _result;
+}
+
+inline VARIANT_BOOL IMTBStage::SetPosition_2 ( double xPosition, double yPosition, _bstr_t unit, enum MTBCmdSetModes mode ) {
+    VARIANT_BOOL _result = 0;
+    HRESULT _hr = raw_SetPosition_2(xPosition, yPosition, unit, mode, &_result);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return _result;
+}
+
+inline VARIANT_BOOL IMTBStage::SetPosition_3 ( _bstr_t clientID, double xPosition, double yPosition, _bstr_t unit, enum MTBCmdSetModes mode, long timeout ) {
+    VARIANT_BOOL _result = 0;
+    HRESULT _hr = raw_SetPosition_3(clientID, xPosition, yPosition, unit, mode, timeout, &_result);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return _result;
+}
+
+inline VARIANT_BOOL IMTBStage::SetPosition_4 ( _bstr_t clientID, double xPosition, double yPosition, _bstr_t unit, enum MTBCmdSetModes mode ) {
+    VARIANT_BOOL _result = 0;
+    HRESULT _hr = raw_SetPosition_4(clientID, xPosition, yPosition, unit, mode, &_result);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return _result;
+}
+
+inline VARIANT_BOOL IMTBStage::Move ( double xMoveSpeed, double yMoveSpeed, _bstr_t unit ) {
+    VARIANT_BOOL _result = 0;
+    HRESULT _hr = raw_Move(xMoveSpeed, yMoveSpeed, unit, &_result);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return _result;
+}
+
+inline VARIANT_BOOL IMTBStage::Move_2 ( _bstr_t clientID, double xMoveSpeed, double yMoveSpeed, _bstr_t unit ) {
+    VARIANT_BOOL _result = 0;
+    HRESULT _hr = raw_Move_2(clientID, xMoveSpeed, yMoveSpeed, unit, &_result);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return _result;
+}
+
+inline VARIANT_BOOL IMTBStage::Stop ( ) {
+    VARIANT_BOOL _result = 0;
+    HRESULT _hr = raw_Stop(&_result);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return _result;
+}
+
+inline VARIANT_BOOL IMTBStage::Stop_2 ( _bstr_t clientID ) {
+    VARIANT_BOOL _result = 0;
+    HRESULT _hr = raw_Stop_2(clientID, &_result);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return _result;
+}
+
+inline double IMTBStage::GetMeasurementDistance ( _bstr_t unit ) {
+    double _result = 0;
+    HRESULT _hr = raw_GetMeasurementDistance(unit, &_result);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return _result;
+}
+
+inline HRESULT IMTBStage::add_MTBPositionSettledEvent ( IUnknown * value ) {
+    HRESULT _hr = raw_add_MTBPositionSettledEvent(value);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return _hr;
+}
+
+inline HRESULT IMTBStage::remove_MTBPositionSettledEvent ( IUnknown * value ) {
+    HRESULT _hr = raw_remove_MTBPositionSettledEvent(value);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return _hr;
+}
+
+//
+// dispinterface IMTBAxisEvents wrapper method implementations
+//
+
+inline HRESULT IMTBAxisEvents::MTBOnOffChangedEvent ( enum MTBOnOff onOff ) {
+    return _com_dispatch_method(this, 0x1, DISPATCH_METHOD, VT_EMPTY, NULL, 
+        L"\x0003", onOff);
+}
+
+inline HRESULT IMTBAxisEvents::MTBLoadWorkChangedEvent ( enum MTBLoadWorkPosition lwType ) {
+    return _com_dispatch_method(this, 0x2, DISPATCH_METHOD, VT_EMPTY, NULL, 
+        L"\x0003", lwType);
+}
+
+inline HRESULT IMTBAxisEvents::MTBSWLimitReachedEvent ( VARIANT_BOOL state, enum MTBLimits limit ) {
+    return _com_dispatch_method(this, 0x3, DISPATCH_METHOD, VT_EMPTY, NULL, 
+        L"\x000b\x0003", state, limit);
+}
+
+inline HRESULT IMTBAxisEvents::MTBSWLimitChangedEvent ( VARIANT_BOOL upper, double limit ) {
+    return _com_dispatch_method(this, 0x4, DISPATCH_METHOD, VT_EMPTY, NULL, 
+        L"\x000b\x0005", upper, limit);
+}
+
+inline HRESULT IMTBAxisEvents::MTBCalibrationChangedEvent ( enum MTBCalibrationModes mode ) {
+    return _com_dispatch_method(this, 0x5, DISPATCH_METHOD, VT_EMPTY, NULL, 
+        L"\x0003", mode);
+}
+
+inline HRESULT IMTBAxisEvents::MTBMeasurementOriginChangedEvent ( struct _Hashtable * origins ) {
+    return _com_dispatch_method(this, 0x6, DISPATCH_METHOD, VT_EMPTY, NULL, 
+        L"\x0009", origins);
+}
+
+inline HRESULT IMTBAxisEvents::MTBMeasurementPositionChangedEvent ( struct _Hashtable * positions ) {
+    return _com_dispatch_method(this, 0x7, DISPATCH_METHOD, VT_EMPTY, NULL, 
+        L"\x0009", positions);
+}
+
+inline HRESULT IMTBAxisEvents::MTBSWLimitEnabledEvent ( VARIANT_BOOL upper, VARIANT_BOOL enable ) {
+    return _com_dispatch_method(this, 0x8, DISPATCH_METHOD, VT_EMPTY, NULL, 
+        L"\x000b\x000b", upper, enable);
+}
+
+inline HRESULT IMTBAxisEvents::MTBClosedLoopChangedEvent ( enum MTBOnOff onOff ) {
+    return _com_dispatch_method(this, 0x9, DISPATCH_METHOD, VT_EMPTY, NULL, 
+        L"\x0003", onOff);
+}
+
+//
+// interface IMTBIncubationSensor wrapper method implementations
+//
+
+inline VARIANT_BOOL IMTBIncubationSensor::GetSensorIsAvailable ( ) {
+    VARIANT_BOOL _result = 0;
+    HRESULT _hr = get_SensorIsAvailable(&_result);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return _result;
+}
+
+inline HRESULT IMTBIncubationSensor::add_MTBSensorAvailableChangedEvent ( IUnknown * value ) {
+    HRESULT _hr = raw_add_MTBSensorAvailableChangedEvent(value);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return _hr;
+}
+
+inline HRESULT IMTBIncubationSensor::remove_MTBSensorAvailableChangedEvent ( IUnknown * value ) {
+    HRESULT _hr = raw_remove_MTBSensorAvailableChangedEvent(value);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return _hr;
+}
+
+//
+// dispinterface IMTBIncubationSensorEvents wrapper method implementations
+//
+
+inline HRESULT IMTBIncubationSensorEvents::MTBSensorAvailableChangedEvent ( VARIANT_BOOL available ) {
+    return _com_dispatch_method(this, 0x1, DISPATCH_METHOD, VT_EMPTY, NULL, 
+        L"\x000b", available);
+}
+
+//
+// interface IMTBIncubationChannel wrapper method implementations
+//
+
+inline VARIANT_BOOL IMTBIncubationChannel::SetOnOff ( enum MTBOnOff onOff, enum MTBCmdSetModes mode, long timeout ) {
+    VARIANT_BOOL _result = 0;
+    HRESULT _hr = raw_SetOnOff(onOff, mode, timeout, &_result);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return _result;
+}
+
+inline VARIANT_BOOL IMTBIncubationChannel::SetOnOff_2 ( enum MTBOnOff onOff, enum MTBCmdSetModes mode ) {
+    VARIANT_BOOL _result = 0;
+    HRESULT _hr = raw_SetOnOff_2(onOff, mode, &_result);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return _result;
+}
+
+inline VARIANT_BOOL IMTBIncubationChannel::SetOnOff_3 ( _bstr_t clientID, enum MTBOnOff onOff, enum MTBCmdSetModes mode, long timeout ) {
+    VARIANT_BOOL _result = 0;
+    HRESULT _hr = raw_SetOnOff_3(clientID, onOff, mode, timeout, &_result);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return _result;
+}
+
+inline VARIANT_BOOL IMTBIncubationChannel::SetOnOff_4 ( _bstr_t clientID, enum MTBOnOff onOff, enum MTBCmdSetModes mode ) {
+    VARIANT_BOOL _result = 0;
+    HRESULT _hr = raw_SetOnOff_4(clientID, onOff, mode, &_result);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return _result;
+}
+
+inline enum MTBOnOff IMTBIncubationChannel::GetOnOff ( ) {
+    enum MTBOnOff _result;
+    HRESULT _hr = raw_GetOnOff(&_result);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return _result;
+}
+
+inline HRESULT IMTBIncubationChannel::add_MTBOnOffChangedEvent ( IUnknown * value ) {
+    HRESULT _hr = raw_add_MTBOnOffChangedEvent(value);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return _hr;
+}
+
+inline HRESULT IMTBIncubationChannel::remove_MTBOnOffChangedEvent ( IUnknown * value ) {
+    HRESULT _hr = raw_remove_MTBOnOffChangedEvent(value);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return _hr;
+}
+
+inline HRESULT IMTBIncubationChannel::add_MTBNameChangedEvent ( IUnknown * value ) {
+    HRESULT _hr = raw_add_MTBNameChangedEvent(value);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return _hr;
+}
+
+inline HRESULT IMTBIncubationChannel::remove_MTBNameChangedEvent ( IUnknown * value ) {
+    HRESULT _hr = raw_remove_MTBNameChangedEvent(value);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return _hr;
+}
+
+//
+// dispinterface IMTBIncubationChannelEvents wrapper method implementations
+//
+
+inline HRESULT IMTBIncubationChannelEvents::MTBOnOffChangedEvent ( enum MTBOnOff onOff ) {
+    return _com_dispatch_method(this, 0x1, DISPATCH_METHOD, VT_EMPTY, NULL, 
+        L"\x0003", onOff);
+}
+
+inline HRESULT IMTBIncubationChannelEvents::MTBNameChangedEvent ( _bstr_t Name ) {
+    return _com_dispatch_method(this, 0x2, DISPATCH_METHOD, VT_EMPTY, NULL, 
+        L"\x0008", (BSTR)Name);
+}
+
+//
+// interface IMTBIncubationCO2Channel wrapper method implementations
+//
+
+inline enum MTBSaturationType IMTBIncubationCO2Channel::GetSaturation ( ) {
+    enum MTBSaturationType _result;
+    HRESULT _hr = get_Saturation(&_result);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return _result;
+}
+
+inline HRESULT IMTBIncubationCO2Channel::add_MTBSaturationChangedEvent ( IUnknown * value ) {
+    HRESULT _hr = raw_add_MTBSaturationChangedEvent(value);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return _hr;
+}
+
+inline HRESULT IMTBIncubationCO2Channel::remove_MTBSaturationChangedEvent ( IUnknown * value ) {
+    HRESULT _hr = raw_remove_MTBSaturationChangedEvent(value);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return _hr;
+}
+
+//
+// dispinterface IMTBIncubationCO2ChannelEvents wrapper method implementations
+//
+
+inline HRESULT IMTBIncubationCO2ChannelEvents::MTBSaturationChangedEvent ( enum MTBSaturationType saturationType ) {
+    return _com_dispatch_method(this, 0x1, DISPATCH_METHOD, VT_EMPTY, NULL, 
+        L"\x0003", saturationType);
+}
+
+//
+// interface IMTBIncubationCirculatorChannel wrapper method implementations
+//
+
+inline _bstr_t IMTBIncubationCirculatorChannel::GetStatus ( ) {
+    BSTR _result = 0;
+    HRESULT _hr = get_Status(&_result);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return _bstr_t(_result, false);
+}
+
+inline _bstr_t IMTBIncubationCirculatorChannel::GetError ( ) {
+    BSTR _result = 0;
+    HRESULT _hr = get_Error(&_result);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return _bstr_t(_result, false);
+}
+
+inline HRESULT IMTBIncubationCirculatorChannel::add_MTBStatusChangedEvent ( IUnknown * value ) {
+    HRESULT _hr = raw_add_MTBStatusChangedEvent(value);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return _hr;
+}
+
+inline HRESULT IMTBIncubationCirculatorChannel::remove_MTBStatusChangedEvent ( IUnknown * value ) {
+    HRESULT _hr = raw_remove_MTBStatusChangedEvent(value);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return _hr;
+}
+
+inline HRESULT IMTBIncubationCirculatorChannel::add_MTBErrorChangedEvent ( IUnknown * value ) {
+    HRESULT _hr = raw_add_MTBErrorChangedEvent(value);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return _hr;
+}
+
+inline HRESULT IMTBIncubationCirculatorChannel::remove_MTBErrorChangedEvent ( IUnknown * value ) {
+    HRESULT _hr = raw_remove_MTBErrorChangedEvent(value);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return _hr;
+}
+
+//
+// dispinterface IMTBIncubationCirculatorChannelEvents wrapper method implementations
+//
+
+inline HRESULT IMTBIncubationCirculatorChannelEvents::MTBStatusChangedEvent ( _bstr_t Status ) {
+    return _com_dispatch_method(this, 0x1, DISPATCH_METHOD, VT_EMPTY, NULL, 
+        L"\x0008", (BSTR)Status);
+}
+
+inline HRESULT IMTBIncubationCirculatorChannelEvents::MTBErrorChangedEvent ( _bstr_t Error ) {
+    return _com_dispatch_method(this, 0x2, DISPATCH_METHOD, VT_EMPTY, NULL, 
+        L"\x0008", (BSTR)Error);
+}
+
+//
+// dispinterface IMTBContinualSpeedEvents wrapper method implementations
+//
+
+inline HRESULT IMTBContinualSpeedEvents::MTBContinualSpeedChangedEvent ( struct _Hashtable * speeds ) {
+    return _com_dispatch_method(this, 0x1, DISPATCH_METHOD, VT_EMPTY, NULL, 
+        L"\x0009", speeds);
+}
+
+inline HRESULT IMTBContinualSpeedEvents::MTBContinualStartSpeedChangedEvent ( struct _Hashtable * speeds ) {
+    return _com_dispatch_method(this, 0x2, DISPATCH_METHOD, VT_EMPTY, NULL, 
+        L"\x0009", speeds);
+}
+
+inline HRESULT IMTBContinualSpeedEvents::MTBContinualAccelerationChangedEvent ( struct _Hashtable * accelerations ) {
+    return _com_dispatch_method(this, 0x3, DISPATCH_METHOD, VT_EMPTY, NULL, 
+        L"\x0009", accelerations);
+}
+
+//
+// dispinterface IMTBChangerEvents wrapper method implementations
+//
+
+inline HRESULT IMTBChangerEvents::MTBPositionChangedEvent ( short Position ) {
+    return _com_dispatch_method(this, 0x1, DISPATCH_METHOD, VT_EMPTY, NULL, 
+        L"\x0002", Position);
+}
+
+inline HRESULT IMTBChangerEvents::MTBTargetPositionChangedEvent ( short targetPosition ) {
+    return _com_dispatch_method(this, 0x2, DISPATCH_METHOD, VT_EMPTY, NULL, 
+        L"\x0002", targetPosition);
+}
+
+inline HRESULT IMTBChangerEvents::MTBPositionSettledEvent ( short Position ) {
+    return _com_dispatch_method(this, 0x3, DISPATCH_METHOD, VT_EMPTY, NULL, 
+        L"\x0002", Position);
+}
+
+inline HRESULT IMTBChangerEvents::MTBElementConfigurationChangedEvent ( ) {
+    return _com_dispatch_method(this, 0x4, DISPATCH_METHOD, VT_EMPTY, NULL, NULL);
+}
+
+inline HRESULT IMTBChangerEvents::MTBElementConfigurationFinishedEvent ( ) {
+    return _com_dispatch_method(this, 0x5, DISPATCH_METHOD, VT_EMPTY, NULL, NULL);
+}
+
+//
+// interface IMTBObjectiveChanger wrapper method implementations
+//
+
+inline VARIANT_BOOL IMTBObjectiveChanger::GetHasOilStop ( ) {
+    VARIANT_BOOL _result = 0;
+    HRESULT _hr = get_HasOilStop(&_result);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return _result;
+}
+
+inline VARIANT_BOOL IMTBObjectiveChanger::GetOilStopActive ( ) {
+    VARIANT_BOOL _result = 0;
+    HRESULT _hr = get_OilStopActive(&_result);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return _result;
+}
+
+inline HRESULT IMTBObjectiveChanger::add_MTBOilStopChangedEvent ( IUnknown * value ) {
+    HRESULT _hr = raw_add_MTBOilStopChangedEvent(value);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return _hr;
+}
+
+inline HRESULT IMTBObjectiveChanger::remove_MTBOilStopChangedEvent ( IUnknown * value ) {
+    HRESULT _hr = raw_remove_MTBOilStopChangedEvent(value);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return _hr;
+}
+
+inline _bstr_t IMTBObjectiveChanger::GetUniqueNameFromName ( _bstr_t Name ) {
+    BSTR _result = 0;
+    HRESULT _hr = raw_GetUniqueNameFromName(Name, &_result);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return _bstr_t(_result, false);
+}
+
+//
+// dispinterface IMTBObjectiveChangerEvents wrapper method implementations
+//
+
+inline HRESULT IMTBObjectiveChangerEvents::MTBOilStopChangedEvent ( VARIANT_BOOL state ) {
+    return _com_dispatch_method(this, 0x1, DISPATCH_METHOD, VT_EMPTY, NULL, 
+        L"\x000b", state);
+}
+
+//
+// interface IMTBReflectorChanger wrapper method implementations
+//
+
+inline _bstr_t IMTBReflectorChanger::GetUniqueNameFromName ( _bstr_t Name ) {
+    BSTR _result = 0;
+    HRESULT _hr = raw_GetUniqueNameFromName(Name, &_result);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return _bstr_t(_result, false);
+}
+
+//
+// interface IMTBShutter wrapper method implementations
+//
+
+inline VARIANT_BOOL IMTBShutter::Expose ( long exposeTime, enum MTBCmdSetModes mode, long timeout ) {
+    VARIANT_BOOL _result = 0;
+    HRESULT _hr = raw_Expose(exposeTime, mode, timeout, &_result);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return _result;
+}
+
+inline VARIANT_BOOL IMTBShutter::Expose_2 ( long exposeTime, enum MTBCmdSetModes mode ) {
+    VARIANT_BOOL _result = 0;
+    HRESULT _hr = raw_Expose_2(exposeTime, mode, &_result);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return _result;
+}
+
+inline VARIANT_BOOL IMTBShutter::Expose_3 ( _bstr_t clientID, long exposeTime, enum MTBCmdSetModes mode, long timeout ) {
+    VARIANT_BOOL _result = 0;
+    HRESULT _hr = raw_Expose_3(clientID, exposeTime, mode, timeout, &_result);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return _result;
+}
+
+inline VARIANT_BOOL IMTBShutter::Expose_4 ( _bstr_t clientID, long exposeTime, enum MTBCmdSetModes mode ) {
+    VARIANT_BOOL _result = 0;
+    HRESULT _hr = raw_Expose_4(clientID, exposeTime, mode, &_result);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return _result;
+}
+
+//
+// interface IMTBFluorescenceLEDShutter wrapper method implementations
+//
+
+inline VARIANT_BOOL IMTBFluorescenceLEDShutter::SetTriggerChannel ( unsigned char triggerChannelNumber ) {
+    VARIANT_BOOL _result = 0;
+    HRESULT _hr = raw_SetTriggerChannel(triggerChannelNumber, &_result);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return _result;
+}
+
+inline unsigned char IMTBFluorescenceLEDShutter::GetTriggerChannel ( ) {
+    unsigned char _result = 0;
+    HRESULT _hr = raw_GetTriggerChannel(&_result);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return _result;
+}
+
+inline HRESULT IMTBFluorescenceLEDShutter::add_MTBTriggerChannelChangedEvent ( IUnknown * value ) {
+    HRESULT _hr = raw_add_MTBTriggerChannelChangedEvent(value);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return _hr;
+}
+
+inline HRESULT IMTBFluorescenceLEDShutter::remove_MTBTriggerChannelChangedEvent ( IUnknown * value ) {
+    HRESULT _hr = raw_remove_MTBTriggerChannelChangedEvent(value);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return _hr;
+}
+
+//
+// dispinterface IMTBFluorescenceLEDShutterEvents wrapper method implementations
+//
+
+inline HRESULT IMTBFluorescenceLEDShutterEvents::MTBTriggerChannelChangedEvent ( unsigned char triggerChannelNumber ) {
+    return _com_dispatch_method(this, 0x1, DISPATCH_METHOD, VT_EMPTY, NULL, 
+        L"\x0011", triggerChannelNumber);
+}
+
+//
+// interface IMTBChangerElement wrapper method implementations
+//
+
+inline _bstr_t IMTBChangerElement::GetElementType ( ) {
+    BSTR _result = 0;
+    HRESULT _hr = get_ElementType(&_result);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return _bstr_t(_result, false);
+}
+
+//
+// interface IMTBChanger wrapper method implementations
+//
+
+inline short IMTBChanger::GetPosition ( ) {
+    short _result = 0;
+    HRESULT _hr = get_Position(&_result);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return _result;
+}
+
+inline short IMTBChanger::GetminPosition ( ) {
+    short _result = 0;
+    HRESULT _hr = get_minPosition(&_result);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return _result;
+}
+
+inline short IMTBChanger::GetmaxPosition ( ) {
+    short _result = 0;
+    HRESULT _hr = get_maxPosition(&_result);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return _result;
+}
+
+inline long IMTBChanger::GetElementCount ( ) {
+    long _result = 0;
+    HRESULT _hr = raw_GetElementCount(&_result);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return _result;
+}
+
+inline IMTBChangerElementPtr IMTBChanger::GetElement ( long n ) {
+    struct IMTBChangerElement * _result = 0;
+    HRESULT _hr = raw_GetElement(n, &_result);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return IMTBChangerElementPtr(_result, false);
+}
+
+inline VARIANT_BOOL IMTBChanger::SetPosition ( short Position, enum MTBCmdSetModes mode, long timeout ) {
+    VARIANT_BOOL _result = 0;
+    HRESULT _hr = raw_SetPosition(Position, mode, timeout, &_result);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return _result;
+}
+
+inline VARIANT_BOOL IMTBChanger::SetPosition_2 ( short Position, enum MTBCmdSetModes mode ) {
+    VARIANT_BOOL _result = 0;
+    HRESULT _hr = raw_SetPosition_2(Position, mode, &_result);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return _result;
+}
+
+inline VARIANT_BOOL IMTBChanger::SetPosition_3 ( _bstr_t clientID, short Position, enum MTBCmdSetModes mode, long timeout ) {
+    VARIANT_BOOL _result = 0;
+    HRESULT _hr = raw_SetPosition_3(clientID, Position, mode, timeout, &_result);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return _result;
+}
+
+inline VARIANT_BOOL IMTBChanger::SetPosition_4 ( _bstr_t clientID, short Position, enum MTBCmdSetModes mode ) {
+    VARIANT_BOOL _result = 0;
+    HRESULT _hr = raw_SetPosition_4(clientID, Position, mode, &_result);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return _result;
+}
+
+inline HRESULT IMTBChanger::add_MTBPositionChangedEvent ( IUnknown * value ) {
+    HRESULT _hr = raw_add_MTBPositionChangedEvent(value);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return _hr;
+}
+
+inline HRESULT IMTBChanger::remove_MTBPositionChangedEvent ( IUnknown * value ) {
+    HRESULT _hr = raw_remove_MTBPositionChangedEvent(value);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return _hr;
+}
+
+inline HRESULT IMTBChanger::add_MTBTargetPositionChangedEvent ( IUnknown * value ) {
+    HRESULT _hr = raw_add_MTBTargetPositionChangedEvent(value);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return _hr;
+}
+
+inline HRESULT IMTBChanger::remove_MTBTargetPositionChangedEvent ( IUnknown * value ) {
+    HRESULT _hr = raw_remove_MTBTargetPositionChangedEvent(value);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return _hr;
+}
+
+inline HRESULT IMTBChanger::add_MTBPositionSettledEvent ( IUnknown * value ) {
+    HRESULT _hr = raw_add_MTBPositionSettledEvent(value);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return _hr;
+}
+
+inline HRESULT IMTBChanger::remove_MTBPositionSettledEvent ( IUnknown * value ) {
+    HRESULT _hr = raw_remove_MTBPositionSettledEvent(value);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return _hr;
+}
+
+inline HRESULT IMTBChanger::add_MTBElementConfigurationChangedEvent ( IUnknown * value ) {
+    HRESULT _hr = raw_add_MTBElementConfigurationChangedEvent(value);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return _hr;
+}
+
+inline HRESULT IMTBChanger::remove_MTBElementConfigurationChangedEvent ( IUnknown * value ) {
+    HRESULT _hr = raw_remove_MTBElementConfigurationChangedEvent(value);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return _hr;
+}
+
+inline HRESULT IMTBChanger::add_MTBElementConfigurationFinishedEvent ( IUnknown * value ) {
+    HRESULT _hr = raw_add_MTBElementConfigurationFinishedEvent(value);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return _hr;
+}
+
+inline HRESULT IMTBChanger::remove_MTBElementConfigurationFinishedEvent ( IUnknown * value ) {
+    HRESULT _hr = raw_remove_MTBElementConfigurationFinishedEvent(value);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return _hr;
+}
+
+//
+// interface IMTBObjective wrapper method implementations
+//
+
+inline double IMTBObjective::GetMagnification ( ) {
+    double _result = 0;
+    HRESULT _hr = get_Magnification(&_result);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return _result;
+}
+
+inline double IMTBObjective::GetAperture ( ) {
+    double _result = 0;
+    HRESULT _hr = get_Aperture(&_result);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return _result;
+}
+
+inline enum MTBObjectiveImmersionTypes IMTBObjective::GetImmersionType ( ) {
+    enum MTBObjectiveImmersionTypes _result;
+    HRESULT _hr = get_ImmersionType(&_result);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return _result;
+}
+
+inline enum MTBContrastTypes IMTBObjective::GetContrastMethod ( ) {
+    enum MTBContrastTypes _result;
+    HRESULT _hr = get_ContrastMethod(&_result);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return _result;
+}
+
+inline double IMTBObjective::GetWorkingDistance ( ) {
+    double _result = 0;
+    HRESULT _hr = get_WorkingDistance(&_result);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return _result;
+}
+
+inline enum MTBObjectiveFeatures IMTBObjective::GetFeatures ( ) {
+    enum MTBObjectiveFeatures _result;
+    HRESULT _hr = get_Features(&_result);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return _result;
+}
+
+inline HRESULT IMTBObjective::GetInformations ( double * Magnification, double * Aperture, enum MTBObjectiveImmersionTypes * ImmersionType, enum MTBContrastTypes * ContrastMethod, double * WorkingDistance, enum MTBObjectiveFeatures * Features ) {
+    HRESULT _hr = raw_GetInformations(Magnification, Aperture, ImmersionType, ContrastMethod, WorkingDistance, Features);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return _hr;
+}
+
+//
+// interface IMTBReflectorWavelengthArea wrapper method implementations
+//
+
+inline short IMTBReflectorWavelengthArea::GetExcitationLow ( ) {
+    short _result = 0;
+    HRESULT _hr = get_ExcitationLow(&_result);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return _result;
+}
+
+inline short IMTBReflectorWavelengthArea::GetExcitationHigh ( ) {
+    short _result = 0;
+    HRESULT _hr = get_ExcitationHigh(&_result);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return _result;
+}
+
+inline short IMTBReflectorWavelengthArea::GetBeamSplitter ( ) {
+    short _result = 0;
+    HRESULT _hr = get_BeamSplitter(&_result);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return _result;
+}
+
+inline short IMTBReflectorWavelengthArea::GetEmissionLow ( ) {
+    short _result = 0;
+    HRESULT _hr = get_EmissionLow(&_result);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return _result;
+}
+
+inline short IMTBReflectorWavelengthArea::GetEmissionHigh ( ) {
+    short _result = 0;
+    HRESULT _hr = get_EmissionHigh(&_result);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return _result;
+}
+
+//
+// interface IMTBReflector wrapper method implementations
+//
+
+inline short IMTBReflector::GetWavelengthAreaCount ( ) {
+    short _result = 0;
+    HRESULT _hr = raw_GetWavelengthAreaCount(&_result);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return _result;
+}
+
+inline IMTBReflectorWavelengthAreaPtr IMTBReflector::GetWavelengthArea ( short index ) {
+    struct IMTBReflectorWavelengthArea * _result = 0;
+    HRESULT _hr = raw_GetWavelengthArea(index, &_result);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return IMTBReflectorWavelengthAreaPtr(_result, false);
+}
+
+//
+// interface IMTBOptovar wrapper method implementations
+//
+
+inline double IMTBOptovar::GetMagnification ( ) {
+    double _result = 0;
+    HRESULT _hr = get_Magnification(&_result);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return _result;
+}
+
+//
+// interface IMTBShutterState wrapper method implementations
+//
+
+inline VARIANT_BOOL IMTBShutterState::GetOpen ( ) {
+    VARIANT_BOOL _result = 0;
+    HRESULT _hr = get_Open(&_result);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return _result;
+}
+
+//
+// interface IMTBContrast wrapper method implementations
+//
+
+inline enum MTBContrastTypes IMTBContrast::GetContrastMethod ( ) {
+    enum MTBContrastTypes _result;
+    HRESULT _hr = get_ContrastMethod(&_result);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return _result;
+}
+
+//
+// interface IMTBFilter wrapper method implementations
+//
+
+inline double IMTBFilter::GetTransmission ( ) {
+    double _result = 0;
+    HRESULT _hr = get_Transmission(&_result);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return _result;
+}
+
+//
+// interface IMTBFrontLens wrapper method implementations
+//
+
+inline VARIANT_BOOL IMTBFrontLens::GetSwungIn ( ) {
+    VARIANT_BOOL _result = 0;
+    HRESULT _hr = get_SwungIn(&_result);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return _result;
+}
+
+//
+// interface IMTBMirror wrapper method implementations
+//
+
+inline _bstr_t IMTBMirror::GetSuccessorID ( ) {
+    BSTR _result = 0;
+    HRESULT _hr = get_SuccessorID(&_result);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return _bstr_t(_result, false);
+}
+
+//
+// interface IMTBBeamSplitter wrapper method implementations
+//
+
+inline _bstr_t IMTBBeamSplitter::GetSuccessor1ID ( ) {
+    BSTR _result = 0;
+    HRESULT _hr = get_Successor1ID(&_result);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return _bstr_t(_result, false);
+}
+
+inline _bstr_t IMTBBeamSplitter::GetSuccessor2ID ( ) {
+    BSTR _result = 0;
+    HRESULT _hr = get_Successor2ID(&_result);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return _bstr_t(_result, false);
+}
+
+inline double IMTBBeamSplitter::GetSplittingRatioSuccessor1 ( ) {
+    double _result = 0;
+    HRESULT _hr = get_SplittingRatioSuccessor1(&_result);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return _result;
+}
+
+//
+// interface IMTBRLTLSwitchState wrapper method implementations
+//
+
+inline enum MTBLightPathLocations IMTBRLTLSwitchState::Getstate ( ) {
+    enum MTBLightPathLocations _result;
+    HRESULT _hr = get_state(&_result);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return _result;
+}
+
+//
+// interface IMTBColorBeamSplitter wrapper method implementations
+//
+
+inline _bstr_t IMTBColorBeamSplitter::GetSuccessor1ID ( ) {
+    BSTR _result = 0;
+    HRESULT _hr = get_Successor1ID(&_result);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return _bstr_t(_result, false);
+}
+
+inline _bstr_t IMTBColorBeamSplitter::GetSuccessor2ID ( ) {
+    BSTR _result = 0;
+    HRESULT _hr = get_Successor2ID(&_result);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return _bstr_t(_result, false);
+}
+
+//
+// interface IMTBComponentID wrapper method implementations
+//
+
+inline _bstr_t IMTBComponentID::GetComponentID ( ) {
+    BSTR _result = 0;
+    HRESULT _hr = get_ComponentID(&_result);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return _bstr_t(_result, false);
+}
+
+//
+// interface IMTBObservationMode wrapper method implementations
+//
+
+inline enum MTBObservationMode IMTBObservationMode::Getmode ( ) {
+    enum MTBObservationMode _result;
+    HRESULT _hr = get_mode(&_result);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return _result;
+}
+
+//
+// interface IMTBOnOffSwitchState wrapper method implementations
+//
+
+inline enum MTBOnOff IMTBOnOffSwitchState::Getstate ( ) {
+    enum MTBOnOff _result;
+    HRESULT _hr = get_state(&_result);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return _result;
+}
+
+//
+// interface IMTBEmissionWavelengthArea wrapper method implementations
+//
+
+inline short IMTBEmissionWavelengthArea::GetEmissionLow ( ) {
+    short _result = 0;
+    HRESULT _hr = get_EmissionLow(&_result);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return _result;
+}
+
+inline short IMTBEmissionWavelengthArea::GetEmissionHigh ( ) {
+    short _result = 0;
+    HRESULT _hr = get_EmissionHigh(&_result);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return _result;
+}
+
+//
+// interface IMTBEmissionFilter wrapper method implementations
+//
+
+inline short IMTBEmissionFilter::GetWavelengthAreaCount ( ) {
+    short _result = 0;
+    HRESULT _hr = raw_GetWavelengthAreaCount(&_result);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return _result;
+}
+
+inline IMTBEmissionWavelengthAreaPtr IMTBEmissionFilter::GetWavelengthArea ( short index ) {
+    struct IMTBEmissionWavelengthArea * _result = 0;
+    HRESULT _hr = raw_GetWavelengthArea(index, &_result);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return IMTBEmissionWavelengthAreaPtr(_result, false);
+}
+
+//
+// interface IMTBDichroicBeamSplitterWavelength wrapper method implementations
+//
+
+inline short IMTBDichroicBeamSplitterWavelength::GetBeamSplitter ( ) {
+    short _result = 0;
+    HRESULT _hr = get_BeamSplitter(&_result);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return _result;
+}
+
+//
+// interface IMTBDichroicBeamSplitter wrapper method implementations
+//
+
+inline short IMTBDichroicBeamSplitter::GetWavelengthCount ( ) {
+    short _result = 0;
+    HRESULT _hr = raw_GetWavelengthCount(&_result);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return _result;
+}
+
+inline IMTBDichroicBeamSplitterWavelengthPtr IMTBDichroicBeamSplitter::GetWavelength ( short index ) {
+    struct IMTBDichroicBeamSplitterWavelength * _result = 0;
+    HRESULT _hr = raw_GetWavelength(index, &_result);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return IMTBDichroicBeamSplitterWavelengthPtr(_result, false);
+}
+
+//
+// interface IMTBBeamCombiner wrapper method implementations
+//
+
+inline short IMTBBeamCombiner::GetWavelength ( ) {
+    short _result = 0;
+    HRESULT _hr = get_Wavelength(&_result);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return _result;
+}
+
+//
+// interface IMTBLamp wrapper method implementations
+//
+
+inline VARIANT_BOOL IMTBLamp::GetHas3200K ( ) {
+    VARIANT_BOOL _result = 0;
+    HRESULT _hr = get_Has3200K(&_result);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return _result;
+}
+
+inline VARIANT_BOOL IMTBLamp::GetHasOnOff ( ) {
+    VARIANT_BOOL _result = 0;
+    HRESULT _hr = get_HasOnOff(&_result);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return _result;
+}
+
+inline VARIANT_BOOL IMTBLamp::GetHasRemote ( ) {
+    VARIANT_BOOL _result = 0;
+    HRESULT _hr = get_HasRemote(&_result);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return _result;
+}
+
+inline VARIANT_BOOL IMTBLamp::Set3200K ( enum MTBOnOff onOff, enum MTBCmdSetModes mode, long timeout ) {
+    VARIANT_BOOL _result = 0;
+    HRESULT _hr = raw_Set3200K(onOff, mode, timeout, &_result);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return _result;
+}
+
+inline VARIANT_BOOL IMTBLamp::Set3200K_2 ( enum MTBOnOff onOff, enum MTBCmdSetModes mode ) {
+    VARIANT_BOOL _result = 0;
+    HRESULT _hr = raw_Set3200K_2(onOff, mode, &_result);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return _result;
+}
+
+inline VARIANT_BOOL IMTBLamp::Set3200K_3 ( _bstr_t clientID, enum MTBOnOff onOff, enum MTBCmdSetModes mode, long timeout ) {
+    VARIANT_BOOL _result = 0;
+    HRESULT _hr = raw_Set3200K_3(clientID, onOff, mode, timeout, &_result);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return _result;
+}
+
+inline VARIANT_BOOL IMTBLamp::Set3200K_4 ( _bstr_t clientID, enum MTBOnOff onOff, enum MTBCmdSetModes mode ) {
+    VARIANT_BOOL _result = 0;
+    HRESULT _hr = raw_Set3200K_4(clientID, onOff, mode, &_result);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return _result;
+}
+
+inline enum MTBOnOff IMTBLamp::Get3200K ( ) {
+    enum MTBOnOff _result;
+    HRESULT _hr = raw_Get3200K(&_result);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return _result;
+}
+
+inline VARIANT_BOOL IMTBLamp::SetOnOff ( enum MTBOnOff onOff, enum MTBCmdSetModes mode, long timeout ) {
+    VARIANT_BOOL _result = 0;
+    HRESULT _hr = raw_SetOnOff(onOff, mode, timeout, &_result);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return _result;
+}
+
+inline VARIANT_BOOL IMTBLamp::SetOnOff_2 ( enum MTBOnOff onOff, enum MTBCmdSetModes mode ) {
+    VARIANT_BOOL _result = 0;
+    HRESULT _hr = raw_SetOnOff_2(onOff, mode, &_result);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return _result;
+}
+
+inline VARIANT_BOOL IMTBLamp::SetOnOff_3 ( _bstr_t clientID, enum MTBOnOff onOff, enum MTBCmdSetModes mode, long timeout ) {
+    VARIANT_BOOL _result = 0;
+    HRESULT _hr = raw_SetOnOff_3(clientID, onOff, mode, timeout, &_result);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return _result;
+}
+
+inline VARIANT_BOOL IMTBLamp::SetOnOff_4 ( _bstr_t clientID, enum MTBOnOff onOff, enum MTBCmdSetModes mode ) {
+    VARIANT_BOOL _result = 0;
+    HRESULT _hr = raw_SetOnOff_4(clientID, onOff, mode, &_result);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return _result;
+}
+
+inline enum MTBOnOff IMTBLamp::GetOnOff ( ) {
+    enum MTBOnOff _result;
+    HRESULT _hr = raw_GetOnOff(&_result);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return _result;
+}
+
+inline VARIANT_BOOL IMTBLamp::SetRemote ( enum MTBOnOff onOff ) {
+    VARIANT_BOOL _result = 0;
+    HRESULT _hr = raw_SetRemote(onOff, &_result);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return _result;
+}
+
+inline VARIANT_BOOL IMTBLamp::SetRemote_2 ( _bstr_t clientID, enum MTBOnOff onOff ) {
+    VARIANT_BOOL _result = 0;
+    HRESULT _hr = raw_SetRemote_2(clientID, onOff, &_result);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return _result;
+}
+
+inline enum MTBOnOff IMTBLamp::GetRemote ( ) {
+    enum MTBOnOff _result;
+    HRESULT _hr = raw_GetRemote(&_result);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return _result;
+}
+
+inline enum MTBLightPathLocations IMTBLamp::GetLightPathLocation ( ) {
+    enum MTBLightPathLocations _result;
+    HRESULT _hr = get_LightPathLocation(&_result);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return _result;
+}
+
+inline VARIANT_BOOL IMTBLamp::GetIsActive ( ) {
+    VARIANT_BOOL _result = 0;
+    HRESULT _hr = get_IsActive(&_result);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return _result;
+}
+
+inline HRESULT IMTBLamp::add_MTB3200KChangedEvent ( IUnknown * value ) {
+    HRESULT _hr = raw_add_MTB3200KChangedEvent(value);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return _hr;
+}
+
+inline HRESULT IMTBLamp::remove_MTB3200KChangedEvent ( IUnknown * value ) {
+    HRESULT _hr = raw_remove_MTB3200KChangedEvent(value);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return _hr;
+}
+
+inline HRESULT IMTBLamp::add_MTBOnOffChangedEvent ( IUnknown * value ) {
+    HRESULT _hr = raw_add_MTBOnOffChangedEvent(value);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return _hr;
+}
+
+inline HRESULT IMTBLamp::remove_MTBOnOffChangedEvent ( IUnknown * value ) {
+    HRESULT _hr = raw_remove_MTBOnOffChangedEvent(value);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return _hr;
+}
+
+inline HRESULT IMTBLamp::add_MTBRemoteChangedEvent ( IUnknown * value ) {
+    HRESULT _hr = raw_add_MTBRemoteChangedEvent(value);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return _hr;
+}
+
+inline HRESULT IMTBLamp::remove_MTBRemoteChangedEvent ( IUnknown * value ) {
+    HRESULT _hr = raw_remove_MTBRemoteChangedEvent(value);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return _hr;
+}
+
+inline HRESULT IMTBLamp::add_MTBActiveChangedEvent ( IUnknown * value ) {
+    HRESULT _hr = raw_add_MTBActiveChangedEvent(value);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return _hr;
+}
+
+inline HRESULT IMTBLamp::remove_MTBActiveChangedEvent ( IUnknown * value ) {
+    HRESULT _hr = raw_remove_MTBActiveChangedEvent(value);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return _hr;
+}
+
+//
+// dispinterface IMTBLampEvents wrapper method implementations
+//
+
+inline HRESULT IMTBLampEvents::MTB3200KChangedEvent ( enum MTBOnOff onOff ) {
+    return _com_dispatch_method(this, 0x1, DISPATCH_METHOD, VT_EMPTY, NULL, 
+        L"\x0003", onOff);
+}
+
+inline HRESULT IMTBLampEvents::MTBOnOffChangedEvent ( enum MTBOnOff onOff ) {
+    return _com_dispatch_method(this, 0x2, DISPATCH_METHOD, VT_EMPTY, NULL, 
+        L"\x0003", onOff);
+}
+
+inline HRESULT IMTBLampEvents::MTBRemoteChangedEvent ( enum MTBOnOff onOff ) {
+    return _com_dispatch_method(this, 0x3, DISPATCH_METHOD, VT_EMPTY, NULL, 
+        L"\x0003", onOff);
+}
+
+inline HRESULT IMTBLampEvents::MTBActiveChangedEvent ( VARIANT_BOOL active ) {
+    return _com_dispatch_method(this, 0x4, DISPATCH_METHOD, VT_EMPTY, NULL, 
+        L"\x000b", active);
+}
+
+//
+// interface IMTBFluorescenceLamp wrapper method implementations
+//
+
+inline long IMTBFluorescenceLamp::GetLevelCount ( ) {
+    long _result = 0;
+    HRESULT _hr = raw_GetLevelCount(&_result);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return _result;
+}
+
+inline VARIANT_BOOL IMTBFluorescenceLamp::SetLevel ( long level, enum MTBCmdSetModes mode, long timeout ) {
+    VARIANT_BOOL _result = 0;
+    HRESULT _hr = raw_SetLevel(level, mode, timeout, &_result);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return _result;
+}
+
+inline VARIANT_BOOL IMTBFluorescenceLamp::SetLevel_2 ( long level, enum MTBCmdSetModes mode ) {
+    VARIANT_BOOL _result = 0;
+    HRESULT _hr = raw_SetLevel_2(level, mode, &_result);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return _result;
+}
+
+inline VARIANT_BOOL IMTBFluorescenceLamp::SetLevel_3 ( _bstr_t clientID, long level, enum MTBCmdSetModes mode, long timeout ) {
+    VARIANT_BOOL _result = 0;
+    HRESULT _hr = raw_SetLevel_3(clientID, level, mode, timeout, &_result);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return _result;
+}
+
+inline VARIANT_BOOL IMTBFluorescenceLamp::SetLevel_4 ( _bstr_t clientID, long level, enum MTBCmdSetModes mode ) {
+    VARIANT_BOOL _result = 0;
+    HRESULT _hr = raw_SetLevel_4(clientID, level, mode, &_result);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return _result;
+}
+
+inline long IMTBFluorescenceLamp::GetLevel ( ) {
+    long _result = 0;
+    HRESULT _hr = raw_GetLevel(&_result);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return _result;
+}
+
+inline VARIANT_BOOL IMTBFluorescenceLamp::SetLevelPosition ( double Position, _bstr_t unit, long level, enum MTBCmdSetModes mode, long timeout ) {
+    VARIANT_BOOL _result = 0;
+    HRESULT _hr = raw_SetLevelPosition(Position, unit, level, mode, timeout, &_result);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return _result;
+}
+
+inline VARIANT_BOOL IMTBFluorescenceLamp::SetLevelPosition_2 ( double Position, _bstr_t unit, long level, enum MTBCmdSetModes mode ) {
+    VARIANT_BOOL _result = 0;
+    HRESULT _hr = raw_SetLevelPosition_2(Position, unit, level, mode, &_result);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return _result;
+}
+
+inline VARIANT_BOOL IMTBFluorescenceLamp::SetLevelPosition_3 ( _bstr_t clientID, double Position, _bstr_t unit, long level, enum MTBCmdSetModes mode, long timeout ) {
+    VARIANT_BOOL _result = 0;
+    HRESULT _hr = raw_SetLevelPosition_3(clientID, Position, unit, level, mode, timeout, &_result);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return _result;
+}
+
+inline VARIANT_BOOL IMTBFluorescenceLamp::SetLevelPosition_4 ( _bstr_t clientID, double Position, _bstr_t unit, long level, enum MTBCmdSetModes mode ) {
+    VARIANT_BOOL _result = 0;
+    HRESULT _hr = raw_SetLevelPosition_4(clientID, Position, unit, level, mode, &_result);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return _result;
+}
+
+inline double IMTBFluorescenceLamp::GetLevelPosition ( _bstr_t unit, long level ) {
+    double _result = 0;
+    HRESULT _hr = raw_GetLevelPosition(unit, level, &_result);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return _result;
+}
+
+inline long IMTBFluorescenceLamp::GetLampHours ( ) {
+    long _result = 0;
+    HRESULT _hr = raw_GetLampHours(&_result);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return _result;
+}
+
+inline VARIANT_BOOL IMTBFluorescenceLamp::IsWarmingUp ( ) {
+    VARIANT_BOOL _result = 0;
+    HRESULT _hr = raw_IsWarmingUp(&_result);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return _result;
+}
+
+inline HRESULT IMTBFluorescenceLamp::add_MTBLevelChangedEvent ( IUnknown * value ) {
+    HRESULT _hr = raw_add_MTBLevelChangedEvent(value);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return _hr;
+}
+
+inline HRESULT IMTBFluorescenceLamp::remove_MTBLevelChangedEvent ( IUnknown * value ) {
+    HRESULT _hr = raw_remove_MTBLevelChangedEvent(value);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return _hr;
+}
+
+inline HRESULT IMTBFluorescenceLamp::add_MTBLevelPositionChangedEvent ( IUnknown * value ) {
+    HRESULT _hr = raw_add_MTBLevelPositionChangedEvent(value);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return _hr;
+}
+
+inline HRESULT IMTBFluorescenceLamp::remove_MTBLevelPositionChangedEvent ( IUnknown * value ) {
+    HRESULT _hr = raw_remove_MTBLevelPositionChangedEvent(value);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return _hr;
+}
+
+inline HRESULT IMTBFluorescenceLamp::add_MTBWarmingUpChangedEvent ( IUnknown * value ) {
+    HRESULT _hr = raw_add_MTBWarmingUpChangedEvent(value);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return _hr;
+}
+
+inline HRESULT IMTBFluorescenceLamp::remove_MTBWarmingUpChangedEvent ( IUnknown * value ) {
+    HRESULT _hr = raw_remove_MTBWarmingUpChangedEvent(value);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return _hr;
+}
+
+//
+// dispinterface IMTBFluorescenceLampEvents wrapper method implementations
+//
+
+inline HRESULT IMTBFluorescenceLampEvents::MTBLevelChangedEvent ( long level ) {
+    return _com_dispatch_method(this, 0x1, DISPATCH_METHOD, VT_EMPTY, NULL, 
+        L"\x0003", level);
+}
+
+inline HRESULT IMTBFluorescenceLampEvents::MTBPositionChangedEvent ( struct _Hashtable * positions, long level ) {
+    return _com_dispatch_method(this, 0x2, DISPATCH_METHOD, VT_EMPTY, NULL, 
+        L"\x0009\x0003", positions, level);
+}
+
+inline HRESULT IMTBFluorescenceLampEvents::MTBWarmingUpChangedEvent ( VARIANT_BOOL IsWarmingUp ) {
+    return _com_dispatch_method(this, 0x3, DISPATCH_METHOD, VT_EMPTY, NULL, 
+        L"\x000b", IsWarmingUp);
+}
+
+//
+// interface IMTBFluorescenceLED wrapper method implementations
+//
+
+inline short IMTBFluorescenceLED::GetWavelength ( ) {
+    short _result = 0;
+    HRESULT _hr = get_Wavelength(&_result);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return _result;
+}
+
+inline unsigned long IMTBFluorescenceLED::GetPulseDuration ( ) {
+    unsigned long _result = 0;
+    HRESULT _hr = raw_GetPulseDuration(&_result);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return _result;
+}
+
+inline VARIANT_BOOL IMTBFluorescenceLED::SetPulseDuration ( unsigned long duration ) {
+    VARIANT_BOOL _result = 0;
+    HRESULT _hr = raw_SetPulseDuration(duration, &_result);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return _result;
+}
+
+inline VARIANT_BOOL IMTBFluorescenceLED::SetPulseDuration_2 ( _bstr_t clientID, unsigned long duration ) {
+    VARIANT_BOOL _result = 0;
+    HRESULT _hr = raw_SetPulseDuration_2(clientID, duration, &_result);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return _result;
+}
+
+inline VARIANT_BOOL IMTBFluorescenceLED::SetTriggerChannel ( unsigned char triggerChannelNumber ) {
+    VARIANT_BOOL _result = 0;
+    HRESULT _hr = raw_SetTriggerChannel(triggerChannelNumber, &_result);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return _result;
+}
+
+inline unsigned char IMTBFluorescenceLED::GetTriggerChannel ( ) {
+    unsigned char _result = 0;
+    HRESULT _hr = raw_GetTriggerChannel(&_result);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return _result;
+}
+
+inline HRESULT IMTBFluorescenceLED::GetExcitationFilter ( BSTR * Name, short * wavelengthLow, short * wavelengthHigh ) {
+    HRESULT _hr = raw_GetExcitationFilter(Name, wavelengthLow, wavelengthHigh);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return _hr;
+}
+
+inline HRESULT IMTBFluorescenceLED::add_MTBPulseDurationChangedEvent ( IUnknown * value ) {
+    HRESULT _hr = raw_add_MTBPulseDurationChangedEvent(value);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return _hr;
+}
+
+inline HRESULT IMTBFluorescenceLED::remove_MTBPulseDurationChangedEvent ( IUnknown * value ) {
+    HRESULT _hr = raw_remove_MTBPulseDurationChangedEvent(value);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return _hr;
+}
+
+inline HRESULT IMTBFluorescenceLED::add_MTBTriggerChannelChangedEvent ( IUnknown * value ) {
+    HRESULT _hr = raw_add_MTBTriggerChannelChangedEvent(value);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return _hr;
+}
+
+inline HRESULT IMTBFluorescenceLED::remove_MTBTriggerChannelChangedEvent ( IUnknown * value ) {
+    HRESULT _hr = raw_remove_MTBTriggerChannelChangedEvent(value);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return _hr;
+}
+
+//
+// dispinterface IMTBFluorescenceLEDEvents wrapper method implementations
+//
+
+inline HRESULT IMTBFluorescenceLEDEvents::MTBPulseDurationChangedEvent ( unsigned long duration ) {
+    return _com_dispatch_method(this, 0x1, DISPATCH_METHOD, VT_EMPTY, NULL, 
+        L"\x0003", duration);
+}
+
+inline HRESULT IMTBFluorescenceLEDEvents::MTBTriggerChannelChangedEvent ( unsigned char triggerChannelNumber ) {
+    return _com_dispatch_method(this, 0x2, DISPATCH_METHOD, VT_EMPTY, NULL, 
+        L"\x0011", triggerChannelNumber);
+}
+
+//
+// interface IMTBFluorescenceLEDControl wrapper method implementations
+//
+
+inline long IMTBFluorescenceLEDControl::GetNumberOfLEDs ( ) {
+    long _result = 0;
+    HRESULT _hr = get_NumberOfLEDs(&_result);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return _result;
+}
+
+inline SAFEARRAY * IMTBFluorescenceLEDControl::GetLED ( ) {
+    SAFEARRAY * _result = 0;
+    HRESULT _hr = get_LED(&_result);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return _result;
+}
+
+inline HRESULT IMTBFluorescenceLEDControl::GetOperationMode ( enum MTBFluorescenceLEDOperationMode * operationMode, enum MTBFluorescenceLEDTriggerMode * triggerMode ) {
+    HRESULT _hr = raw_GetOperationMode(operationMode, triggerMode);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return _hr;
+}
+
+inline VARIANT_BOOL IMTBFluorescenceLEDControl::SetOperationMode ( enum MTBFluorescenceLEDOperationMode operationMode, enum MTBFluorescenceLEDTriggerMode triggerMode, enum MTBCmdSetModes cmdSetMode, long timeout ) {
+    VARIANT_BOOL _result = 0;
+    HRESULT _hr = raw_SetOperationMode(operationMode, triggerMode, cmdSetMode, timeout, &_result);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return _result;
+}
+
+inline VARIANT_BOOL IMTBFluorescenceLEDControl::SetOperationMode_2 ( enum MTBFluorescenceLEDOperationMode operationMode, enum MTBFluorescenceLEDTriggerMode triggerMode, enum MTBCmdSetModes cmdSetMode ) {
+    VARIANT_BOOL _result = 0;
+    HRESULT _hr = raw_SetOperationMode_2(operationMode, triggerMode, cmdSetMode, &_result);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return _result;
+}
+
+inline VARIANT_BOOL IMTBFluorescenceLEDControl::SetOperationMode_3 ( _bstr_t clientID, enum MTBFluorescenceLEDOperationMode operationMode, enum MTBFluorescenceLEDTriggerMode triggerMode, enum MTBCmdSetModes cmdSetMode, long timeout ) {
+    VARIANT_BOOL _result = 0;
+    HRESULT _hr = raw_SetOperationMode_3(clientID, operationMode, triggerMode, cmdSetMode, timeout, &_result);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return _result;
+}
+
+inline VARIANT_BOOL IMTBFluorescenceLEDControl::SetOperationMode_4 ( _bstr_t clientID, enum MTBFluorescenceLEDOperationMode operationMode, enum MTBFluorescenceLEDTriggerMode triggerMode, enum MTBCmdSetModes cmdSetMode ) {
+    VARIANT_BOOL _result = 0;
+    HRESULT _hr = raw_SetOperationMode_4(clientID, operationMode, triggerMode, cmdSetMode, &_result);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return _result;
+}
+
+inline HRESULT IMTBFluorescenceLEDControl::SetTriggerBufferEntry ( unsigned char entryNumber, SAFEARRAY * brightness, _bstr_t unit, SAFEARRAY * duration ) {
+    HRESULT _hr = raw_SetTriggerBufferEntry(entryNumber, brightness, unit, duration);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return _hr;
+}
+
+inline HRESULT IMTBFluorescenceLEDControl::GetTriggerBufferEntry ( unsigned char entryNumber, SAFEARRAY * * brightness, _bstr_t unit, SAFEARRAY * * duration ) {
+    HRESULT _hr = raw_GetTriggerBufferEntry(entryNumber, brightness, unit, duration);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return _hr;
+}
+
+inline HRESULT IMTBFluorescenceLEDControl::SetTriggerBufferPointer ( unsigned char entryNumber ) {
+    HRESULT _hr = raw_SetTriggerBufferPointer(entryNumber);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return _hr;
+}
+
+inline unsigned char IMTBFluorescenceLEDControl::GetTriggerBufferPointer ( ) {
+    unsigned char _result = 0;
+    HRESULT _hr = raw_GetTriggerBufferPointer(&_result);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return _result;
+}
+
+inline HRESULT IMTBFluorescenceLEDControl::SetInvertTriggerSignal ( SAFEARRAY * triggerIn, SAFEARRAY * triggerOut ) {
+    HRESULT _hr = raw_SetInvertTriggerSignal(triggerIn, triggerOut);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return _hr;
+}
+
+inline HRESULT IMTBFluorescenceLEDControl::GetInvertTriggerSignal ( SAFEARRAY * * triggerIn, SAFEARRAY * * triggerOut ) {
+    HRESULT _hr = raw_GetInvertTriggerSignal(triggerIn, triggerOut);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return _hr;
+}
+
+inline HRESULT IMTBFluorescenceLEDControl::add_MTBOperationModeChangedEvent ( IUnknown * value ) {
+    HRESULT _hr = raw_add_MTBOperationModeChangedEvent(value);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return _hr;
+}
+
+inline HRESULT IMTBFluorescenceLEDControl::remove_MTBOperationModeChangedEvent ( IUnknown * value ) {
+    HRESULT _hr = raw_remove_MTBOperationModeChangedEvent(value);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return _hr;
+}
+
+inline HRESULT IMTBFluorescenceLEDControl::add_MTBTriggerBufferEntryChangedEvent ( IUnknown * value ) {
+    HRESULT _hr = raw_add_MTBTriggerBufferEntryChangedEvent(value);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return _hr;
+}
+
+inline HRESULT IMTBFluorescenceLEDControl::remove_MTBTriggerBufferEntryChangedEvent ( IUnknown * value ) {
+    HRESULT _hr = raw_remove_MTBTriggerBufferEntryChangedEvent(value);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return _hr;
+}
+
+inline HRESULT IMTBFluorescenceLEDControl::add_MTBInvertTriggerSignalChangedEvent ( IUnknown * value ) {
+    HRESULT _hr = raw_add_MTBInvertTriggerSignalChangedEvent(value);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return _hr;
+}
+
+inline HRESULT IMTBFluorescenceLEDControl::remove_MTBInvertTriggerSignalChangedEvent ( IUnknown * value ) {
+    HRESULT _hr = raw_remove_MTBInvertTriggerSignalChangedEvent(value);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return _hr;
+}
+
+//
+// dispinterface IMTBFluorescenceLEDControlEvents wrapper method implementations
+//
+
+inline HRESULT IMTBFluorescenceLEDControlEvents::MTBOperationModeChangedEvent ( enum MTBFluorescenceLEDOperationMode operationMode, enum MTBFluorescenceLEDTriggerMode triggerMode ) {
+    return _com_dispatch_method(this, 0x1, DISPATCH_METHOD, VT_EMPTY, NULL, 
+        L"\x0003\x0003", operationMode, triggerMode);
+}
+
+inline HRESULT IMTBFluorescenceLEDControlEvents::MTBTriggerBufferEntryChangedEvent ( unsigned char entryNumber, struct _Hashtable * brightness, SAFEARRAY * duration ) {
+    return _com_dispatch_method(this, 0x2, DISPATCH_METHOD, VT_EMPTY, NULL, 
+        L"\x0011\x0009\x2003", entryNumber, brightness, duration);
+}
+
+inline HRESULT IMTBFluorescenceLEDControlEvents::MTBInvertTriggerSignalChangedEvent ( SAFEARRAY * triggerIn, SAFEARRAY * triggerOut ) {
+    return _com_dispatch_method(this, 0x3, DISPATCH_METHOD, VT_EMPTY, NULL, 
+        L"\x2011\x2011", triggerIn, triggerOut);
+}
+
+//
+// dispinterface IMTBCoupledZoomEvents wrapper method implementations
+//
+
+inline HRESULT IMTBCoupledZoomEvents::MTBZoomCouplingChangedEvent ( enum MTBOnOff onOff ) {
+    return _com_dispatch_method(this, 0x1, DISPATCH_METHOD, VT_EMPTY, NULL, 
+        L"\x0003", onOff);
+}
+
+//
+// interface IMTBCoupledZoom wrapper method implementations
+//
+
+inline IMTBCoupledZoomZoomPtr IMTBCoupledZoom::GetObservationZoom ( ) {
+    struct IMTBCoupledZoomZoom * _result = 0;
+    HRESULT _hr = get_ObservationZoom(&_result);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return IMTBCoupledZoomZoomPtr(_result, false);
+}
+
+inline IMTBCoupledZoomZoomPtr IMTBCoupledZoom::GetIlluminationZoom ( ) {
+    struct IMTBCoupledZoomZoom * _result = 0;
+    HRESULT _hr = get_IlluminationZoom(&_result);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return IMTBCoupledZoomZoomPtr(_result, false);
+}
+
+inline VARIANT_BOOL IMTBCoupledZoom::SetZoomCoupling ( enum MTBOnOff onOff, enum MTBCmdSetModes mode, long timeout ) {
+    VARIANT_BOOL _result = 0;
+    HRESULT _hr = raw_SetZoomCoupling(onOff, mode, timeout, &_result);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return _result;
+}
+
+inline VARIANT_BOOL IMTBCoupledZoom::SetZoomCoupling_2 ( enum MTBOnOff onOff, enum MTBCmdSetModes mode ) {
+    VARIANT_BOOL _result = 0;
+    HRESULT _hr = raw_SetZoomCoupling_2(onOff, mode, &_result);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return _result;
+}
+
+inline VARIANT_BOOL IMTBCoupledZoom::SetZoomCoupling_3 ( _bstr_t clientID, enum MTBOnOff onOff, enum MTBCmdSetModes mode, long timeout ) {
+    VARIANT_BOOL _result = 0;
+    HRESULT _hr = raw_SetZoomCoupling_3(clientID, onOff, mode, timeout, &_result);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return _result;
+}
+
+inline VARIANT_BOOL IMTBCoupledZoom::SetZoomCoupling_4 ( _bstr_t clientID, enum MTBOnOff onOff, enum MTBCmdSetModes mode ) {
+    VARIANT_BOOL _result = 0;
+    HRESULT _hr = raw_SetZoomCoupling_4(clientID, onOff, mode, &_result);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return _result;
+}
+
+inline enum MTBOnOff IMTBCoupledZoom::GetZoomCoupling ( ) {
+    enum MTBOnOff _result;
+    HRESULT _hr = raw_GetZoomCoupling(&_result);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return _result;
+}
+
+inline HRESULT IMTBCoupledZoom::add_MTBZoomCouplingChangedEvent ( IUnknown * value ) {
+    HRESULT _hr = raw_add_MTBZoomCouplingChangedEvent(value);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return _hr;
+}
+
+inline HRESULT IMTBCoupledZoom::remove_MTBZoomCouplingChangedEvent ( IUnknown * value ) {
+    HRESULT _hr = raw_remove_MTBZoomCouplingChangedEvent(value);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return _hr;
+}
+
+//
+// interface IMTBCSUSpinningDisk wrapper method implementations
+//
+
+inline VARIANT_BOOL IMTBCSUSpinningDisk::SetDiskRotationOff ( enum MTBCmdSetModes mode, long timeout ) {
+    VARIANT_BOOL _result = 0;
+    HRESULT _hr = raw_SetDiskRotationOff(mode, timeout, &_result);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return _result;
+}
+
+inline VARIANT_BOOL IMTBCSUSpinningDisk::SetDiskRotationOff_2 ( enum MTBCmdSetModes mode ) {
+    VARIANT_BOOL _result = 0;
+    HRESULT _hr = raw_SetDiskRotationOff_2(mode, &_result);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return _result;
+}
+
+inline VARIANT_BOOL IMTBCSUSpinningDisk::SetDiskRotationOff_3 ( _bstr_t clientID, enum MTBCmdSetModes mode, long timeout ) {
+    VARIANT_BOOL _result = 0;
+    HRESULT _hr = raw_SetDiskRotationOff_3(clientID, mode, timeout, &_result);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return _result;
+}
+
+inline VARIANT_BOOL IMTBCSUSpinningDisk::SetDiskRotationOff_4 ( _bstr_t clientID, enum MTBCmdSetModes mode ) {
+    VARIANT_BOOL _result = 0;
+    HRESULT _hr = raw_SetDiskRotationOff_4(clientID, mode, &_result);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return _result;
+}
+
+inline enum MTBOnOff IMTBCSUSpinningDisk::GetDiskRotationOnOff ( ) {
+    enum MTBOnOff _result;
+    HRESULT _hr = raw_GetDiskRotationOnOff(&_result);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return _result;
+}
+
+inline VARIANT_BOOL IMTBCSUSpinningDisk::AdjustSpeedToExposureTime ( double exposureTime, enum MTBCmdSetModes mode, long timeout ) {
+    VARIANT_BOOL _result = 0;
+    HRESULT _hr = raw_AdjustSpeedToExposureTime(exposureTime, mode, timeout, &_result);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return _result;
+}
+
+inline VARIANT_BOOL IMTBCSUSpinningDisk::AdjustSpeedToExposureTime_2 ( double exposureTime, enum MTBCmdSetModes mode ) {
+    VARIANT_BOOL _result = 0;
+    HRESULT _hr = raw_AdjustSpeedToExposureTime_2(exposureTime, mode, &_result);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return _result;
+}
+
+inline VARIANT_BOOL IMTBCSUSpinningDisk::AdjustSpeedToExposureTime_3 ( _bstr_t clientID, double exposureTime, enum MTBCmdSetModes mode, long timeout ) {
+    VARIANT_BOOL _result = 0;
+    HRESULT _hr = raw_AdjustSpeedToExposureTime_3(clientID, exposureTime, mode, timeout, &_result);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return _result;
+}
+
+inline VARIANT_BOOL IMTBCSUSpinningDisk::AdjustSpeedToExposureTime_4 ( _bstr_t clientID, double exposureTime, enum MTBCmdSetModes mode ) {
+    VARIANT_BOOL _result = 0;
+    HRESULT _hr = raw_AdjustSpeedToExposureTime_4(clientID, exposureTime, mode, &_result);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return _result;
+}
+
+inline HRESULT IMTBCSUSpinningDisk::add_MTBDiskRotationOnOffChangedEvent ( IUnknown * value ) {
+    HRESULT _hr = raw_add_MTBDiskRotationOnOffChangedEvent(value);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return _hr;
+}
+
+inline HRESULT IMTBCSUSpinningDisk::remove_MTBDiskRotationOnOffChangedEvent ( IUnknown * value ) {
+    HRESULT _hr = raw_remove_MTBDiskRotationOnOffChangedEvent(value);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return _hr;
+}
+
+//
+// dispinterface IMTBCSUSpinningDiskEvents wrapper method implementations
+//
+
+inline HRESULT IMTBCSUSpinningDiskEvents::MTBDiskRotationOnOffChangedEvent ( enum MTBOnOff onOff ) {
+    return _com_dispatch_method(this, 0x1, DISPATCH_METHOD, VT_EMPTY, NULL, 
+        L"\x0003", onOff);
+}
+
+//
+// interface IMTBUtil wrapper method implementations
+//
+
+inline _bstr_t IMTBUtil::GetNameFromUniqueName ( _bstr_t UniqueName ) {
+    BSTR _result = 0;
+    HRESULT _hr = raw_GetNameFromUniqueName(UniqueName, &_result);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return _bstr_t(_result, false);
+}
+
+//
+// interface IMTBKeyFunctions wrapper method implementations
+//
+
+inline long IMTBKeyFunctions::GetKeyCount ( ) {
+    long _result = 0;
+    HRESULT _hr = get_KeyCount(&_result);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return _result;
+}
+
+inline VARIANT_BOOL IMTBKeyFunctions::GetHasKeyLabeling ( ) {
+    VARIANT_BOOL _result = 0;
+    HRESULT _hr = get_HasKeyLabeling(&_result);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return _result;
+}
+
+inline HRESULT IMTBKeyFunctions::SetKeyLabel ( long keyIndex, _bstr_t label ) {
+    HRESULT _hr = raw_SetKeyLabel(keyIndex, label);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return _hr;
+}
+
+inline _bstr_t IMTBKeyFunctions::GetKeyLabel ( long keyIndex ) {
+    BSTR _result = 0;
+    HRESULT _hr = raw_GetKeyLabel(keyIndex, &_result);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return _bstr_t(_result, false);
+}
+
+inline HRESULT IMTBKeyFunctions::add_MTBKeyFunctionsExecuteEvent ( IUnknown * value ) {
+    HRESULT _hr = raw_add_MTBKeyFunctionsExecuteEvent(value);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return _hr;
+}
+
+inline HRESULT IMTBKeyFunctions::remove_MTBKeyFunctionsExecuteEvent ( IUnknown * value ) {
+    HRESULT _hr = raw_remove_MTBKeyFunctionsExecuteEvent(value);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return _hr;
+}
+
+inline HRESULT IMTBKeyFunctions::add_MTBKeyFunctionsLabelChangedEvent ( IUnknown * value ) {
+    HRESULT _hr = raw_add_MTBKeyFunctionsLabelChangedEvent(value);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return _hr;
+}
+
+inline HRESULT IMTBKeyFunctions::remove_MTBKeyFunctionsLabelChangedEvent ( IUnknown * value ) {
+    HRESULT _hr = raw_remove_MTBKeyFunctionsLabelChangedEvent(value);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return _hr;
+}
+
+//
+// interface IMTBMicroscopeManager wrapper method implementations
+//
+
+inline VARIANT_BOOL IMTBMicroscopeManager::GetHasParfocalCorrection ( ) {
+    VARIANT_BOOL _result = 0;
+    HRESULT _hr = get_HasParfocalCorrection(&_result);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return _result;
+}
+
+inline enum MTBOnOff IMTBMicroscopeManager::GetParfocalCorrection ( ) {
+    enum MTBOnOff _result;
+    HRESULT _hr = get_ParfocalCorrection(&_result);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return _result;
+}
+
+inline void IMTBMicroscopeManager::PutParfocalCorrection ( enum MTBOnOff pRetVal ) {
+    HRESULT _hr = put_ParfocalCorrection(pRetVal);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+}
+
+inline enum MTBLightManagerModes IMTBMicroscopeManager::GetLightManagerModes ( ) {
+    enum MTBLightManagerModes _result;
+    HRESULT _hr = get_LightManagerModes(&_result);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return _result;
+}
+
+inline enum MTBLightManagerModes IMTBMicroscopeManager::GetLightManagerMode ( ) {
+    enum MTBLightManagerModes _result;
+    HRESULT _hr = get_LightManagerMode(&_result);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return _result;
+}
+
+inline void IMTBMicroscopeManager::PutLightManagerMode ( enum MTBLightManagerModes pRetVal ) {
+    HRESULT _hr = put_LightManagerMode(pRetVal);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+}
+
+inline VARIANT_BOOL IMTBMicroscopeManager::GetHasLightManagerTemporaryOnOff ( ) {
+    VARIANT_BOOL _result = 0;
+    HRESULT _hr = get_HasLightManagerTemporaryOnOff(&_result);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return _result;
+}
+
+inline enum MTBOnOff IMTBMicroscopeManager::GetLightManagerTemporaryOnOff ( ) {
+    enum MTBOnOff _result;
+    HRESULT _hr = get_LightManagerTemporaryOnOff(&_result);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return _result;
+}
+
+inline void IMTBMicroscopeManager::PutLightManagerTemporaryOnOff ( enum MTBOnOff pRetVal ) {
+    HRESULT _hr = put_LightManagerTemporaryOnOff(pRetVal);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+}
+
+inline VARIANT_BOOL IMTBMicroscopeManager::GetHasDazzleProtection ( ) {
+    VARIANT_BOOL _result = 0;
+    HRESULT _hr = get_HasDazzleProtection(&_result);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return _result;
+}
+
+inline enum MTBOnOff IMTBMicroscopeManager::GetDazzleProtectionOnOff ( ) {
+    enum MTBOnOff _result;
+    HRESULT _hr = get_DazzleProtectionOnOff(&_result);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return _result;
+}
+
+inline void IMTBMicroscopeManager::PutDazzleProtectionOnOff ( enum MTBOnOff pRetVal ) {
+    HRESULT _hr = put_DazzleProtectionOnOff(pRetVal);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+}
+
+inline enum MTBContrastManagerModes IMTBMicroscopeManager::GetContrastManagerModes ( ) {
+    enum MTBContrastManagerModes _result;
+    HRESULT _hr = get_ContrastManagerModes(&_result);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return _result;
+}
+
+inline enum MTBContrastManagerModes IMTBMicroscopeManager::GetContrastManagerMode ( ) {
+    enum MTBContrastManagerModes _result;
+    HRESULT _hr = get_ContrastManagerMode(&_result);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return _result;
+}
+
+inline void IMTBMicroscopeManager::PutContrastManagerMode ( enum MTBContrastManagerModes pRetVal ) {
+    HRESULT _hr = put_ContrastManagerMode(pRetVal);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+}
+
+inline enum MTBContrastManagerContrastMethods IMTBMicroscopeManager::GetContrastManagerContrastMethods ( ) {
+    enum MTBContrastManagerContrastMethods _result;
+    HRESULT _hr = get_ContrastManagerContrastMethods(&_result);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return _result;
+}
+
+inline enum MTBContrastManagerContrastMethods IMTBMicroscopeManager::GetContrastManagerContrastMethod ( ) {
+    enum MTBContrastManagerContrastMethods _result;
+    HRESULT _hr = get_ContrastManagerContrastMethod(&_result);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return _result;
+}
+
+inline void IMTBMicroscopeManager::PutContrastManagerContrastMethod ( enum MTBContrastManagerContrastMethods pRetVal ) {
+    HRESULT _hr = put_ContrastManagerContrastMethod(pRetVal);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+}
+
+inline HRESULT IMTBMicroscopeManager::add_MTBParfocalCorrectionChangedEvent ( IUnknown * value ) {
+    HRESULT _hr = raw_add_MTBParfocalCorrectionChangedEvent(value);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return _hr;
+}
+
+inline HRESULT IMTBMicroscopeManager::remove_MTBParfocalCorrectionChangedEvent ( IUnknown * value ) {
+    HRESULT _hr = raw_remove_MTBParfocalCorrectionChangedEvent(value);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return _hr;
+}
+
+inline HRESULT IMTBMicroscopeManager::add_MTBLightManagerModeChangedEvent ( IUnknown * value ) {
+    HRESULT _hr = raw_add_MTBLightManagerModeChangedEvent(value);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return _hr;
+}
+
+inline HRESULT IMTBMicroscopeManager::remove_MTBLightManagerModeChangedEvent ( IUnknown * value ) {
+    HRESULT _hr = raw_remove_MTBLightManagerModeChangedEvent(value);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return _hr;
+}
+
+inline HRESULT IMTBMicroscopeManager::add_MTBLightManagerTemporaryOnOffChangedEvent ( IUnknown * value ) {
+    HRESULT _hr = raw_add_MTBLightManagerTemporaryOnOffChangedEvent(value);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return _hr;
+}
+
+inline HRESULT IMTBMicroscopeManager::remove_MTBLightManagerTemporaryOnOffChangedEvent ( IUnknown * value ) {
+    HRESULT _hr = raw_remove_MTBLightManagerTemporaryOnOffChangedEvent(value);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return _hr;
+}
+
+inline HRESULT IMTBMicroscopeManager::add_MTBDazzleProtectionOnOffChangedEvent ( IUnknown * value ) {
+    HRESULT _hr = raw_add_MTBDazzleProtectionOnOffChangedEvent(value);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return _hr;
+}
+
+inline HRESULT IMTBMicroscopeManager::remove_MTBDazzleProtectionOnOffChangedEvent ( IUnknown * value ) {
+    HRESULT _hr = raw_remove_MTBDazzleProtectionOnOffChangedEvent(value);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return _hr;
+}
+
+inline HRESULT IMTBMicroscopeManager::add_MTBContrastManagerContrastMethodsChangedEvent ( IUnknown * value ) {
+    HRESULT _hr = raw_add_MTBContrastManagerContrastMethodsChangedEvent(value);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return _hr;
+}
+
+inline HRESULT IMTBMicroscopeManager::remove_MTBContrastManagerContrastMethodsChangedEvent ( IUnknown * value ) {
+    HRESULT _hr = raw_remove_MTBContrastManagerContrastMethodsChangedEvent(value);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return _hr;
+}
+
+inline HRESULT IMTBMicroscopeManager::add_MTBContrastManagerContrastMethodChangedEvent ( IUnknown * value ) {
+    HRESULT _hr = raw_add_MTBContrastManagerContrastMethodChangedEvent(value);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return _hr;
+}
+
+inline HRESULT IMTBMicroscopeManager::remove_MTBContrastManagerContrastMethodChangedEvent ( IUnknown * value ) {
+    HRESULT _hr = raw_remove_MTBContrastManagerContrastMethodChangedEvent(value);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return _hr;
+}
+
+inline HRESULT IMTBMicroscopeManager::add_MTBContrastManagerModeChangedEvent ( IUnknown * value ) {
+    HRESULT _hr = raw_add_MTBContrastManagerModeChangedEvent(value);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return _hr;
+}
+
+inline HRESULT IMTBMicroscopeManager::remove_MTBContrastManagerModeChangedEvent ( IUnknown * value ) {
+    HRESULT _hr = raw_remove_MTBContrastManagerModeChangedEvent(value);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return _hr;
+}
+
+inline IMTBKeyFunctionsPtr IMTBMicroscopeManager::GetKeyFunctions ( ) {
+    struct IMTBKeyFunctions * _result = 0;
+    HRESULT _hr = get_KeyFunctions(&_result);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return IMTBKeyFunctionsPtr(_result, false);
+}
+
+inline VARIANT_BOOL IMTBMicroscopeManager::GetHasCondenserFocusing ( ) {
+    VARIANT_BOOL _result = 0;
+    HRESULT _hr = get_HasCondenserFocusing(&_result);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return _result;
+}
+
+inline enum MTBOnOff IMTBMicroscopeManager::GetCondenserFocusingOnOff ( ) {
+    enum MTBOnOff _result;
+    HRESULT _hr = get_CondenserFocusingOnOff(&_result);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return _result;
+}
+
+inline void IMTBMicroscopeManager::PutCondenserFocusingOnOff ( enum MTBOnOff pRetVal ) {
+    HRESULT _hr = put_CondenserFocusingOnOff(pRetVal);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+}
+
+inline VARIANT_BOOL IMTBMicroscopeManager::GetHasCurrentFeedOnOff ( ) {
+    VARIANT_BOOL _result = 0;
+    HRESULT _hr = get_HasCurrentFeedOnOff(&_result);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return _result;
+}
+
+inline enum MTBOnOff IMTBMicroscopeManager::GetCurrentFeedOnOff ( ) {
+    enum MTBOnOff _result;
+    HRESULT _hr = get_CurrentFeedOnOff(&_result);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return _result;
+}
+
+inline void IMTBMicroscopeManager::PutCurrentFeedOnOff ( enum MTBOnOff pRetVal ) {
+    HRESULT _hr = put_CurrentFeedOnOff(pRetVal);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+}
+
+inline HRESULT IMTBMicroscopeManager::add_MTBCondenserFocusingOnOffChangedEvent ( IUnknown * value ) {
+    HRESULT _hr = raw_add_MTBCondenserFocusingOnOffChangedEvent(value);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return _hr;
+}
+
+inline HRESULT IMTBMicroscopeManager::remove_MTBCondenserFocusingOnOffChangedEvent ( IUnknown * value ) {
+    HRESULT _hr = raw_remove_MTBCondenserFocusingOnOffChangedEvent(value);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return _hr;
+}
+
+inline HRESULT IMTBMicroscopeManager::add_MTBCurrentFeedOnOffChangedEvent ( IUnknown * value ) {
+    HRESULT _hr = raw_add_MTBCurrentFeedOnOffChangedEvent(value);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return _hr;
+}
+
+inline HRESULT IMTBMicroscopeManager::remove_MTBCurrentFeedOnOffChangedEvent ( IUnknown * value ) {
+    HRESULT _hr = raw_remove_MTBCurrentFeedOnOffChangedEvent(value);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return _hr;
+}
+
+//
+// dispinterface IMTBKeyFunctionsEvents wrapper method implementations
+//
+
+inline HRESULT IMTBKeyFunctionsEvents::MTBKeyFunctionsExecuteEvent ( long keyIndex ) {
+    return _com_dispatch_method(this, 0x1, DISPATCH_METHOD, VT_EMPTY, NULL, 
+        L"\x0003", keyIndex);
+}
+
+inline HRESULT IMTBKeyFunctionsEvents::MTBKeyFunctionsLabelChangedEvent ( long keyIndex, _bstr_t label ) {
+    return _com_dispatch_method(this, 0x2, DISPATCH_METHOD, VT_EMPTY, NULL, 
+        L"\x0003\x0008", keyIndex, (BSTR)label);
+}
+
+//
+// interface IMTBDescriptors wrapper method implementations
+//
+
+inline _bstr_t IMTBDescriptors::GetApplicationName ( ) {
+    BSTR _result = 0;
+    HRESULT _hr = raw_GetApplicationName(&_result);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return _bstr_t(_result, false);
+}
+
+inline _bstr_t IMTBDescriptors::GetApplicationVersion ( ) {
+    BSTR _result = 0;
+    HRESULT _hr = raw_GetApplicationVersion(&_result);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return _bstr_t(_result, false);
+}
+
+inline _bstr_t IMTBDescriptors::GetApplicationDate ( ) {
+    BSTR _result = 0;
+    HRESULT _hr = raw_GetApplicationDate(&_result);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return _bstr_t(_result, false);
+}
+
+inline _bstr_t IMTBDescriptors::GetBIOSName ( ) {
+    BSTR _result = 0;
+    HRESULT _hr = raw_GetBIOSName(&_result);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return _bstr_t(_result, false);
+}
+
+inline _bstr_t IMTBDescriptors::GetBIOSVersion ( ) {
+    BSTR _result = 0;
+    HRESULT _hr = raw_GetBIOSVersion(&_result);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return _bstr_t(_result, false);
+}
+
+inline _bstr_t IMTBDescriptors::GetBIOSDate ( ) {
+    BSTR _result = 0;
+    HRESULT _hr = raw_GetBIOSDate(&_result);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return _bstr_t(_result, false);
+}
+
+inline _bstr_t IMTBDescriptors::GetCPUType ( VARIANT_BOOL subBus ) {
+    BSTR _result = 0;
+    HRESULT _hr = raw_GetCPUType(subBus, &_result);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return _bstr_t(_result, false);
+}
+
+inline _bstr_t IMTBDescriptors::GetSerialNumber ( ) {
+    BSTR _result = 0;
+    HRESULT _hr = raw_GetSerialNumber(&_result);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return _bstr_t(_result, false);
+}
+
+//
+// dispinterface IMTBRootEvents wrapper method implementations
+//
+
+inline HRESULT IMTBRootEvents::MTBConfigChanged ( SAFEARRAY * componentIDs ) {
+    return _com_dispatch_method(this, 0x1, DISPATCH_METHOD, VT_EMPTY, NULL, 
+        L"\x2008", componentIDs);
+}
+
+//
+// dispinterface IMTBContinualEvents wrapper method implementations
+//
+
+inline HRESULT IMTBContinualEvents::MTBPositionChangedEvent ( struct _Hashtable * positions ) {
+    return _com_dispatch_method(this, 0x1, DISPATCH_METHOD, VT_EMPTY, NULL, 
+        L"\x0009", positions);
+}
+
+inline HRESULT IMTBContinualEvents::MTBTargetPositionChangedEvent ( struct _Hashtable * targetPositions ) {
+    return _com_dispatch_method(this, 0x2, DISPATCH_METHOD, VT_EMPTY, NULL, 
+        L"\x0009", targetPositions);
+}
+
+inline HRESULT IMTBContinualEvents::MTBPositionSettledEvent ( struct _Hashtable * positions ) {
+    return _com_dispatch_method(this, 0x3, DISPATCH_METHOD, VT_EMPTY, NULL, 
+        L"\x0009", positions);
+}
+
+inline HRESULT IMTBContinualEvents::MTBHWLimitReachedEvent ( VARIANT_BOOL state, enum MTBLimits limit ) {
+    return _com_dispatch_method(this, 0x4, DISPATCH_METHOD, VT_EMPTY, NULL, 
+        L"\x000b\x0003", state, limit);
+}
+
+//
+// interface IMTBAxisTrigger wrapper method implementations
+//
+
+inline enum MTBAxisTriggerMode IMTBAxisTrigger::GetAvailableTriggerModes ( ) {
+    enum MTBAxisTriggerMode _result;
+    HRESULT _hr = get_AvailableTriggerModes(&_result);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return _result;
+}
+
+inline enum MTBAxisTriggerMode IMTBAxisTrigger::GetTriggerMode ( ) {
+    enum MTBAxisTriggerMode _result;
+    HRESULT _hr = raw_GetTriggerMode(&_result);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return _result;
+}
+
+inline VARIANT_BOOL IMTBAxisTrigger::SetTriggerMode ( enum MTBAxisTriggerMode triggerMode, enum MTBCmdSetModes cmdSetMode, long timeout ) {
+    VARIANT_BOOL _result = 0;
+    HRESULT _hr = raw_SetTriggerMode(triggerMode, cmdSetMode, timeout, &_result);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return _result;
+}
+
+inline VARIANT_BOOL IMTBAxisTrigger::SetTriggerMode_2 ( enum MTBAxisTriggerMode triggerMode, enum MTBCmdSetModes cmdSetMode ) {
+    VARIANT_BOOL _result = 0;
+    HRESULT _hr = raw_SetTriggerMode_2(triggerMode, cmdSetMode, &_result);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return _result;
+}
+
+inline VARIANT_BOOL IMTBAxisTrigger::SetTriggerMode_3 ( _bstr_t clientID, enum MTBAxisTriggerMode triggerMode, enum MTBCmdSetModes cmdSetMode, long timeout ) {
+    VARIANT_BOOL _result = 0;
+    HRESULT _hr = raw_SetTriggerMode_3(clientID, triggerMode, cmdSetMode, timeout, &_result);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return _result;
+}
+
+inline VARIANT_BOOL IMTBAxisTrigger::SetTriggerMode_4 ( _bstr_t clientID, enum MTBAxisTriggerMode triggerMode, enum MTBCmdSetModes cmdSetMode ) {
+    VARIANT_BOOL _result = 0;
+    HRESULT _hr = raw_SetTriggerMode_4(clientID, triggerMode, cmdSetMode, &_result);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return _result;
+}
+
+inline long IMTBAxisTrigger::GetMaxTriggerPositionListLength ( ) {
+    long _result = 0;
+    HRESULT _hr = get_MaxTriggerPositionListLength(&_result);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return _result;
+}
+
+inline long IMTBAxisTrigger::GetTriggerPositionListLength ( ) {
+    long _result = 0;
+    HRESULT _hr = get_TriggerPositionListLength(&_result);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return _result;
+}
+
+inline SAFEARRAY * IMTBAxisTrigger::GetTriggerPositionList ( _bstr_t unit ) {
+    SAFEARRAY * _result = 0;
+    HRESULT _hr = raw_GetTriggerPositionList(unit, &_result);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return _result;
+}
+
+inline VARIANT_BOOL IMTBAxisTrigger::SetTriggerPositionList ( SAFEARRAY * list, _bstr_t unit ) {
+    VARIANT_BOOL _result = 0;
+    HRESULT _hr = raw_SetTriggerPositionList(list, unit, &_result);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return _result;
+}
+
+inline VARIANT_BOOL IMTBAxisTrigger::SetTriggerPositionList_2 ( _bstr_t clientID, SAFEARRAY * list, _bstr_t unit ) {
+    VARIANT_BOOL _result = 0;
+    HRESULT _hr = raw_SetTriggerPositionList_2(clientID, list, unit, &_result);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return _result;
+}
+
+inline double IMTBAxisTrigger::GetTriggerPositionListEntry ( long index, _bstr_t unit ) {
+    double _result = 0;
+    HRESULT _hr = raw_GetTriggerPositionListEntry(index, unit, &_result);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return _result;
+}
+
+inline VARIANT_BOOL IMTBAxisTrigger::SetTriggerPositionListEntry ( long index, double entry, _bstr_t unit ) {
+    VARIANT_BOOL _result = 0;
+    HRESULT _hr = raw_SetTriggerPositionListEntry(index, entry, unit, &_result);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return _result;
+}
+
+inline VARIANT_BOOL IMTBAxisTrigger::SetTriggerPositionListEntry_2 ( _bstr_t clientID, long index, double entry, _bstr_t unit ) {
+    VARIANT_BOOL _result = 0;
+    HRESULT _hr = raw_SetTriggerPositionListEntry_2(clientID, index, entry, unit, &_result);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return _result;
+}
+
+inline VARIANT_BOOL IMTBAxisTrigger::ClearTriggerPositionList ( ) {
+    VARIANT_BOOL _result = 0;
+    HRESULT _hr = raw_ClearTriggerPositionList(&_result);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return _result;
+}
+
+inline VARIANT_BOOL IMTBAxisTrigger::ClearTriggerPositionList_2 ( _bstr_t clientID ) {
+    VARIANT_BOOL _result = 0;
+    HRESULT _hr = raw_ClearTriggerPositionList_2(clientID, &_result);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return _result;
+}
+
+inline long IMTBAxisTrigger::GetTriggerPositionListPointer ( ) {
+    long _result = 0;
+    HRESULT _hr = raw_GetTriggerPositionListPointer(&_result);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return _result;
+}
+
+inline VARIANT_BOOL IMTBAxisTrigger::SetTriggerPositionListPointer ( long pointer ) {
+    VARIANT_BOOL _result = 0;
+    HRESULT _hr = raw_SetTriggerPositionListPointer(pointer, &_result);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return _result;
+}
+
+inline VARIANT_BOOL IMTBAxisTrigger::SetTriggerPositionListPointer_2 ( _bstr_t clientID, long pointer ) {
+    VARIANT_BOOL _result = 0;
+    HRESULT _hr = raw_SetTriggerPositionListPointer_2(clientID, pointer, &_result);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return _result;
+}
+
+inline VARIANT_BOOL IMTBAxisTrigger::GetTriggerStepDefinition ( double * startPosition, double * stepSize, _bstr_t unit, long * numOfSteps ) {
+    VARIANT_BOOL _result = 0;
+    HRESULT _hr = raw_GetTriggerStepDefinition(startPosition, stepSize, unit, numOfSteps, &_result);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return _result;
+}
+
+inline VARIANT_BOOL IMTBAxisTrigger::SetTriggerStepDefinition ( double startPosition, double stepSize, _bstr_t unit, long numOfSteps ) {
+    VARIANT_BOOL _result = 0;
+    HRESULT _hr = raw_SetTriggerStepDefinition(startPosition, stepSize, unit, numOfSteps, &_result);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return _result;
+}
+
+inline VARIANT_BOOL IMTBAxisTrigger::SetTriggerStepDefinition_2 ( _bstr_t clientID, double startPosition, double stepSize, _bstr_t unit, long numOfSteps ) {
+    VARIANT_BOOL _result = 0;
+    HRESULT _hr = raw_SetTriggerStepDefinition_2(clientID, startPosition, stepSize, unit, numOfSteps, &_result);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return _result;
+}
+
+inline long IMTBAxisTrigger::GetTriggerStepNumber ( ) {
+    long _result = 0;
+    HRESULT _hr = raw_GetTriggerStepNumber(&_result);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return _result;
+}
+
+inline VARIANT_BOOL IMTBAxisTrigger::SetTriggerStepNumber ( long stepNumber ) {
+    VARIANT_BOOL _result = 0;
+    HRESULT _hr = raw_SetTriggerStepNumber(stepNumber, &_result);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return _result;
+}
+
+inline VARIANT_BOOL IMTBAxisTrigger::SetTriggerStepNumber_2 ( _bstr_t clientID, long stepNumber ) {
+    VARIANT_BOOL _result = 0;
+    HRESULT _hr = raw_SetTriggerStepNumber_2(clientID, stepNumber, &_result);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return _result;
+}
+
+inline HRESULT IMTBAxisTrigger::add_MTBAxisTriggerModeChangedEvent ( IUnknown * value ) {
+    HRESULT _hr = raw_add_MTBAxisTriggerModeChangedEvent(value);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return _hr;
+}
+
+inline HRESULT IMTBAxisTrigger::remove_MTBAxisTriggerModeChangedEvent ( IUnknown * value ) {
+    HRESULT _hr = raw_remove_MTBAxisTriggerModeChangedEvent(value);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return _hr;
+}
+
+//
+// interface IMTBAxis wrapper method implementations
+//
+
+inline VARIANT_BOOL IMTBAxis::GetHasOnOff ( ) {
+    VARIANT_BOOL _result = 0;
+    HRESULT _hr = get_HasOnOff(&_result);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return _result;
+}
+
+inline VARIANT_BOOL IMTBAxis::SetOnOff ( enum MTBOnOff onOff ) {
+    VARIANT_BOOL _result = 0;
+    HRESULT _hr = raw_SetOnOff(onOff, &_result);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return _result;
+}
+
+inline VARIANT_BOOL IMTBAxis::SetOnOff_2 ( _bstr_t clientID, enum MTBOnOff onOff ) {
+    VARIANT_BOOL _result = 0;
+    HRESULT _hr = raw_SetOnOff_2(clientID, onOff, &_result);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return _result;
+}
+
+inline enum MTBOnOff IMTBAxis::GetOnOff ( ) {
+    enum MTBOnOff _result;
+    HRESULT _hr = raw_GetOnOff(&_result);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return _result;
+}
+
+inline enum MTBCalibrationModes IMTBAxis::GetCalibrationModes ( ) {
+    enum MTBCalibrationModes _result;
+    HRESULT _hr = get_CalibrationModes(&_result);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return _result;
+}
+
+inline enum MTBCalibrationModes IMTBAxis::GetCalibrationMode ( ) {
+    enum MTBCalibrationModes _result;
+    HRESULT _hr = get_CalibrationMode(&_result);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return _result;
+}
+
+inline VARIANT_BOOL IMTBAxis::Calibrate ( enum MTBCalibrationModes calMode, enum MTBCmdSetModes cmdMode, long timeout ) {
+    VARIANT_BOOL _result = 0;
+    HRESULT _hr = raw_Calibrate(calMode, cmdMode, timeout, &_result);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return _result;
+}
+
+inline VARIANT_BOOL IMTBAxis::Calibrate_2 ( enum MTBCalibrationModes calMode, enum MTBCmdSetModes cmdMode ) {
+    VARIANT_BOOL _result = 0;
+    HRESULT _hr = raw_Calibrate_2(calMode, cmdMode, &_result);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return _result;
+}
+
+inline VARIANT_BOOL IMTBAxis::Calibrate_3 ( _bstr_t clientID, enum MTBCalibrationModes calMode, enum MTBCmdSetModes cmdMode, long timeout ) {
+    VARIANT_BOOL _result = 0;
+    HRESULT _hr = raw_Calibrate_3(clientID, calMode, cmdMode, timeout, &_result);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return _result;
+}
+
+inline VARIANT_BOOL IMTBAxis::Calibrate_4 ( _bstr_t clientID, enum MTBCalibrationModes calMode, enum MTBCmdSetModes cmdMode ) {
+    VARIANT_BOOL _result = 0;
+    HRESULT _hr = raw_Calibrate_4(clientID, calMode, cmdMode, &_result);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return _result;
+}
+
+inline VARIANT_BOOL IMTBAxis::GetHasLoadWork ( ) {
+    VARIANT_BOOL _result = 0;
+    HRESULT _hr = get_HasLoadWork(&_result);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return _result;
+}
+
+inline VARIANT_BOOL IMTBAxis::SetLoadWork ( enum MTBLoadWorkPosition lwType, enum MTBCmdSetModes mode, long timeout ) {
+    VARIANT_BOOL _result = 0;
+    HRESULT _hr = raw_SetLoadWork(lwType, mode, timeout, &_result);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return _result;
+}
+
+inline VARIANT_BOOL IMTBAxis::SetLoadWork_2 ( enum MTBLoadWorkPosition lwType, enum MTBCmdSetModes mode ) {
+    VARIANT_BOOL _result = 0;
+    HRESULT _hr = raw_SetLoadWork_2(lwType, mode, &_result);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return _result;
+}
+
+inline VARIANT_BOOL IMTBAxis::SetLoadWork_3 ( _bstr_t clientID, enum MTBLoadWorkPosition lwType, enum MTBCmdSetModes mode, long timeout ) {
+    VARIANT_BOOL _result = 0;
+    HRESULT _hr = raw_SetLoadWork_3(clientID, lwType, mode, timeout, &_result);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return _result;
+}
+
+inline VARIANT_BOOL IMTBAxis::SetLoadWork_4 ( _bstr_t clientID, enum MTBLoadWorkPosition lwType, enum MTBCmdSetModes mode ) {
+    VARIANT_BOOL _result = 0;
+    HRESULT _hr = raw_SetLoadWork_4(clientID, lwType, mode, &_result);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return _result;
+}
+
+inline enum MTBLoadWorkPosition IMTBAxis::GetLoadWork ( ) {
+    enum MTBLoadWorkPosition _result;
+    HRESULT _hr = raw_GetLoadWork(&_result);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return _result;
+}
+
+inline enum MTBLimits IMTBAxis::GetHasSWLimit ( ) {
+    enum MTBLimits _result;
+    HRESULT _hr = get_HasSWLimit(&_result);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return _result;
+}
+
+inline VARIANT_BOOL IMTBAxis::SetSWLimit ( VARIANT_BOOL upper, double limit, _bstr_t unit ) {
+    VARIANT_BOOL _result = 0;
+    HRESULT _hr = raw_SetSWLimit(upper, limit, unit, &_result);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return _result;
+}
+
+inline VARIANT_BOOL IMTBAxis::SetSWLimit_2 ( _bstr_t clientID, VARIANT_BOOL upper, double limit, _bstr_t unit ) {
+    VARIANT_BOOL _result = 0;
+    HRESULT _hr = raw_SetSWLimit_2(clientID, upper, limit, unit, &_result);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return _result;
+}
+
+inline double IMTBAxis::GetSWLimit ( VARIANT_BOOL upper, _bstr_t unit ) {
+    double _result = 0;
+    HRESULT _hr = raw_GetSWLimit(upper, unit, &_result);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return _result;
+}
+
+inline enum MTBLimits IMTBAxis::GetIsOnSWLimit ( ) {
+    enum MTBLimits _result;
+    HRESULT _hr = get_IsOnSWLimit(&_result);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return _result;
+}
+
+inline VARIANT_BOOL IMTBAxis::EnableSWLimit ( VARIANT_BOOL upper, VARIANT_BOOL enable ) {
+    VARIANT_BOOL _result = 0;
+    HRESULT _hr = raw_EnableSWLimit(upper, enable, &_result);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return _result;
+}
+
+inline VARIANT_BOOL IMTBAxis::EnableSWLimit_2 ( _bstr_t clientID, VARIANT_BOOL upper, VARIANT_BOOL enable ) {
+    VARIANT_BOOL _result = 0;
+    HRESULT _hr = raw_EnableSWLimit_2(clientID, upper, enable, &_result);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return _result;
+}
+
+inline VARIANT_BOOL IMTBAxis::IsSWLimitEnabled ( VARIANT_BOOL upper ) {
+    VARIANT_BOOL _result = 0;
+    HRESULT _hr = raw_IsSWLimitEnabled(upper, &_result);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return _result;
+}
+
+inline VARIANT_BOOL IMTBAxis::SetMeasurementPosition ( double Position, _bstr_t unit ) {
+    VARIANT_BOOL _result = 0;
+    HRESULT _hr = raw_SetMeasurementPosition(Position, unit, &_result);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return _result;
+}
+
+inline VARIANT_BOOL IMTBAxis::SetMeasurementPosition_2 ( _bstr_t clientID, double Position, _bstr_t unit ) {
+    VARIANT_BOOL _result = 0;
+    HRESULT _hr = raw_SetMeasurementPosition_2(clientID, Position, unit, &_result);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return _result;
+}
+
+inline double IMTBAxis::GetMeasurementPosition ( _bstr_t unit ) {
+    double _result = 0;
+    HRESULT _hr = raw_GetMeasurementPosition(unit, &_result);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return _result;
+}
+
+inline VARIANT_BOOL IMTBAxis::SetMeasurementOrigin ( double origin, _bstr_t unit ) {
+    VARIANT_BOOL _result = 0;
+    HRESULT _hr = raw_SetMeasurementOrigin(origin, unit, &_result);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return _result;
+}
+
+inline VARIANT_BOOL IMTBAxis::SetMeasurementOrigin_2 ( _bstr_t clientID, double origin, _bstr_t unit ) {
+    VARIANT_BOOL _result = 0;
+    HRESULT _hr = raw_SetMeasurementOrigin_2(clientID, origin, unit, &_result);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return _result;
+}
+
+inline double IMTBAxis::GetMeasurementOrigin ( _bstr_t unit ) {
+    double _result = 0;
+    HRESULT _hr = raw_GetMeasurementOrigin(unit, &_result);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return _result;
+}
+
+inline enum MTBDirection IMTBAxis::GetCoordinateDirection ( ) {
+    enum MTBDirection _result;
+    HRESULT _hr = get_CoordinateDirection(&_result);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return _result;
+}
+
+inline HRESULT IMTBAxis::add_MTBOnOffChangedEvent ( IUnknown * value ) {
+    HRESULT _hr = raw_add_MTBOnOffChangedEvent(value);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return _hr;
+}
+
+inline HRESULT IMTBAxis::remove_MTBOnOffChangedEvent ( IUnknown * value ) {
+    HRESULT _hr = raw_remove_MTBOnOffChangedEvent(value);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return _hr;
+}
+
+inline HRESULT IMTBAxis::add_MTBLoadWorkChangedEvent ( IUnknown * value ) {
+    HRESULT _hr = raw_add_MTBLoadWorkChangedEvent(value);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return _hr;
+}
+
+inline HRESULT IMTBAxis::remove_MTBLoadWorkChangedEvent ( IUnknown * value ) {
+    HRESULT _hr = raw_remove_MTBLoadWorkChangedEvent(value);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return _hr;
+}
+
+inline HRESULT IMTBAxis::add_MTBSWLimitReachedEvent ( IUnknown * value ) {
+    HRESULT _hr = raw_add_MTBSWLimitReachedEvent(value);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return _hr;
+}
+
+inline HRESULT IMTBAxis::remove_MTBSWLimitReachedEvent ( IUnknown * value ) {
+    HRESULT _hr = raw_remove_MTBSWLimitReachedEvent(value);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return _hr;
+}
+
+inline HRESULT IMTBAxis::add_MTBSWLimitChangedEvent ( IUnknown * value ) {
+    HRESULT _hr = raw_add_MTBSWLimitChangedEvent(value);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return _hr;
+}
+
+inline HRESULT IMTBAxis::remove_MTBSWLimitChangedEvent ( IUnknown * value ) {
+    HRESULT _hr = raw_remove_MTBSWLimitChangedEvent(value);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return _hr;
+}
+
+inline HRESULT IMTBAxis::add_MTBSWLimitEnabledEvent ( IUnknown * value ) {
+    HRESULT _hr = raw_add_MTBSWLimitEnabledEvent(value);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return _hr;
+}
+
+inline HRESULT IMTBAxis::remove_MTBSWLimitEnabledEvent ( IUnknown * value ) {
+    HRESULT _hr = raw_remove_MTBSWLimitEnabledEvent(value);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return _hr;
+}
+
+inline HRESULT IMTBAxis::add_MTBCalibrationChangedEvent ( IUnknown * value ) {
+    HRESULT _hr = raw_add_MTBCalibrationChangedEvent(value);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return _hr;
+}
+
+inline HRESULT IMTBAxis::remove_MTBCalibrationChangedEvent ( IUnknown * value ) {
+    HRESULT _hr = raw_remove_MTBCalibrationChangedEvent(value);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return _hr;
+}
+
+inline HRESULT IMTBAxis::add_MTBMeasurementOriginChangedEvent ( IUnknown * value ) {
+    HRESULT _hr = raw_add_MTBMeasurementOriginChangedEvent(value);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return _hr;
+}
+
+inline HRESULT IMTBAxis::remove_MTBMeasurementOriginChangedEvent ( IUnknown * value ) {
+    HRESULT _hr = raw_remove_MTBMeasurementOriginChangedEvent(value);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return _hr;
+}
+
+inline HRESULT IMTBAxis::add_MTBMeasurementPositionChangedEvent ( IUnknown * value ) {
+    HRESULT _hr = raw_add_MTBMeasurementPositionChangedEvent(value);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return _hr;
+}
+
+inline HRESULT IMTBAxis::remove_MTBMeasurementPositionChangedEvent ( IUnknown * value ) {
+    HRESULT _hr = raw_remove_MTBMeasurementPositionChangedEvent(value);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return _hr;
+}
+
+inline enum MTBOnOff IMTBAxis::GetClosedLoop ( ) {
+    enum MTBOnOff _result;
+    HRESULT _hr = get_ClosedLoop(&_result);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return _result;
+}
+
+inline HRESULT IMTBAxis::add_MTBClosedLoopChangedEvent ( IUnknown * value ) {
+    HRESULT _hr = raw_add_MTBClosedLoopChangedEvent(value);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return _hr;
+}
+
+inline HRESULT IMTBAxis::remove_MTBClosedLoopChangedEvent ( IUnknown * value ) {
+    HRESULT _hr = raw_remove_MTBClosedLoopChangedEvent(value);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return _hr;
+}
+
+inline IMTBAxisTriggerPtr IMTBAxis::GetTrigger ( ) {
+    struct IMTBAxisTrigger * _result = 0;
+    HRESULT _hr = get_Trigger(&_result);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return IMTBAxisTriggerPtr(_result, false);
+}
+
+//
+// dispinterface IMTBAxisTriggerEvents wrapper method implementations
+//
+
+inline HRESULT IMTBAxisTriggerEvents::MTBAxisTriggerModeChangedEvent ( enum MTBAxisTriggerMode triggerMode ) {
+    return _com_dispatch_method(this, 0x1, DISPATCH_METHOD, VT_EMPTY, NULL, 
+        L"\x0003", triggerMode);
+}
+
+//
+// interface IMTBMagnificationPort wrapper method implementations
+//
+
+inline double IMTBMagnificationPort::GetMagnification ( ) {
+    double _result = 0;
+    HRESULT _hr = get_Magnification(&_result);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return _result;
+}
+
+inline double IMTBMagnificationPort::GetTotalMagnification ( ) {
+    double _result = 0;
+    HRESULT _hr = get_TotalMagnification(&_result);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return _result;
+}
+
+inline HRESULT IMTBMagnificationPort::add_MTBTotalMagnificationChangedEvent ( IUnknown * value ) {
+    HRESULT _hr = raw_add_MTBTotalMagnificationChangedEvent(value);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return _hr;
+}
+
+inline HRESULT IMTBMagnificationPort::remove_MTBTotalMagnificationChangedEvent ( IUnknown * value ) {
+    HRESULT _hr = raw_remove_MTBTotalMagnificationChangedEvent(value);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return _hr;
+}
+
+//
+// dispinterface IMTBMagnificationPortEvents wrapper method implementations
+//
+
+inline HRESULT IMTBMagnificationPortEvents::MTBTotalMagnificationChangedEvent ( double Magnification ) {
+    return _com_dispatch_method(this, 0x1, DISPATCH_METHOD, VT_EMPTY, NULL, 
+        L"\x0005", Magnification);
+}
+
+//
+// interface IMTBCameraAdapter wrapper method implementations
+//
+
+inline _bstr_t IMTBCameraAdapter::GetCameraID ( ) {
+    BSTR _result = 0;
+    HRESULT _hr = get_CameraID(&_result);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return _bstr_t(_result, false);
+}
+
+inline HRESULT IMTBCameraAdapter::add_MTBCameraIDChangedEvent ( IUnknown * value ) {
+    HRESULT _hr = raw_add_MTBCameraIDChangedEvent(value);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return _hr;
+}
+
+inline HRESULT IMTBCameraAdapter::remove_MTBCameraIDChangedEvent ( IUnknown * value ) {
+    HRESULT _hr = raw_remove_MTBCameraIDChangedEvent(value);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return _hr;
+}
+
+//
+// dispinterface IMTBCameraAdapterEvents wrapper method implementations
+//
+
+inline HRESULT IMTBCameraAdapterEvents::MTBCameraIDChangedEvent ( _bstr_t CameraID ) {
+    return _com_dispatch_method(this, 0x1, DISPATCH_METHOD, VT_EMPTY, NULL, 
+        L"\x0008", (BSTR)CameraID);
+}
+
+//
+// interface IMTBEyepiece wrapper method implementations
+//
+
+inline double IMTBEyepiece::GetFieldOfView ( ) {
+    double _result = 0;
+    HRESULT _hr = get_FieldOfView(&_result);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return _result;
+}
+
+inline double IMTBEyepiece::GetTotalFieldOfView ( ) {
+    double _result = 0;
+    HRESULT _hr = get_TotalFieldOfView(&_result);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return _result;
+}
+
+inline double IMTBEyepiece::GetDepthOfField ( ) {
+    double _result = 0;
+    HRESULT _hr = get_DepthOfField(&_result);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return _result;
+}
+
+inline HRESULT IMTBEyepiece::add_MTBTotalFieldOfViewChangedEvent ( IUnknown * value ) {
+    HRESULT _hr = raw_add_MTBTotalFieldOfViewChangedEvent(value);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return _hr;
+}
+
+inline HRESULT IMTBEyepiece::remove_MTBTotalFieldOfViewChangedEvent ( IUnknown * value ) {
+    HRESULT _hr = raw_remove_MTBTotalFieldOfViewChangedEvent(value);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return _hr;
+}
+
+inline HRESULT IMTBEyepiece::add_MTBDepthOfFieldChangedEvent ( IUnknown * value ) {
+    HRESULT _hr = raw_add_MTBDepthOfFieldChangedEvent(value);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return _hr;
+}
+
+inline HRESULT IMTBEyepiece::remove_MTBDepthOfFieldChangedEvent ( IUnknown * value ) {
+    HRESULT _hr = raw_remove_MTBDepthOfFieldChangedEvent(value);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return _hr;
+}
+
+//
+// dispinterface IMTBEyepieceEvents wrapper method implementations
+//
+
+inline HRESULT IMTBEyepieceEvents::MTBTotalFieldOfViewChangedEvent ( double FieldOfView ) {
+    return _com_dispatch_method(this, 0x1, DISPATCH_METHOD, VT_EMPTY, NULL, 
+        L"\x0005", FieldOfView);
+}
+
+inline HRESULT IMTBEyepieceEvents::MTBDepthOfFieldChangedEvent ( double DepthOfField ) {
+    return _com_dispatch_method(this, 0x2, DISPATCH_METHOD, VT_EMPTY, NULL, 
+        L"\x0005", DepthOfField);
+}
+
+//
+// interface IMTBDigiport wrapper method implementations
+//
+
+inline double IMTBDigiport::GetFocalLength ( ) {
+    double _result = 0;
+    HRESULT _hr = get_FocalLength(&_result);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return _result;
+}
+
+//
+// dispinterface IMTBMoveEvents wrapper method implementations
+//
+
+inline HRESULT IMTBMoveEvents::MTBMoveSpeedSettledEvent ( ) {
+    return _com_dispatch_method(this, 0x1, DISPATCH_METHOD, VT_EMPTY, NULL, NULL);
+}
+
+//
+// interface IMTBComponent wrapper method implementations
+//
+
+inline IMTBDevicePtr IMTBComponent::GetDevice ( ) {
+    struct IMTBDevice * _result = 0;
+    HRESULT _hr = raw_GetDevice(&_result);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return IMTBDevicePtr(_result, false);
+}
+
+inline _bstr_t IMTBComponent::GetID ( ) {
+    BSTR _result = 0;
+    HRESULT _hr = get_ID(&_result);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return _bstr_t(_result, false);
+}
+
+inline long IMTBComponent::GetSyncTimeout ( ) {
+    long _result = 0;
+    HRESULT _hr = get_SyncTimeout(&_result);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return _result;
+}
+
+inline enum MTBMotorization IMTBComponent::GetMotorization ( ) {
+    enum MTBMotorization _result;
+    HRESULT _hr = get_Motorization(&_result);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return _result;
+}
+
+inline IMTBLightPathNodePtr IMTBComponent::GetObservationPathNode ( ) {
+    struct IMTBLightPathNode * _result = 0;
+    HRESULT _hr = get_ObservationPathNode(&_result);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return IMTBLightPathNodePtr(_result, false);
+}
+
+inline IMTBLightPathNodePtr IMTBComponent::GetTransmittedLightPathNode ( ) {
+    struct IMTBLightPathNode * _result = 0;
+    HRESULT _hr = get_TransmittedLightPathNode(&_result);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return IMTBLightPathNodePtr(_result, false);
+}
+
+inline IMTBLightPathNodePtr IMTBComponent::GetReflectedLightPathNode ( ) {
+    struct IMTBLightPathNode * _result = 0;
+    HRESULT _hr = get_ReflectedLightPathNode(&_result);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return IMTBLightPathNodePtr(_result, false);
+}
+
+inline enum MTBCmdSetModes IMTBComponent::AvailableCmdSetModes ( _bstr_t functionName ) {
+    enum MTBCmdSetModes _result;
+    HRESULT _hr = raw_AvailableCmdSetModes(functionName, &_result);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return _result;
+}
+
+//
+// interface IMTBLightPathNode wrapper method implementations
+//
+
+inline IMTBComponentPtr IMTBLightPathNode::GetPredecessor ( ) {
+    struct IMTBComponent * _result = 0;
+    HRESULT _hr = get_Predecessor(&_result);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return IMTBComponentPtr(_result, false);
+}
+
+inline SAFEARRAY * IMTBLightPathNode::GetSuccessors ( ) {
+    SAFEARRAY * _result = 0;
+    HRESULT _hr = get_Successors(&_result);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return _result;
+}
+
+//
+// interface IMTBConnection wrapper method implementations
+//
+
+inline _bstr_t IMTBConnection::GetID ( ) {
+    BSTR _result = 0;
+    HRESULT _hr = get_ID(&_result);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return _bstr_t(_result, false);
+}
+
+inline HRESULT IMTBConnection::Login ( _bstr_t culture, BSTR * ID ) {
+    HRESULT _hr = raw_Login(culture, ID);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return _hr;
+}
+
+inline HRESULT IMTBConnection::Logout ( _bstr_t ID ) {
+    HRESULT _hr = raw_Logout(ID);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return _hr;
+}
+
+inline HRESULT IMTBConnection::Init ( _bstr_t ID ) {
+    HRESULT _hr = raw_Init(ID);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return _hr;
+}
+
+inline IMTBRootPtr IMTBConnection::GetRoot ( _bstr_t ID ) {
+    struct IMTBRoot * _result = 0;
+    HRESULT _hr = raw_GetRoot(ID, &_result);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return IMTBRootPtr(_result, false);
+}
+
+inline IMTBConfigurationPtr IMTBConnection::GetConfiguration ( _bstr_t ID ) {
+    struct IMTBConfiguration * _result = 0;
+    HRESULT _hr = raw_GetConfiguration(ID, &_result);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return IMTBConfigurationPtr(_result, false);
+}
+
+inline IMTBFwSettingsPtr IMTBConnection::GetFwSettings ( _bstr_t ID ) {
+    struct IMTBFwSettings * _result = 0;
+    HRESULT _hr = raw_GetFwSettings(ID, &_result);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return IMTBFwSettingsPtr(_result, false);
+}
+
+inline _bstr_t IMTBConnection::GetMTBVersion ( ) {
+    BSTR _result = 0;
+    HRESULT _hr = get_MTBVersion(&_result);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return _bstr_t(_result, false);
+}
+
+inline _bstr_t IMTBConnection::GetAvailableAssemblies ( ) {
+    BSTR _result = 0;
+    HRESULT _hr = get_AvailableAssemblies(&_result);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return _bstr_t(_result, false);
+}
+
+inline _bstr_t IMTBConnection::GetLoadedAssemblies ( ) {
+    BSTR _result = 0;
+    HRESULT _hr = get_LoadedAssemblies(&_result);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return _bstr_t(_result, false);
+}
+
+inline HRESULT IMTBConnection::add_MTBConnectionPossibleEvent ( IUnknown * value ) {
+    HRESULT _hr = raw_add_MTBConnectionPossibleEvent(value);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return _hr;
+}
+
+inline HRESULT IMTBConnection::remove_MTBConnectionPossibleEvent ( IUnknown * value ) {
+    HRESULT _hr = raw_remove_MTBConnectionPossibleEvent(value);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return _hr;
+}
+
+inline HRESULT IMTBConnection::add_MTBConfigMismatchEvent ( IUnknown * value ) {
+    HRESULT _hr = raw_add_MTBConfigMismatchEvent(value);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return _hr;
+}
+
+inline HRESULT IMTBConnection::remove_MTBConfigMismatchEvent ( IUnknown * value ) {
+    HRESULT _hr = raw_remove_MTBConfigMismatchEvent(value);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return _hr;
+}
+
+inline HRESULT IMTBConnection::Close ( ) {
+    HRESULT _hr = raw_Close();
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return _hr;
+}
+
+inline IMTBUtilPtr IMTBConnection::GetUtil ( _bstr_t ID ) {
+    struct IMTBUtil * _result = 0;
+    HRESULT _hr = raw_GetUtil(ID, &_result);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return IMTBUtilPtr(_result, false);
+}
+
+inline IUnknownPtr IMTBConnection::GetMTBMonitor ( _bstr_t ID ) {
+    IUnknown * _result = 0;
+    HRESULT _hr = raw_GetMTBMonitor(ID, &_result);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return IUnknownPtr(_result, false);
+}
+
+//
+// interface IMTBDevice wrapper method implementations
+//
+
+inline IMTBRootPtr IMTBDevice::GetRoot ( ) {
+    struct IMTBRoot * _result = 0;
+    HRESULT _hr = raw_GetRoot(&_result);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return IMTBRootPtr(_result, false);
+}
+
+inline IMTBComponentPtr IMTBDevice::GetComponent ( _bstr_t ID ) {
+    struct IMTBComponent * _result = 0;
+    HRESULT _hr = raw_GetComponent(ID, &_result);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return IMTBComponentPtr(_result, false);
+}
+
+inline long IMTBDevice::GetComponentCount ( ) {
+    long _result = 0;
+    HRESULT _hr = raw_GetComponentCount(&_result);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return _result;
+}
+
+inline IMTBComponentPtr IMTBDevice::GetComponent_2 ( long index ) {
+    struct IMTBComponent * _result = 0;
+    HRESULT _hr = raw_GetComponent_2(index, &_result);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return IMTBComponentPtr(_result, false);
+}
+
+inline VARIANT_BOOL IMTBDevice::GetIsExternal ( ) {
+    VARIANT_BOOL _result = 0;
+    HRESULT _hr = get_IsExternal(&_result);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return _result;
+}
+
+inline _bstr_t IMTBDevice::GetServerName ( ) {
+    BSTR _result = 0;
+    HRESULT _hr = get_ServerName(&_result);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return _bstr_t(_result, false);
+}
+
+inline VARIANT_BOOL IMTBDevice::SendRead ( _bstr_t message, BSTR * answer ) {
+    VARIANT_BOOL _result = 0;
+    HRESULT _hr = raw_SendRead(message, answer, &_result);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return _result;
+}
+
+inline VARIANT_BOOL IMTBDevice::Send ( _bstr_t message ) {
+    VARIANT_BOOL _result = 0;
+    HRESULT _hr = raw_Send(message, &_result);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return _result;
+}
+
+//
+// interface IMTBRoot wrapper method implementations
+//
+
+inline long IMTBRoot::GetDeviceCount ( ) {
+    long _result = 0;
+    HRESULT _hr = raw_GetDeviceCount(&_result);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return _result;
+}
+
+inline IMTBDevicePtr IMTBRoot::GetDevice ( long n ) {
+    struct IMTBDevice * _result = 0;
+    HRESULT _hr = raw_GetDevice(n, &_result);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return IMTBDevicePtr(_result, false);
+}
+
+inline IMTBComponentPtr IMTBRoot::GetComponent ( _bstr_t ID ) {
+    struct IMTBComponent * _result = 0;
+    HRESULT _hr = raw_GetComponent(ID, &_result);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return IMTBComponentPtr(_result, false);
+}
+
+inline HRESULT IMTBRoot::add_MTBConfigChanged ( IUnknown * value ) {
+    HRESULT _hr = raw_add_MTBConfigChanged(value);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return _hr;
+}
+
+inline HRESULT IMTBRoot::remove_MTBConfigChanged ( IUnknown * value ) {
+    HRESULT _hr = raw_remove_MTBConfigChanged(value);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return _hr;
+}
