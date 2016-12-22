@@ -1,0 +1,147 @@
+﻿// Created by Microsoft (R) C/C++ Compiler Version 10.00.30319.01 (c89ef7ab).
+//
+// f:\userdata\wenxu_data\program\eric roller's previous program\program\debug\pumpcommserver.tlh
+//
+// C++ source equivalent of Win32 type library PumpCommServer.dll
+// compiler-generated file created 12/09/16 at 10:50:17 - DO NOT EDIT!
+
+//
+// Cross-referenced type libraries:
+//
+//  #import "C:\WINDOWS\Microsoft.NET\Framework\v4.0.30319\mscorlib.tlb"
+//
+
+#pragma once
+#pragma pack(push, 8)
+
+#include <comdef.h>
+
+//
+// Forward references and typedefs
+//
+
+struct __declspec(uuid("0c698845-7e19-4c2c-a4a7-4dae5c19668a"))
+/* LIBID */ __PUMPCOMMSERVERLib;
+struct __declspec(uuid("8c3592c7-dccd-44c5-a270-152c87d81a10"))
+/* dispinterface */ _IPumpCommEvents;
+struct /* coclass */ PumpComm;
+struct __declspec(uuid("b7c35364-814b-4b54-93ef-16d50213bed8"))
+/* dual interface */ IPumpComm;
+enum EBaudRate;
+
+//
+// Smart pointer typedef declarations
+//
+
+_COM_SMARTPTR_TYPEDEF(_IPumpCommEvents, __uuidof(_IPumpCommEvents));
+_COM_SMARTPTR_TYPEDEF(IPumpComm, __uuidof(IPumpComm));
+
+//
+// Type library items
+//
+
+struct __declspec(uuid("8c3592c7-dccd-44c5-a270-152c87d81a10"))
+_IPumpCommEvents : IDispatch
+{};
+
+struct __declspec(uuid("502ce196-0f8e-4738-a063-63e9e24aafe6"))
+PumpComm;
+    // [ default ] interface IPumpComm
+    // [ default, source ] dispinterface _IPumpCommEvents
+
+enum __declspec(uuid("48e0173c-18de-458d-b284-10f0e74883e6"))
+EBaudRate
+{
+    Baud9600 = 9600,
+    Baud38400 = 38400
+};
+
+struct __declspec(uuid("b7c35364-814b-4b54-93ef-16d50213bed8"))
+IPumpComm : IDispatch
+{
+    //
+    // Raw methods provided by interface
+    //
+
+      virtual HRESULT __stdcall PumpInitComm (
+        /*[in]*/ unsigned char byPortNumber ) = 0;
+      virtual HRESULT __stdcall PumpGetCommID (
+        /*[out,retval]*/ long * pLCommHandle ) = 0;
+      virtual HRESULT __stdcall PumpExitComm ( ) = 0;
+      virtual HRESULT __stdcall PumpDetectComm (
+        /*[in]*/ unsigned char byPortNumber ) = 0;
+      virtual HRESULT __stdcall PumpSendNoWait (
+        /*[in]*/ BSTR bstrCommand,
+        /*[in]*/ unsigned char byDevNo ) = 0;
+      virtual HRESULT __stdcall PumpGetLastAnswer (
+        /*[in]*/ unsigned char byDevNo,
+        /*[in,out]*/ BSTR * bstrAnswer ) = 0;
+      virtual HRESULT __stdcall PumpGetLastError (
+        /*[in]*/ unsigned char byDevNo ) = 0;
+      virtual HRESULT __stdcall PumpSendCommand (
+        /*[in]*/ BSTR pCommand,
+        /*[in]*/ unsigned char byDevNo,
+        /*[in,out]*/ BSTR * bstrAnswer ) = 0;
+      virtual HRESULT __stdcall PumpSetLogFileID (
+        /*[in]*/ long lLogFileID ) = 0;
+      virtual HRESULT __stdcall PumpGetLogFileID (
+        /*[out,retval]*/ long * pLLogFileID ) = 0;
+      virtual HRESULT __stdcall PumpGetServerVersion (
+        /*[out,retval]*/ unsigned char * pByVersion ) = 0;
+      virtual HRESULT __stdcall PumpEnableLogWindow (
+        /*[in]*/ unsigned char byEnable,
+        /*[in]*/ long pWndParent ) = 0;
+      virtual HRESULT __stdcall PumpGetLogWindowID (
+        /*[out,retval]*/ long * hWnd ) = 0;
+      virtual HRESULT __stdcall PumpSetLogWnd (
+        /*[in]*/ long lLogHWND ) = 0;
+      virtual HRESULT __stdcall PumpCheckDevStatus (
+        /*[in]*/ unsigned char byDevNo,
+        /*[out,retval]*/ long * iStatus ) = 0;
+      virtual HRESULT __stdcall PumpAddLogMsg (
+        /*[in]*/ BSTR bstrLogMsg,
+        /*[in]*/ unsigned char byLevel,
+        /*[in]*/ VARIANT varWhich = vtMissing ) = 0;
+      virtual HRESULT __stdcall get_BaudRate (
+        /*[out,retval]*/ enum EBaudRate * pVal ) = 0;
+      virtual HRESULT __stdcall put_BaudRate (
+        /*[in]*/ enum EBaudRate pVal ) = 0;
+      virtual HRESULT __stdcall get_EnableLog (
+        /*[out,retval]*/ VARIANT_BOOL * pVal ) = 0;
+      virtual HRESULT __stdcall put_EnableLog (
+        /*[in]*/ VARIANT_BOOL pVal ) = 0;
+      virtual HRESULT __stdcall PumpWaitForDevice (
+        unsigned char devNo ) = 0;
+      virtual HRESULT __stdcall get_LogComPort (
+        /*[out,retval]*/ VARIANT_BOOL * pVal ) = 0;
+      virtual HRESULT __stdcall put_LogComPort (
+        /*[in]*/ VARIANT_BOOL pVal ) = 0;
+      virtual HRESULT __stdcall PumpWaitForAll ( ) = 0;
+      virtual HRESULT __stdcall get_CommandRetryCount (
+        /*[out,retval]*/ short * pVal ) = 0;
+      virtual HRESULT __stdcall put_CommandRetryCount (
+        /*[in]*/ short pVal ) = 0;
+      virtual HRESULT __stdcall get_CommandAckTimeout (
+        /*[out,retval]*/ short * pVal ) = 0;
+      virtual HRESULT __stdcall put_CommandAckTimeout (
+        /*[in]*/ short pVal ) = 0;
+      virtual HRESULT __stdcall get_EnableCheckSum (
+        /*[out,retval]*/ VARIANT_BOOL * pVal ) = 0;
+      virtual HRESULT __stdcall put_EnableCheckSum (
+        /*[in]*/ VARIANT_BOOL pVal ) = 0;
+};
+
+//
+// Named GUID constants initializations
+//
+
+extern "C" const GUID __declspec(selectany) LIBID_PUMPCOMMSERVERLib =
+    {0x0c698845,0x7e19,0x4c2c,{0xa4,0xa7,0x4d,0xae,0x5c,0x19,0x66,0x8a}};
+extern "C" const GUID __declspec(selectany) DIID__IPumpCommEvents =
+    {0x8c3592c7,0xdccd,0x44c5,{0xa2,0x70,0x15,0x2c,0x87,0xd8,0x1a,0x10}};
+extern "C" const GUID __declspec(selectany) CLSID_PumpComm =
+    {0x502ce196,0x0f8e,0x4738,{0xa0,0x63,0x63,0xe9,0xe2,0x4a,0xaf,0xe6}};
+extern "C" const GUID __declspec(selectany) IID_IPumpComm =
+    {0xb7c35364,0x814b,0x4b54,{0x93,0xef,0x16,0xd5,0x02,0x13,0xbe,0xd8}};
+
+#pragma pack(pop)

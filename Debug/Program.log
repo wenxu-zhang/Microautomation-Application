@@ -1,0 +1,21 @@
+﻿Build started 12/22/2016 11:04:53 AM.
+     1>Project "F:\UserData\Wenxu_data\PROGRAM\Eric Roller's Previous Program\Program\Program.vcxproj" on node 2 (build target(s)).
+     1>InitializeBuildStatus:
+         Creating "Debug\Program.unsuccessfulbuild" because "AlwaysCreate" was specified.
+       ClCompile:
+         All outputs are up-to-date.
+         All outputs are up-to-date.
+       ManifestResourceCompile:
+         All outputs are up-to-date.
+       Link:
+         All outputs are up-to-date.
+       Manifest:
+         All outputs are up-to-date.
+       FinalizeBuildStatus:
+         Deleting file "Debug\Program.unsuccessfulbuild".
+         Touching "Debug\Program.lastbuildstate".
+     1>Done Building Project "F:\UserData\Wenxu_data\PROGRAM\Eric Roller's Previous Program\Program\Program.vcxproj" (build target(s)).
+
+Build succeeded.
+
+Time Elapsed 00:00:00.12
