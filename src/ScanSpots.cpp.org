@@ -1,0 +1,54 @@
+#include "ScanSpots.h"
+#include "Controller.h"
+#include<limits>
+using namespace std;
+extern Controller cont;
+
+ScanSpots::ScanSpots(std::vector<AcquisitionChannel>& acquisitionChannels,int showOnScreenPeriod)
+	:Scan(acquisitionChannels,showOnScreenPeriod)
+{
+	cout<<"For selecting scan region, ";
+	cont.currentChannel.chan=Channel::select();
+	selectScanRegionGUI(cont.currentChannel);
+	currentSpot=0;
+}
+ScanSpots::~ScanSpots(void){
+}
+void ScanSpots::move2NextSpot(){
+	cont.stg->move(x[currentSpot],y[currentSpot]);
+	cont.focus->move(z[currentSpot]);
+	if(currentSpot<numSpots()-1 || numSpots()!=1)
+		currentSpot++;
+	else //Reset currentSpot when last position is reached.
+		currentSpot=0;
+}//update x,y and focus 
+int ScanSpots::numSpots(){
+	return x.size();
+}//return num spots per scan
+void ScanSpots::getImageProperties(int scanNum,int spotNum,int chanNum,string& fileName,string& comment){
+	fileName=string("t")+toString(scanNum,3)+string("p")+toString(spotNum,3)+string("c")+toString(chanNum);
+	comment=string("scanSpots");
+}//return false if it is not to be saved (i.e. dummy acquisition)
+void ScanSpots::selectScanRegionGUI(AcquisitionChannel viewChan){
+	viewChan.on();
+	viewChan.out->cam->startLiveView();
+	int c=1;
+	while (c!=0){
+		cout<<"Move stage to next position to scan.\n";
+		cont.stg->stageControl();
+		cout<<"Enter 1 to accept, 2 to reject, 0 when finished.\n";
+		cin>>c;
+		std::cin.ignore(std::numeric_limits<streamsize>::max(), '\n');
+		switch(c){
+			case 1:
+				x.push_back(cont.stg->getX());
+				y.push_back(cont.stg->getY());
+				z.push_back(cont.focus->getZ());
+				cout<<"Position accepted: "<<cont.stg->getX()<<"\t"<<cont.stg->getY()<<"\t"<<cont.focus->getZ()<<"\n";
+				logFile->write("Position: "+toString(cont.stg->getX())+"\t"+toString(cont.stg->getY())+"\t"+toString(cont.focus->getZ())+"\n");
+			case 2:
+			case 0: break;
+		}
+	}
+	viewChan.out->cam->stopLiveView();
+}
